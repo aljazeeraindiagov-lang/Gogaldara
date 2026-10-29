@@ -141,14 +141,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initSettingsPage();
 });
 
-// Hide Preloader on Window Load
-window.addEventListener('load', () => {
-  const preloader = document.getElementById('preloader');
-  if (preloader) {
-    preloader.classList.add('fade-out');
-    setTimeout(() => preloader.remove(), 600);
-  }
-});
 
 // --- Theme Management ---
 function initTheme() {

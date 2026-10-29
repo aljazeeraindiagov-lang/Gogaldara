@@ -63,18 +63,11 @@
 </head>
 <body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 antialiased selection:bg-emerald-800 selection:text-white">
 
-  <!-- Loading Preloader -->
-  <div id="preloader" aria-hidden="true">
-    <div class="spinner mb-4"></div>
-    <div class="text-white text-sm font-semibold tracking-widest uppercase">The Gogaldara</div>
-    <div class="text-xs text-amber-400 mt-1">Curated by Shahid Mir</div>
-  </div>
-
   <!-- Sticky Glassmorphic Navbar -->
   <header class="sticky top-0 z-50 glass-header">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[72px] flex items-center justify-between gap-4">
       
-      <!-- Brand Logo -->
+      <!-- Brand Logo & Owner Byline -->
       <a href="index.html" class="flex items-center gap-3 flex-shrink-0 group">
         <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-900 to-emerald-700 flex items-center justify-center text-amber-400 shadow-md group-hover:scale-105 transition-transform">
           <i class="fas fa-mountain text-lg"></i>
@@ -83,7 +76,9 @@
           <span class="text-xl font-bold font-serif tracking-tight text-emerald-950 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
             The Gogaldara
           </span>
-          <span class="block text-[10px] tracking-wider uppercase text-emerald-700 dark:text-emerald-400 font-medium">Tangmarg, Kashmir</span>
+          <span class="block text-[10px] tracking-wider uppercase text-emerald-700 dark:text-emerald-400 font-semibold">
+            Owned & Curated by Shahid Mir • Tangmarg
+          </span>
         </div>
       </a>
 
@@ -171,7 +166,10 @@
           <div class="w-8 h-8 rounded-lg bg-emerald-900 text-amber-400 flex items-center justify-center font-bold">
             <i class="fas fa-mountain text-sm"></i>
           </div>
-          <span class="font-serif font-bold text-slate-900 dark:text-white">The Gogaldara</span>
+          <div>
+            <span class="font-serif font-bold text-slate-900 dark:text-white block">The Gogaldara</span>
+            <span class="text-[9px] text-amber-600 dark:text-amber-400 font-semibold uppercase">Owner: Shahid Mir</span>
+          </div>
         </div>
         <button id="close-drawer-btn" class="w-8 h-8 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center text-slate-500" aria-label="Close Drawer">
           <i class="fas fa-times"></i>
@@ -232,7 +230,7 @@
         </button>
       </div>
       <div class="text-[11px] text-slate-400 text-center">
-        Designed by Shahid Mir &copy; 2026
+        Owned & Designed by Shahid Mir &copy; 2026
       </div>
     </div>
   </aside>
@@ -243,35 +241,35 @@
     <!-- Hero Slider Section -->
     <section class="slider-container" aria-label="Featured Highlights of Gogaldara">
       
-      <!-- Slide 1: Chill Point Winter Icicles -->
+      <!-- Slide 1: Original Gogaldara Chill Point Image from Kashmir Digest -->
       <div class="slide active">
         <img 
-          src="https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?auto=format&fit=crop&w=2000&q=85" 
-          alt="Majestic 35-foot frozen icicles at Chill Point Gogaldara Kashmir" 
+          src="https://www.kashmirdigest.com/wp-content/uploads/2025/01/download-2025-01-16T230346.379.jpeg" 
+          alt="Original photo of Chill Point 35-foot frozen icicles in Gogaldara Tangmarg Kashmir" 
           class="w-full h-full object-cover"
-          loading="lazy"
-          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1600&q=80';"
+          loading="eager"
+          onerror="this.onerror=null;this.src='https://cdn.tripuntold.com/media/photos/location/2025/04/07/41a5a283-74f7-483f-a719-6ce5c0de00ab.jpg';"
         >
         <div class="slide-overlay absolute inset-0 flex items-center">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <div class="max-w-2xl text-white">
-              <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-amber-300 text-xs font-semibold uppercase tracking-wider mb-4 border border-white/20">
-                <i class="fas fa-icicles"></i> Winter Wonder of Tangmarg
+            <div class="max-w-3xl text-white">
+              <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500 text-slate-950 text-xs font-bold uppercase tracking-wider mb-4 shadow-lg">
+                <i class="fas fa-award"></i> Official Travel Portal • Owned by Shahid Mir
               </span>
-              <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-serif leading-tight mb-4 drop-shadow-md">
-                The Colossal 35-Foot Icicles of Chill Point
+              <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold font-serif leading-tight mb-4 drop-shadow-lg">
+                Chill Point Gogaldara: The 35-Foot Frozen Icicle Marvel
               </h1>
-              <p class="text-base sm:text-lg text-slate-200 mb-8 font-light leading-relaxed">
-                Tucked just 13 km from Tangmarg in North Kashmir's Baramulla district, Gogaldara transforms into a fairy-tale winter sanctuary featuring massive natural frozen cascades.
+              <p class="text-sm sm:text-lg text-slate-100 mb-8 font-light leading-relaxed drop-shadow">
+                Witness Kashmir's true winter phenomenon. Situated just 13 km from Tangmarg town, Gogaldara's sub-zero frost sculpts running hillside water into towering 35-foot crystalline ice columns framed by dense fir forests.
               </p>
               <div class="flex flex-wrap items-center gap-4">
-                <a href="explore.html#chill-point" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-semibold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 flex items-center gap-2 text-sm">
-                  <span>Explore Chill Point</span>
+                <a href="explore.html#chill-point" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-6 py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 flex items-center gap-2 text-sm">
+                  <span>Explore Chill Point Guide</span>
                   <i class="fas fa-arrow-right text-xs"></i>
                 </a>
-                <a href="gallery.html" class="bg-white/15 hover:bg-white/25 backdrop-blur-md text-white border border-white/30 font-medium px-6 py-3 rounded-xl transition-all text-sm flex items-center gap-2">
-                  <i class="fas fa-photo-film"></i>
-                  <span>View Winter Gallery</span>
+                <a href="gallery.html" class="bg-white/20 hover:bg-white/30 backdrop-blur-md text-white border border-white/40 font-semibold px-6 py-3.5 rounded-xl transition-all text-sm flex items-center gap-2">
+                  <i class="fas fa-images"></i>
+                  <span>Original Photos Gallery</span>
                 </a>
               </div>
             </div>
@@ -279,71 +277,71 @@
         </div>
       </div>
 
-      <!-- Slide 2: Alpine Meadows & Wildflowers -->
+      <!-- Slide 2: Original Gogaldara Scenic Landscape from TripUntold -->
+      <div class="slide">
+        <img 
+          src="https://cdn.tripuntold.com/media/photos/location/2025/04/07/41a5a283-74f7-483f-a719-6ce5c0de00ab.jpg" 
+          alt="Original winter landscape and pine trees of Gogaldara Chill Point Baramulla" 
+          class="w-full h-full object-cover"
+          loading="lazy"
+          onerror="this.onerror=null;this.src='https://www.kashmirdigest.com/wp-content/uploads/2025/01/download-2025-01-16T230346.379.jpeg';"
+        >
+        <div class="slide-overlay absolute inset-0 flex items-center">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="max-w-3xl text-white">
+              <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-600/90 backdrop-blur-md text-white text-xs font-semibold uppercase tracking-wider mb-4 border border-emerald-400/40">
+                <i class="fas fa-tree"></i> Authentic North Kashmir • Curated by Shahid Mir
+              </span>
+              <h2 class="text-3xl sm:text-5xl lg:text-6xl font-bold font-serif leading-tight mb-4 drop-shadow-lg">
+                Snow-Draped Deodar Forests & Pure Solitude
+              </h2>
+              <p class="text-sm sm:text-lg text-slate-100 mb-8 font-light leading-relaxed drop-shadow">
+                A serene retreat away from Gulmarg’s crowded commercial corridors. Breathe in crisp mountain air, trek along quiet snow trails, and savor warmth around traditional village hearths.
+              </p>
+              <div class="flex flex-wrap items-center gap-4">
+                <a href="about.html#geography" class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-6 py-3.5 rounded-xl shadow-lg transition-all text-sm flex items-center gap-2">
+                  <span>Geography & Terrain</span>
+                  <i class="fas fa-compass"></i>
+                </a>
+                <a href="explore.html#how-to-reach" class="bg-white/20 hover:bg-white/30 backdrop-blur-md text-white border border-white/40 font-semibold px-6 py-3.5 rounded-xl transition-all text-sm flex items-center gap-2">
+                  <i class="fas fa-route"></i>
+                  <span>How to Reach from Srinagar</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Alpine Meadows & Spring Blooms -->
       <div class="slide">
         <img 
           src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=2000&q=85" 
-          alt="Lush green alpine meadows and streams of Gogaldara in summer" 
+          alt="Lush green alpine meadows and mountain streams of Gogaldara in summer" 
           class="w-full h-full object-cover"
           loading="lazy"
-          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=80';"
+          onerror="this.onerror=null;this.src='https://cdn.tripuntold.com/media/photos/location/2025/04/07/41a5a283-74f7-483f-a719-6ce5c0de00ab.jpg';"
         >
         <div class="slide-overlay absolute inset-0 flex items-center">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <div class="max-w-2xl text-white">
-              <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-emerald-300 text-xs font-semibold uppercase tracking-wider mb-4 border border-white/20">
-                <i class="fas fa-seedling"></i> Spring & Summer Haven
+            <div class="max-w-3xl text-white">
+              <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-600/90 backdrop-blur-md text-white text-xs font-semibold uppercase tracking-wider mb-4 border border-sky-400/40">
+                <i class="fas fa-seedling"></i> Summer Pastures & Brooks
               </span>
-              <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-serif leading-tight mb-4 drop-shadow-md">
-                Verdant Meadows & Singing Mountain Brooks
+              <h2 class="text-3xl sm:text-5xl lg:text-6xl font-bold font-serif leading-tight mb-4 drop-shadow-lg">
+                Wildflower Slopes & Crystal Brooks
               </h2>
-              <p class="text-base sm:text-lg text-slate-200 mb-8 font-light leading-relaxed">
-                When winter recedes, Gogaldara’s hills unfold carpeted in native wildflowers, crystal springs, and serene shepherd grazing trails away from tourist crowds.
+              <p class="text-sm sm:text-lg text-slate-100 mb-8 font-light leading-relaxed drop-shadow">
+                When winter recedes, Gogaldara's pastures awaken under carpeted wildflowers, cold glacial brooks, and shepherd trails connecting Baramulla and Budgam.
               </p>
               <div class="flex flex-wrap items-center gap-4">
-                <a href="about.html#geography" class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-6 py-3 rounded-xl shadow-lg transition-all text-sm flex items-center gap-2">
-                  <span>Discover the Meadows</span>
-                  <i class="fas fa-compass"></i>
-                </a>
-                <a href="explore.html#food" class="bg-white/15 hover:bg-white/25 backdrop-blur-md text-white border border-white/30 font-medium px-6 py-3 rounded-xl transition-all text-sm flex items-center gap-2">
-                  <i class="fas fa-mug-hot"></i>
-                  <span>Kashmiri Food Guide</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Slide 3: Dense Pine & Fir Forests -->
-      <div class="slide">
-        <img 
-          src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=2000&q=85" 
-          alt="Misty morning in the ancient pine forests near Tangmarg and Gogaldara" 
-          class="w-full h-full object-cover"
-          loading="lazy"
-          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?auto=format&fit=crop&w=1600&q=80';"
-        >
-        <div class="slide-overlay absolute inset-0 flex items-center">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <div class="max-w-2xl text-white">
-              <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-sky-300 text-xs font-semibold uppercase tracking-wider mb-4 border border-white/20">
-                <i class="fas fa-tree"></i> Pristine Ecology
-              </span>
-              <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-serif leading-tight mb-4 drop-shadow-md">
-                Ancient Deodars, Crisp Air & Pure Silence
-              </h2>
-              <p class="text-base sm:text-lg text-slate-200 mb-8 font-light leading-relaxed">
-                Breathe in the rejuvenating fragrance of pine resin and ozone. Gogaldara offers unfiltered immersion into North Kashmir's timeless natural rhythms.
-              </p>
-              <div class="flex flex-wrap items-center gap-4">
-                <a href="explore.html#activities" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-semibold px-6 py-3 rounded-xl shadow-lg transition-all text-sm flex items-center gap-2">
-                  <span>Forest Treks & Sledging</span>
+                <a href="explore.html#activities" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-6 py-3.5 rounded-xl shadow-lg transition-all text-sm flex items-center gap-2">
+                  <span>Meadow Picnics & Treks</span>
                   <i class="fas fa-hiking"></i>
                 </a>
-                <a href="about.html#culture" class="bg-white/15 hover:bg-white/25 backdrop-blur-md text-white border border-white/30 font-medium px-6 py-3 rounded-xl transition-all text-sm flex items-center gap-2">
-                  <i class="fas fa-users"></i>
-                  <span>Village Life & Heritage</span>
+                <a href="explore.html#food" class="bg-white/20 hover:bg-white/30 backdrop-blur-md text-white border border-white/40 font-semibold px-6 py-3.5 rounded-xl transition-all text-sm flex items-center gap-2">
+                  <i class="fas fa-mug-hot"></i>
+                  <span>Kashmiri Food & Kahwa</span>
                 </a>
               </div>
             </div>
@@ -352,10 +350,10 @@
       </div>
 
       <!-- Slider Controls -->
-      <button class="slider-prev absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/30 hover:bg-black/60 text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition-all z-20" aria-label="Previous Slide">
+      <button class="slider-prev absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/40 hover:bg-black/70 text-white flex items-center justify-center backdrop-blur-md border border-white/30 transition-all z-20" aria-label="Previous Slide">
         <i class="fas fa-chevron-left"></i>
       </button>
-      <button class="slider-next absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/30 hover:bg-black/60 text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition-all z-20" aria-label="Next Slide">
+      <button class="slider-next absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/40 hover:bg-black/70 text-white flex items-center justify-center backdrop-blur-md border border-white/30 transition-all z-20" aria-label="Next Slide">
         <i class="fas fa-chevron-right"></i>
       </button>
 
@@ -365,84 +363,89 @@
       </div>
     </section>
 
-    <!-- Welcome Note by Shahid Mir Section -->
+    <!-- Welcome Note by Owner Shahid Mir Section -->
     <section class="py-16 md:py-24 bg-white dark:bg-slate-900 border-b border-slate-200/60 dark:border-slate-800">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           <div class="lg:col-span-5 reveal">
             <div class="relative">
-              <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800">
+              <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800 bg-slate-100">
                 <img 
-                  src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80" 
-                  alt="Pine slopes and snowy mountain vistas surrounding Tangmarg and Gogaldara"
+                  src="https://www.kashmirdigest.com/wp-content/uploads/2025/01/download-2025-01-16T230346.379.jpeg" 
+                  alt="Original Chill Point icicle formation in Gogaldara Tangmarg curated by Shahid Mir"
                   class="w-full h-full object-cover"
                   loading="lazy"
-                  onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80';"
+                  onerror="this.onerror=null;this.src='https://cdn.tripuntold.com/media/photos/location/2025/04/07/41a5a283-74f7-483f-a719-6ce5c0de00ab.jpg';"
                 >
               </div>
-              <div class="absolute -bottom-6 -right-6 bg-gradient-to-br from-emerald-900 to-emerald-800 text-white p-5 rounded-2xl shadow-xl max-w-xs border border-emerald-700/50">
+              <div class="absolute -bottom-6 -right-6 bg-gradient-to-br from-emerald-950 to-emerald-900 text-white p-6 rounded-2xl shadow-2xl max-w-xs border border-emerald-700/60">
                 <div class="flex items-center gap-3 mb-2">
-                  <div class="w-10 h-10 rounded-full bg-amber-400 text-emerald-950 flex items-center justify-center font-bold text-sm">
+                  <div class="w-12 h-12 rounded-full bg-amber-400 text-slate-950 flex items-center justify-center font-bold text-base shadow">
                     SM
                   </div>
                   <div>
-                    <h4 class="text-sm font-semibold">Shahid Mir</h4>
-                    <span class="text-[11px] text-amber-300">Creator & Curator</span>
+                    <h4 class="text-base font-bold">Shahid Mir</h4>
+                    <span class="text-xs text-amber-300 font-semibold uppercase tracking-wider block">Owner &amp; Curator</span>
                   </div>
                 </div>
-                <p class="text-xs text-emerald-100 leading-snug italic">
-                  "Gogaldara is Kashmir in its purest soul—unhurried, majestic, and grounded in centuries of mountain kindness."
+                <p class="text-xs text-emerald-100 leading-snug italic mt-2">
+                  "As the owner and custodian of this sanctuary, my mission is to share the authentic soul of Gogaldara while preserving its pristine wilderness for generations to come."
                 </p>
+                <div class="mt-3 pt-2 border-t border-emerald-800/80 text-[10px] text-amber-200 font-medium flex items-center gap-1.5">
+                  <i class="fas fa-check-circle text-amber-400"></i> Verified Official Portal
+                </div>
               </div>
             </div>
           </div>
 
           <div class="lg:col-span-7 reveal">
-            <span class="text-xs font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400">Curator's Welcome Note</span>
-            <h2 class="text-3xl sm:text-4xl font-bold font-serif text-slate-900 dark:text-white mt-2 mb-6">
-              Welcome to The Gogaldara: A Sanctuary of Peace & Pine
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300 text-xs font-bold uppercase tracking-wider mb-2">
+              <i class="fas fa-user-check"></i> Official Message from the Owner
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-bold font-serif text-slate-900 dark:text-white mt-1 mb-6">
+              Welcome to The Gogaldara — By Shahid Mir
             </h2>
             <div class="space-y-4 text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
               <p>
-                Welcome to the digital gateway of <strong>Gogaldara</strong>. Nestled in the serene foothills of <strong>Tangmarg tehsil in Baramulla district</strong>, roughly 13 km off the bustling Gulmarg highway, Gogaldara has long been a cherished retreat for local shepherds and discerning mountaineers seeking silence.
+                I am <strong>Shahid Mir</strong>, owner and creator of <strong>The Gogaldara</strong> portal. I welcome you to one of Kashmir's most enchanting and untouched mountain sanctuaries, located in the <strong>Tangmarg tehsil of Baramulla district</strong>, roughly 13 km from Tangmarg town.
               </p>
               <p>
-                In recent years, Gogaldara has emerged as Kashmir’s most captivating offbeat destination—celebrated for its miraculous <strong>35-foot natural icicle wall at Chill Point</strong> in peak winter, its aromatic deodar forests, and the tranquil rustle of pristine alpine meadows in summer.
+                For generations, Gogaldara was a quiet pastoral haven known only to local Gujjar herders and mountain trekkers. Today, it has captivated travelers across the world through its sensational <strong>35-foot natural icicle wall at Chill Point</strong>, where freezing sub-zero winter winds turn freshwater seepages into magnificent ice sculptures.
               </p>
               <p>
-                I created <strong>The Gogaldara</strong> to provide authentic, verified travel intelligence: how to travel here responsibly from Srinagar, where to drink traditional saffron Kahwa, and how to immerse yourself in our authentic village hospitality without disrupting the pristine ecology.
+                Whether you are visiting in peak winter for sledging and icicle photography, or in summer for the wildflower meadows and steaming saffron Kahwa by a wood-fired hearth, I have curated every detail on this portal to help you explore responsibly, safely, and comfortably.
               </p>
             </div>
 
             <!-- Key Quick Facts Grid -->
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 pt-8 border-t border-slate-100 dark:border-slate-800">
-              <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50">
+              <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700/60">
                 <div class="text-xl font-bold text-emerald-900 dark:text-emerald-400 font-serif">13 km</div>
                 <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">From Tangmarg</div>
               </div>
-              <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50">
+              <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700/60">
                 <div class="text-xl font-bold text-amber-600 dark:text-amber-400 font-serif">35 ft</div>
                 <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Icicle Formations</div>
               </div>
-              <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50">
+              <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700/60">
                 <div class="text-xl font-bold text-sky-600 dark:text-sky-400 font-serif">60 km</div>
                 <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Srinagar Airport</div>
               </div>
-              <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50">
-                <div class="text-xl font-bold text-emerald-900 dark:text-emerald-400 font-serif">4 Seasons</div>
-                <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Pure Beauty</div>
+              <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700/60">
+                <div class="text-xl font-bold text-emerald-900 dark:text-emerald-400 font-serif">Shahid Mir</div>
+                <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Owner &amp; Curator</div>
               </div>
             </div>
 
-            <div class="mt-8 flex flex-wrap gap-4">
+            <div class="mt-8 flex flex-wrap items-center gap-4">
               <a href="about.html" class="inline-flex items-center gap-2 text-sm font-semibold text-emerald-800 dark:text-emerald-400 hover:text-amber-600 dark:hover:text-amber-300">
                 <span>Read Full Geography & History</span>
                 <i class="fas fa-arrow-right text-xs"></i>
               </a>
               <span class="text-slate-300 dark:text-slate-700">|</span>
               <a href="explore.html#how-to-reach" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-emerald-800 dark:hover:text-emerald-400">
-                <span>Getting Here from Srinagar</span>
+                <span>Travel Directions from Srinagar</span>
                 <i class="fas fa-route text-xs"></i>
               </a>
             </div>
@@ -450,7 +453,7 @@
 
         </div>
       </div>
-    </section>
+
 
     <!-- Featured Places & Core Highlights -->
     <section class="py-16 md:py-24 bg-slate-50 dark:bg-slate-950">
@@ -472,11 +475,11 @@
           <div class="nature-card overflow-hidden flex flex-col reveal">
             <div class="relative h-56 overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?auto=format&fit=crop&w=800&q=80" 
-                alt="Chill Point frozen icicle wall in Gogaldara"
+                src="https://www.kashmirdigest.com/wp-content/uploads/2025/01/download-2025-01-16T230346.379.jpeg" 
+                alt="Original photo of Chill Point frozen icicle wall in Gogaldara"
                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
-                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80';"
+                onerror="this.onerror=null;this.src='https://cdn.tripuntold.com/media/photos/location/2025/04/07/41a5a283-74f7-483f-a719-6ce5c0de00ab.jpg';"
               >
               <div class="absolute top-3 left-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm text-xs font-bold text-sky-600 dark:text-sky-400 px-3 py-1 rounded-full">
                 Winter Wonder
@@ -723,10 +726,10 @@
       <!-- Bottom Credits & Image Sources -->
       <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
         <div>
-          <span>&copy; 2026 The Gogaldara. Designed by <strong class="text-slate-300 font-semibold">Shahid Mir</strong>.</span>
+          <span>&copy; 2026 The Gogaldara. Owned & Designed by <strong class="text-slate-200 font-semibold">Shahid Mir</strong>.</span>
         </div>
         <div class="text-[11px] text-slate-500 text-center sm:text-right">
-          <span>Images sourced from Unsplash & Wikimedia Commons (Kashmir & Alpine Landscapes).</span>
+          <span>Photos: Kashmir Digest, TripUntold & Wikimedia Commons.</span>
         </div>
       </div>
 
