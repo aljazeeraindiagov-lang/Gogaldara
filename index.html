@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Gogaldara - Tangmarg, Kashmir | Curated by Shahid Mir</title>
+  <meta name="description" content="Explore The Gogaldara in Tangmarg, Baramulla, Kashmir. Discover 35-foot natural winter icicles at Chill Point, pristine pine forests, alpine meadows, and authentic Kashmiri hospitality.">
+  <meta property="og:title" content="The Gogaldara - Tangmarg, Kashmir">
+  <meta property="og:description" content="Discover Kashmir's untouched winter wonderland and summer alpine sanctuary in Baramulla.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Tailwind CSS CDN for instant VS Code Live Server & zero-build operation -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            pine: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              600: '#16a34a',
+              700: '#15803d',
+              800: '#166534',
+              900: '#143828',
+              950: '#0b2218'
+            },
+            saffron: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309'
+            },
+            skyhimalaya: {
+              50: '#f0f9ff',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1'
+            }
+          },
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+            serif: ['Playfair Display', 'Georgia', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Poppins & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Shared Custom Stylesheet -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 antialiased selection:bg-emerald-800 selection:text-white">
+
+  <!-- Loading Preloader -->
+  <div id="preloader" aria-hidden="true">
+    <div class="spinner mb-4"></div>
+    <div class="text-white text-sm font-semibold tracking-widest uppercase">The Gogaldara</div>
+    <div class="text-xs text-amber-400 mt-1">Curated by Shahid Mir</div>
+  </div>
+
+  <!-- Sticky Glassmorphic Navbar -->
+  <header class="sticky top-0 z-50 glass-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[72px] flex items-center justify-between gap-4">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3 flex-shrink-0 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-900 to-emerald-700 flex items-center justify-center text-amber-400 shadow-md group-hover:scale-105 transition-transform">
+          <i class="fas fa-mountain text-lg"></i>
+        </div>
+        <div>
+          <span class="text-xl font-bold font-serif tracking-tight text-emerald-950 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+            The Gogaldara
+          </span>
+          <span class="block text-[10px] tracking-wider uppercase text-emerald-700 dark:text-emerald-400 font-medium">Tangmarg, Kashmir</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-700 dark:text-slate-200" aria-label="Main Navigation">
+        <a href="index.html" class="text-emerald-800 dark:text-emerald-400 font-semibold border-b-2 border-emerald-800 dark:border-emerald-400 pb-1">Home</a>
+        <a href="about.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">About</a>
+        <a href="explore.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">Explore</a>
+        <a href="gallery.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">Gallery</a>
+        <a href="menu.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">Directory</a>
+        <a href="help.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">Help & FAQ</a>
+        <a href="feedback.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">Reviews</a>
+      </nav>
+
+      <!-- Search Bar & Actions -->
+      <div class="flex items-center gap-3">
+        <!-- Interactive Search Bar -->
+        <div class="search-container relative hidden sm:block w-48 md:w-60">
+          <div class="relative">
+            <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+            <input 
+              type="text" 
+              id="nav-search-input"
+              placeholder="Search Chill Point, stays..." 
+              class="w-full bg-slate-100 dark:bg-slate-800/80 text-slate-900 dark:text-white pl-8 pr-3 py-1.5 rounded-full text-xs border border-transparent focus:border-emerald-600 focus:bg-white dark:focus:bg-slate-900 outline-none transition-all placeholder:text-slate-400"
+              autocomplete="off"
+            >
+          </div>
+        </div>
+
+        <!-- Notification Bell Dropdown -->
+        <div class="relative">
+          <button id="notif-bell-btn" class="w-9 h-9 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 flex items-center justify-center transition-colors relative" aria-label="Notifications" title="Notifications">
+            <i class="fas fa-bell text-sm"></i>
+            <span id="notif-badge" class="absolute top-1 right-1 w-4 h-4 rounded-full bg-amber-500 text-white text-[9px] font-bold flex items-center justify-center shadow">2</span>
+          </button>
+
+          <!-- Notification Dropdown Menu -->
+          <div id="notif-dropdown" class="notification-menu">
+            <div class="p-3 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between">
+              <span class="text-xs font-semibold text-slate-900 dark:text-white uppercase tracking-wider">Alerts & Updates</span>
+              <button id="notif-mark-all" class="text-[11px] text-emerald-600 dark:text-emerald-400 hover:underline">Mark all read</button>
+            </div>
+            <div id="notif-list" class="max-h-72 overflow-y-auto divide-y divide-slate-100 dark:divide-slate-800">
+              <!-- Populated by script.js -->
+            </div>
+            <div class="p-2 border-t border-slate-100 dark:border-slate-800 text-center bg-slate-50 dark:bg-slate-800/40">
+              <a href="help.html" class="text-xs text-slate-500 dark:text-slate-400 hover:text-emerald-700">Need immediate travel help?</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Theme Toggle Button -->
+        <button class="theme-toggle-btn w-9 h-9 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center transition-colors" aria-label="Toggle Dark Mode" title="Toggle Dark/Light Mode">
+          <i class="fas fa-moon theme-toggle-icon text-slate-700 text-sm"></i>
+        </button>
+
+        <!-- Settings Quick Link -->
+        <a href="settings.html" class="w-9 h-9 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 hidden sm:flex items-center justify-center transition-colors" title="Settings">
+          <i class="fas fa-cog text-sm"></i>
+        </a>
+
+        <!-- User Authentication Buttons / Profile -->
+        <div class="nav-auth-container hidden sm:block">
+          <!-- Populated by script.js -->
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <button id="hamburger-btn" class="lg:hidden w-9 h-9 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-200" aria-label="Open Navigation Drawer">
+          <i class="fas fa-bars text-lg"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop -->
+  <div id="drawer-backdrop" class="drawer-backdrop"></div>
+
+  <!-- Mobile Side Drawer -->
+  <aside id="mobile-drawer" class="mobile-drawer p-5 flex flex-col justify-between" aria-label="Mobile Navigation Drawer">
+    <div>
+      <div class="flex items-center justify-between pb-4 border-b border-slate-100 dark:border-slate-800">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-lg bg-emerald-900 text-amber-400 flex items-center justify-center font-bold">
+            <i class="fas fa-mountain text-sm"></i>
+          </div>
+          <span class="font-serif font-bold text-slate-900 dark:text-white">The Gogaldara</span>
+        </div>
+        <button id="close-drawer-btn" class="w-8 h-8 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center text-slate-500" aria-label="Close Drawer">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Search -->
+      <div class="search-container mt-4 mb-6">
+        <div class="relative">
+          <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+          <input 
+            type="text" 
+            id="drawer-search-input"
+            placeholder="Search site..." 
+            class="w-full bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white pl-8 pr-3 py-2 rounded-lg text-xs border border-transparent focus:border-emerald-600 outline-none"
+          >
+        </div>
+      </div>
+
+      <!-- Drawer Nav Links -->
+      <nav class="space-y-1 text-sm font-medium" aria-label="Mobile Menu Links">
+        <a href="index.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 text-emerald-800 dark:text-emerald-300 font-semibold">
+          <i class="fas fa-home w-5 text-center"></i> Home
+        </a>
+        <a href="about.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 transition-colors">
+          <i class="fas fa-info-circle w-5 text-center text-emerald-700"></i> About Gogaldara
+        </a>
+        <a href="explore.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 transition-colors">
+          <i class="fas fa-compass w-5 text-center text-sky-600"></i> Explore & Travel Guide
+        </a>
+        <a href="gallery.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 transition-colors">
+          <i class="fas fa-images w-5 text-center text-amber-600"></i> Photo Gallery
+        </a>
+        <a href="menu.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 transition-colors">
+          <i class="fas fa-sitemap w-5 text-center text-indigo-600"></i> Site Directory
+        </a>
+        <a href="settings.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 transition-colors">
+          <i class="fas fa-sliders-h w-5 text-center text-teal-600"></i> Settings & Display
+        </a>
+        <a href="help.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 transition-colors">
+          <i class="fas fa-question-circle w-5 text-center text-rose-600"></i> Help & FAQs
+        </a>
+        <a href="feedback.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 transition-colors">
+          <i class="fas fa-star w-5 text-center text-amber-500"></i> Traveler Reviews
+        </a>
+      </nav>
+    </div>
+
+    <!-- Drawer Footer Actions -->
+    <div class="pt-6 border-t border-slate-100 dark:border-slate-800 space-y-3">
+      <div class="nav-auth-container">
+        <!-- Rendered by JS -->
+      </div>
+      <div class="flex items-center justify-between text-xs text-slate-500 pt-2">
+        <span>Dark Theme</span>
+        <button class="theme-toggle-btn p-1 text-slate-700 dark:text-amber-400">
+          <i class="fas fa-moon theme-toggle-icon"></i>
+        </button>
+      </div>
+      <div class="text-[11px] text-slate-400 text-center">
+        Designed by Shahid Mir &copy; 2026
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="flex-grow">
+    
+    <!-- Hero Slider Section -->
+    <section class="slider-container" aria-label="Featured Highlights of Gogaldara">
+      
+      <!-- Slide 1: Chill Point Winter Icicles -->
+      <div class="slide active">
+        <img 
+          src="https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?auto=format&fit=crop&w=2000&q=85" 
+          alt="Majestic 35-foot frozen icicles at Chill Point Gogaldara Kashmir" 
+          class="w-full h-full object-cover"
+          loading="lazy"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1600&q=80';"
+        >
+        <div class="slide-overlay absolute inset-0 flex items-center">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="max-w-2xl text-white">
+              <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-amber-300 text-xs font-semibold uppercase tracking-wider mb-4 border border-white/20">
+                <i class="fas fa-icicles"></i> Winter Wonder of Tangmarg
+              </span>
+              <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-serif leading-tight mb-4 drop-shadow-md">
+                The Colossal 35-Foot Icicles of Chill Point
+              </h1>
+              <p class="text-base sm:text-lg text-slate-200 mb-8 font-light leading-relaxed">
+                Tucked just 13 km from Tangmarg in North Kashmir's Baramulla district, Gogaldara transforms into a fairy-tale winter sanctuary featuring massive natural frozen cascades.
+              </p>
+              <div class="flex flex-wrap items-center gap-4">
+                <a href="explore.html#chill-point" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-semibold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 flex items-center gap-2 text-sm">
+                  <span>Explore Chill Point</span>
+                  <i class="fas fa-arrow-right text-xs"></i>
+                </a>
+                <a href="gallery.html" class="bg-white/15 hover:bg-white/25 backdrop-blur-md text-white border border-white/30 font-medium px-6 py-3 rounded-xl transition-all text-sm flex items-center gap-2">
+                  <i class="fas fa-photo-film"></i>
+                  <span>View Winter Gallery</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: Alpine Meadows & Wildflowers -->
+      <div class="slide">
+        <img 
+          src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=2000&q=85" 
+          alt="Lush green alpine meadows and streams of Gogaldara in summer" 
+          class="w-full h-full object-cover"
+          loading="lazy"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=80';"
+        >
+        <div class="slide-overlay absolute inset-0 flex items-center">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="max-w-2xl text-white">
+              <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-emerald-300 text-xs font-semibold uppercase tracking-wider mb-4 border border-white/20">
+                <i class="fas fa-seedling"></i> Spring & Summer Haven
+              </span>
+              <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-serif leading-tight mb-4 drop-shadow-md">
+                Verdant Meadows & Singing Mountain Brooks
+              </h2>
+              <p class="text-base sm:text-lg text-slate-200 mb-8 font-light leading-relaxed">
+                When winter recedes, Gogaldara’s hills unfold carpeted in native wildflowers, crystal springs, and serene shepherd grazing trails away from tourist crowds.
+              </p>
+              <div class="flex flex-wrap items-center gap-4">
+                <a href="about.html#geography" class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-6 py-3 rounded-xl shadow-lg transition-all text-sm flex items-center gap-2">
+                  <span>Discover the Meadows</span>
+                  <i class="fas fa-compass"></i>
+                </a>
+                <a href="explore.html#food" class="bg-white/15 hover:bg-white/25 backdrop-blur-md text-white border border-white/30 font-medium px-6 py-3 rounded-xl transition-all text-sm flex items-center gap-2">
+                  <i class="fas fa-mug-hot"></i>
+                  <span>Kashmiri Food Guide</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Dense Pine & Fir Forests -->
+      <div class="slide">
+        <img 
+          src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=2000&q=85" 
+          alt="Misty morning in the ancient pine forests near Tangmarg and Gogaldara" 
+          class="w-full h-full object-cover"
+          loading="lazy"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?auto=format&fit=crop&w=1600&q=80';"
+        >
+        <div class="slide-overlay absolute inset-0 flex items-center">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="max-w-2xl text-white">
+              <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-sky-300 text-xs font-semibold uppercase tracking-wider mb-4 border border-white/20">
+                <i class="fas fa-tree"></i> Pristine Ecology
+              </span>
+              <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-serif leading-tight mb-4 drop-shadow-md">
+                Ancient Deodars, Crisp Air & Pure Silence
+              </h2>
+              <p class="text-base sm:text-lg text-slate-200 mb-8 font-light leading-relaxed">
+                Breathe in the rejuvenating fragrance of pine resin and ozone. Gogaldara offers unfiltered immersion into North Kashmir's timeless natural rhythms.
+              </p>
+              <div class="flex flex-wrap items-center gap-4">
+                <a href="explore.html#activities" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-semibold px-6 py-3 rounded-xl shadow-lg transition-all text-sm flex items-center gap-2">
+                  <span>Forest Treks & Sledging</span>
+                  <i class="fas fa-hiking"></i>
+                </a>
+                <a href="about.html#culture" class="bg-white/15 hover:bg-white/25 backdrop-blur-md text-white border border-white/30 font-medium px-6 py-3 rounded-xl transition-all text-sm flex items-center gap-2">
+                  <i class="fas fa-users"></i>
+                  <span>Village Life & Heritage</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slider Controls -->
+      <button class="slider-prev absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/30 hover:bg-black/60 text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition-all z-20" aria-label="Previous Slide">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="slider-next absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/30 hover:bg-black/60 text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition-all z-20" aria-label="Next Slide">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+
+      <!-- Slider Dots -->
+      <div class="slider-dots absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-2.5 z-20">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <!-- Welcome Note by Shahid Mir Section -->
+    <section class="py-16 md:py-24 bg-white dark:bg-slate-900 border-b border-slate-200/60 dark:border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-5 reveal">
+            <div class="relative">
+              <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800">
+                <img 
+                  src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80" 
+                  alt="Pine slopes and snowy mountain vistas surrounding Tangmarg and Gogaldara"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80';"
+                >
+              </div>
+              <div class="absolute -bottom-6 -right-6 bg-gradient-to-br from-emerald-900 to-emerald-800 text-white p-5 rounded-2xl shadow-xl max-w-xs border border-emerald-700/50">
+                <div class="flex items-center gap-3 mb-2">
+                  <div class="w-10 h-10 rounded-full bg-amber-400 text-emerald-950 flex items-center justify-center font-bold text-sm">
+                    SM
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-semibold">Shahid Mir</h4>
+                    <span class="text-[11px] text-amber-300">Creator & Curator</span>
+                  </div>
+                </div>
+                <p class="text-xs text-emerald-100 leading-snug italic">
+                  "Gogaldara is Kashmir in its purest soul—unhurried, majestic, and grounded in centuries of mountain kindness."
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 reveal">
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400">Curator's Welcome Note</span>
+            <h2 class="text-3xl sm:text-4xl font-bold font-serif text-slate-900 dark:text-white mt-2 mb-6">
+              Welcome to The Gogaldara: A Sanctuary of Peace & Pine
+            </h2>
+            <div class="space-y-4 text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
+              <p>
+                Welcome to the digital gateway of <strong>Gogaldara</strong>. Nestled in the serene foothills of <strong>Tangmarg tehsil in Baramulla district</strong>, roughly 13 km off the bustling Gulmarg highway, Gogaldara has long been a cherished retreat for local shepherds and discerning mountaineers seeking silence.
+              </p>
+              <p>
+                In recent years, Gogaldara has emerged as Kashmir’s most captivating offbeat destination—celebrated for its miraculous <strong>35-foot natural icicle wall at Chill Point</strong> in peak winter, its aromatic deodar forests, and the tranquil rustle of pristine alpine meadows in summer.
+              </p>
+              <p>
+                I created <strong>The Gogaldara</strong> to provide authentic, verified travel intelligence: how to travel here responsibly from Srinagar, where to drink traditional saffron Kahwa, and how to immerse yourself in our authentic village hospitality without disrupting the pristine ecology.
+              </p>
+            </div>
+
+            <!-- Key Quick Facts Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 pt-8 border-t border-slate-100 dark:border-slate-800">
+              <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50">
+                <div class="text-xl font-bold text-emerald-900 dark:text-emerald-400 font-serif">13 km</div>
+                <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">From Tangmarg</div>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50">
+                <div class="text-xl font-bold text-amber-600 dark:text-amber-400 font-serif">35 ft</div>
+                <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Icicle Formations</div>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50">
+                <div class="text-xl font-bold text-sky-600 dark:text-sky-400 font-serif">60 km</div>
+                <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Srinagar Airport</div>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50">
+                <div class="text-xl font-bold text-emerald-900 dark:text-emerald-400 font-serif">4 Seasons</div>
+                <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Pure Beauty</div>
+              </div>
+            </div>
+
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a href="about.html" class="inline-flex items-center gap-2 text-sm font-semibold text-emerald-800 dark:text-emerald-400 hover:text-amber-600 dark:hover:text-amber-300">
+                <span>Read Full Geography & History</span>
+                <i class="fas fa-arrow-right text-xs"></i>
+              </a>
+              <span class="text-slate-300 dark:text-slate-700">|</span>
+              <a href="explore.html#how-to-reach" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-emerald-800 dark:hover:text-emerald-400">
+                <span>Getting Here from Srinagar</span>
+                <i class="fas fa-route text-xs"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Places & Core Highlights -->
+    <section class="py-16 md:py-24 bg-slate-50 dark:bg-slate-950">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="text-xs font-bold uppercase tracking-wider text-emerald-800 dark:text-emerald-400">Discover North Kashmir</span>
+          <h2 class="text-3xl sm:text-4xl font-bold font-serif text-slate-900 dark:text-white mt-2 mb-4">
+            Highlights of The Gogaldara
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400">
+            From the geological winter phenomenon at Chill Point to aromatic summer meadows and local hearths, experience authentic Kashmir.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Card 1: Chill Point -->
+          <div class="nature-card overflow-hidden flex flex-col reveal">
+            <div class="relative h-56 overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?auto=format&fit=crop&w=800&q=80" 
+                alt="Chill Point frozen icicle wall in Gogaldara"
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80';"
+              >
+              <div class="absolute top-3 left-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm text-xs font-bold text-sky-600 dark:text-sky-400 px-3 py-1 rounded-full">
+                Winter Wonder
+              </div>
+              <div class="absolute bottom-3 right-3 bg-black/60 backdrop-blur-sm text-white text-[11px] px-2.5 py-1 rounded-md">
+                35-ft Icicles
+              </div>
+            </div>
+            <div class="p-6 flex-grow flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold font-serif text-slate-900 dark:text-white mb-2">Chill Point (Gogaldara)</h3>
+                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                  During peak winter (Dec - Feb), fresh mountain runoffs freeze into vertical crystalline pillars extending up to 35 feet high, creating an unforgettable ice canyon.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                <span class="text-xs font-medium text-emerald-800 dark:text-emerald-400">Tangmarg Route</span>
+                <a href="explore.html#chill-point" class="text-xs font-semibold text-amber-600 dark:text-amber-400 hover:underline flex items-center gap-1">
+                  <span>Details</span>
+                  <i class="fas fa-chevron-right text-[10px]"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Wildflower Meadows & Trekking -->
+          <div class="nature-card overflow-hidden flex flex-col reveal">
+            <div class="relative h-56 overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1586348943529-beaae6c28db9?auto=format&fit=crop&w=800&q=80" 
+                alt="Summer alpine meadows and wildflowers in Gogaldara Tangmarg"
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80';"
+              >
+              <div class="absolute top-3 left-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm text-xs font-bold text-emerald-700 dark:text-emerald-400 px-3 py-1 rounded-full">
+                Spring & Summer
+              </div>
+              <div class="absolute bottom-3 right-3 bg-black/60 backdrop-blur-sm text-white text-[11px] px-2.5 py-1 rounded-md">
+                Wildflower Trails
+              </div>
+            </div>
+            <div class="p-6 flex-grow flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold font-serif text-slate-900 dark:text-white mb-2">Alpine Meadows & Brooks</h3>
+                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                  Lush terraced slopes, grazing pastoral flocks, and meandering glacial rivulets make Gogaldara an idyllic escape for picnics, solitude, and amateur landscape photography.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                <span class="text-xs font-medium text-emerald-800 dark:text-emerald-400">Nature Walks</span>
+                <a href="explore.html#activities" class="text-xs font-semibold text-amber-600 dark:text-amber-400 hover:underline flex items-center gap-1">
+                  <span>Explore Treks</span>
+                  <i class="fas fa-chevron-right text-[10px]"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Traditional Kashmiri Food & Hospitality -->
+          <div class="nature-card overflow-hidden flex flex-col reveal">
+            <div class="relative h-56 overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80" 
+                alt="Traditional Kashmiri Kahwa tea brewed with saffron and crushed almonds"
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80';"
+              >
+              <div class="absolute top-3 left-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm text-xs font-bold text-amber-600 dark:text-amber-400 px-3 py-1 rounded-full">
+                Kashmiri Flavors
+              </div>
+              <div class="absolute bottom-3 right-3 bg-black/60 backdrop-blur-sm text-white text-[11px] px-2.5 py-1 rounded-md">
+                Kahwa & Wazwan
+              </div>
+            </div>
+            <div class="p-6 flex-grow flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold font-serif text-slate-900 dark:text-white mb-2">Hearth & Village Hospitality</h3>
+                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                  Warm your hands around a boiling samovar cup of sweet saffron Kahwa, taste freshly baked Makki ki Roti with mountain butter, and experience generous Kashmiri warmth.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                <span class="text-xs font-medium text-emerald-800 dark:text-emerald-400">Authentic Taste</span>
+                <a href="explore.html#food" class="text-xs font-semibold text-amber-600 dark:text-amber-400 hover:underline flex items-center gap-1">
+                  <span>Culinary Guide</span>
+                  <i class="fas fa-chevron-right text-[10px]"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Best Seasons Guide -->
+    <section class="py-16 md:py-20 bg-emerald-950 text-white relative overflow-hidden">
+      <div class="absolute -right-20 -bottom-20 w-96 h-96 rounded-full bg-emerald-800/30 blur-3xl pointer-events-none"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="max-w-2xl mb-12 reveal">
+          <span class="text-xs font-bold uppercase tracking-wider text-amber-400">Travel Planning</span>
+          <h2 class="text-3xl sm:text-4xl font-bold font-serif mt-2 mb-4">
+            When Should You Visit Gogaldara?
+          </h2>
+          <p class="text-sm sm:text-base text-emerald-200">
+            Each season paints Tangmarg in a distinctive color palette. Plan according to what you wish to see.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 rounded-2xl bg-emerald-900/60 border border-emerald-800/80 backdrop-blur-sm reveal">
+            <div class="w-10 h-10 rounded-xl bg-sky-500/20 text-sky-300 flex items-center justify-center text-lg mb-4">
+              <i class="fas fa-snowflake"></i>
+            </div>
+            <h3 class="text-xl font-bold font-serif mb-2">Winter Magic (Dec – Feb)</h3>
+            <p class="text-xs sm:text-sm text-emerald-200 leading-relaxed mb-4">
+              Witness the colossal 35-ft icicles at Chill Point, enjoy sledge rides down powder snow slopes, and bundle up in traditional pherans with hot tea.
+            </p>
+            <div class="text-xs font-semibold text-amber-400">Key highlight: Chill Point icicles</div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-emerald-900/60 border border-emerald-800/80 backdrop-blur-sm reveal">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-300 flex items-center justify-center text-lg mb-4">
+              <i class="fas fa-seedling"></i>
+            </div>
+            <h3 class="text-xl font-bold font-serif mb-2">Spring & Summer (Mar – Aug)</h3>
+            <p class="text-xs sm:text-sm text-emerald-200 leading-relaxed mb-4">
+              Melted snow leaves emerald green carpets of grass, blooming mountain wildflowers, cool breezes, and peaceful picnic spots by crystal brooks.
+            </p>
+            <div class="text-xs font-semibold text-amber-400">Key highlight: Wildflower meadows & trekking</div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-emerald-900/60 border border-emerald-800/80 backdrop-blur-sm reveal">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-300 flex items-center justify-center text-lg mb-4">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <h3 class="text-xl font-bold font-serif mb-2">Golden Autumn (Sep – Nov)</h3>
+            <p class="text-xs sm:text-sm text-emerald-200 leading-relaxed mb-4">
+              Crisp mornings, golden amber hues on deciduous mountain shrubs, peaceful uncrowded trails, and harvest season in nearby orchards.
+            </p>
+            <div class="text-xs font-semibold text-amber-400">Key highlight: Photography & crisp air</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="py-20 bg-white dark:bg-slate-900 text-center relative">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+        <div class="w-16 h-16 rounded-2xl bg-amber-100 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400 flex items-center justify-center text-2xl mx-auto mb-6">
+          <i class="fas fa-map-marked-alt"></i>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-bold font-serif text-slate-900 dark:text-white mb-4">
+          Ready to Discover The Gogaldara?
+        </h2>
+        <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base max-w-2xl mx-auto mb-8 leading-relaxed">
+          Explore our comprehensive travel guide for exact distances, taxi rates from Tangmarg, clothing guidelines, photo galleries, and community reviews.
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="explore.html" class="bg-emerald-900 hover:bg-emerald-800 text-white font-semibold px-8 py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all text-sm flex items-center gap-2">
+            <i class="fas fa-compass"></i>
+            <span>Open Travel Guide</span>
+          </a>
+          <a href="gallery.html" class="bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-semibold px-8 py-3.5 rounded-xl transition-all text-sm flex items-center gap-2">
+            <i class="fas fa-images"></i>
+            <span>Browse Photo Gallery</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="bg-slate-900 text-slate-300 pt-16 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+        
+        <!-- Brand Info -->
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-emerald-800 text-amber-400 flex items-center justify-center shadow">
+              <i class="fas fa-mountain"></i>
+            </div>
+            <div>
+              <span class="text-xl font-bold font-serif text-white">The Gogaldara</span>
+              <span class="block text-[10px] text-emerald-400 uppercase tracking-wider">Tangmarg, Baramulla, Kashmir</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed mb-6 max-w-sm">
+            An independent informational portal dedicated to celebrating the offbeat beauty, 35-foot Chill Point icicles, pine forests, and heritage of Gogaldara.
+          </p>
+          <div class="flex items-center gap-3 text-slate-400 text-sm">
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-emerald-800 hover:text-white flex items-center justify-center transition-colors" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-emerald-800 hover:text-white flex items-center justify-center transition-colors" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-emerald-800 hover:text-white flex items-center justify-center transition-colors" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-emerald-800 hover:text-white flex items-center justify-center transition-colors" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">Discover</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-amber-400 transition-colors">Home Page</a></li>
+            <li><a href="about.html" class="hover:text-amber-400 transition-colors">About Gogaldara</a></li>
+            <li><a href="explore.html#chill-point" class="hover:text-amber-400 transition-colors">Chill Point Icicles</a></li>
+            <li><a href="gallery.html" class="hover:text-amber-400 transition-colors">Photo Grid</a></li>
+            <li><a href="menu.html" class="hover:text-amber-400 transition-colors">Site Directory</a></li>
+          </ul>
+        </div>
+
+        <!-- Travel Guide Links -->
+        <div>
+          <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">Traveler Info</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="explore.html#how-to-reach" class="hover:text-amber-400 transition-colors">How to Reach</a></li>
+            <li><a href="explore.html#food" class="hover:text-amber-400 transition-colors">Kashmiri Food & Kahwa</a></li>
+            <li><a href="explore.html#activities" class="hover:text-amber-400 transition-colors">Sledging & Treks</a></li>
+            <li><a href="help.html" class="hover:text-amber-400 transition-colors">Travel FAQs</a></li>
+            <li><a href="feedback.html" class="hover:text-amber-400 transition-colors">Submit Review</a></li>
+          </ul>
+        </div>
+
+        <!-- Settings & User -->
+        <div>
+          <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">Account & Tools</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="settings.html" class="hover:text-amber-400 transition-colors">Display Settings</a></li>
+            <li><a href="login.html" class="hover:text-amber-400 transition-colors">Traveler Login</a></li>
+            <li><a href="signup.html" class="hover:text-amber-400 transition-colors">Create Account</a></li>
+            <li><a href="help.html#contact" class="hover:text-amber-400 transition-colors">Help Desk</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Credits & Image Sources -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <div>
+          <span>&copy; 2026 The Gogaldara. Designed by <strong class="text-slate-300 font-semibold">Shahid Mir</strong>.</span>
+        </div>
+        <div class="text-[11px] text-slate-500 text-center sm:text-right">
+          <span>Images sourced from Unsplash & Wikimedia Commons (Kashmir & Alpine Landscapes).</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Shared JavaScript -->
+  <script src="./script.js"></script>
+</body>
+</html>

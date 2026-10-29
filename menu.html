@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Directory & Navigation - All Sections | The Gogaldara</title>
+  <meta name="description" content="Complete directory and table of contents for The Gogaldara portal by Shahid Mir: Explore all guides, attractions, media galleries, account tools, and help resources.">
+  <meta property="og:title" content="Site Directory - The Gogaldara">
+  <meta property="og:description" content="Direct links to every page, guide, and interactive tool across The Gogaldara.">
+  <meta property="og:type" content="website">
+
+  <!-- Tailwind CDN & Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            pine: { 800: '#166534', 900: '#143828', 950: '#0b2218' },
+            saffron: { 500: '#f59e0b', 600: '#d97706' }
+          },
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+            serif: ['Playfair Display', 'Georgia', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Font Awesome CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 antialiased selection:bg-emerald-800 selection:text-white">
+
+  <!-- Loading Preloader -->
+  <div id="preloader" aria-hidden="true">
+    <div class="spinner mb-4"></div>
+    <div class="text-white text-sm font-semibold tracking-widest uppercase">The Gogaldara</div>
+    <div class="text-xs text-amber-400 mt-1">Site Directory</div>
+  </div>
+
+  <!-- Sticky Navbar -->
+  <header class="sticky top-0 z-50 glass-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[72px] flex items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center gap-3 flex-shrink-0 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-900 to-emerald-700 flex items-center justify-center text-amber-400 shadow-md group-hover:scale-105 transition-transform">
+          <i class="fas fa-mountain text-lg"></i>
+        </div>
+        <div>
+          <span class="text-xl font-bold font-serif tracking-tight text-emerald-950 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+            The Gogaldara
+          </span>
+          <span class="block text-[10px] tracking-wider uppercase text-emerald-700 dark:text-emerald-400 font-medium">Tangmarg, Kashmir</span>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-700 dark:text-slate-200" aria-label="Main Navigation">
+        <a href="index.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">Home</a>
+        <a href="about.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">About</a>
+        <a href="explore.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">Explore</a>
+        <a href="gallery.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">Gallery</a>
+        <a href="menu.html" class="text-emerald-800 dark:text-emerald-400 font-semibold border-b-2 border-emerald-800 dark:border-emerald-400 pb-1">Directory</a>
+        <a href="help.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">Help & FAQ</a>
+        <a href="feedback.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">Reviews</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <div class="search-container relative hidden sm:block w-48 md:w-60">
+          <div class="relative">
+            <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+            <input type="text" id="nav-search-input" placeholder="Search directory..." class="w-full bg-slate-100 dark:bg-slate-800/80 text-slate-900 dark:text-white pl-8 pr-3 py-1.5 rounded-full text-xs border border-transparent focus:border-emerald-600 outline-none transition-all">
+          </div>
+        </div>
+
+        <div class="relative">
+          <button id="notif-bell-btn" class="w-9 h-9 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 flex items-center justify-center transition-colors relative" aria-label="Notifications">
+            <i class="fas fa-bell text-sm"></i>
+            <span id="notif-badge" class="absolute top-1 right-1 w-4 h-4 rounded-full bg-amber-500 text-white text-[9px] font-bold flex items-center justify-center shadow">2</span>
+          </button>
+          <div id="notif-dropdown" class="notification-menu">
+            <div class="p-3 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between">
+              <span class="text-xs font-semibold uppercase tracking-wider">Alerts & Updates</span>
+              <button id="notif-mark-all" class="text-[11px] text-emerald-600 hover:underline">Mark all read</button>
+            </div>
+            <div id="notif-list" class="max-h-72 overflow-y-auto divide-y divide-slate-100 dark:divide-slate-800"></div>
+          </div>
+        </div>
+
+        <button class="theme-toggle-btn w-9 h-9 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center transition-colors" aria-label="Toggle Dark Mode">
+          <i class="fas fa-moon theme-toggle-icon text-slate-700 text-sm"></i>
+        </button>
+
+        <a href="settings.html" class="w-9 h-9 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 hidden sm:flex items-center justify-center transition-colors" title="Settings">
+          <i class="fas fa-cog text-sm"></i>
+        </a>
+
+        <div class="nav-auth-container hidden sm:block"></div>
+
+        <button id="hamburger-btn" class="lg:hidden w-9 h-9 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-200">
+          <i class="fas fa-bars text-lg"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="drawer-backdrop" class="drawer-backdrop"></div>
+  <aside id="mobile-drawer" class="mobile-drawer p-5 flex flex-col justify-between">
+    <div>
+      <div class="flex items-center justify-between pb-4 border-b border-slate-100 dark:border-slate-800">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-lg bg-emerald-900 text-amber-400 flex items-center justify-center font-bold">
+            <i class="fas fa-mountain text-sm"></i>
+          </div>
+          <span class="font-serif font-bold text-slate-900 dark:text-white">The Gogaldara</span>
+        </div>
+        <button id="close-drawer-btn" class="w-8 h-8 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center text-slate-500">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <nav class="space-y-1 text-sm font-medium mt-6">
+        <a href="index.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-home w-5 text-center"></i> Home</a>
+        <a href="about.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-info-circle w-5 text-center"></i> About Gogaldara</a>
+        <a href="explore.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-compass w-5 text-center"></i> Explore & Travel Guide</a>
+        <a href="gallery.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-images w-5 text-center"></i> Photo Gallery</a>
+        <a href="menu.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 text-emerald-800 dark:text-emerald-300 font-semibold"><i class="fas fa-sitemap w-5 text-center text-indigo-600"></i> Site Directory</a>
+        <a href="settings.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-sliders-h w-5 text-center"></i> Settings</a>
+        <a href="help.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-question-circle w-5 text-center"></i> Help & FAQs</a>
+        <a href="feedback.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-star w-5 text-center"></i> Reviews</a>
+      </nav>
+    </div>
+    <div class="pt-6 border-t border-slate-100 dark:border-slate-800">
+      <div class="nav-auth-container"></div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="flex-grow py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs font-bold uppercase tracking-wider text-emerald-800 dark:text-emerald-400">Complete Site Index</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-serif text-slate-900 dark:text-white mt-2 mb-4">
+          The Gogaldara Directory
+        </h1>
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400">
+          Direct navigation to all 10 pages and dedicated sections. Discover attractions, research travel routes, adjust settings, and submit reviews.
+        </p>
+      </div>
+
+      <!-- Categories Mega Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Category 1: Discover & Overview -->
+        <div class="nature-card p-6 reveal">
+          <div class="flex items-center gap-3 mb-4 pb-3 border-b border-slate-100 dark:border-slate-800">
+            <div class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 flex items-center justify-center font-bold">
+              <i class="fas fa-home"></i>
+            </div>
+            <div>
+              <h2 class="text-lg font-bold font-serif text-slate-900 dark:text-white">Home & Discovery</h2>
+              <span class="text-[11px] text-slate-400">Overview & Curator Note</span>
+            </div>
+          </div>
+          <ul class="space-y-3 text-xs">
+            <li>
+              <a href="index.html" class="font-semibold text-emerald-800 dark:text-emerald-400 hover:text-amber-600 flex items-center justify-between">
+                <span>Main Home Page</span>
+                <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+              <p class="text-slate-500 dark:text-slate-400 mt-0.5">Hero image slider, welcome message from Shahid Mir, and quick facts.</p>
+            </li>
+            <li>
+              <a href="about.html" class="font-semibold text-slate-800 dark:text-slate-200 hover:text-emerald-700 flex items-center justify-between">
+                <span>About Gogaldara</span>
+                <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+              <p class="text-slate-500 dark:text-slate-400 mt-0.5">Tehsil Tangmarg location, pastoral roots, and rise as an offbeat gem.</p>
+            </li>
+            <li>
+              <a href="about.html#geography" class="font-semibold text-slate-800 dark:text-slate-200 hover:text-emerald-700 flex items-center justify-between">
+                <span>Geography & Terrain</span>
+                <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+              <p class="text-slate-500 dark:text-slate-400 mt-0.5">Pir Panjal sub-alpine slopes, deodar pine ecology, and elevation.</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Category 2: Places & Field Guide -->
+        <div class="nature-card p-6 reveal">
+          <div class="flex items-center gap-3 mb-4 pb-3 border-b border-slate-100 dark:border-slate-800">
+            <div class="w-10 h-10 rounded-xl bg-sky-100 dark:bg-sky-950/60 text-sky-600 dark:text-sky-300 flex items-center justify-center font-bold">
+              <i class="fas fa-compass"></i>
+            </div>
+            <div>
+              <h2 class="text-lg font-bold font-serif text-slate-900 dark:text-white">Places & Transit</h2>
+              <span class="text-[11px] text-slate-400">Field Guide & Maps</span>
+            </div>
+          </div>
+          <ul class="space-y-3 text-xs">
+            <li>
+              <a href="explore.html#chill-point" class="font-semibold text-sky-600 dark:text-sky-400 hover:text-amber-600 flex items-center justify-between">
+                <span>Chill Point Icicles (35 ft)</span>
+                <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+              <p class="text-slate-500 dark:text-slate-400 mt-0.5">The signature natural winter ice canyon and photo vantage.</p>
+            </li>
+            <li>
+              <a href="explore.html#how-to-reach" class="font-semibold text-slate-800 dark:text-slate-200 hover:text-emerald-700 flex items-center justify-between">
+                <span>How to Reach Logistics</span>
+                <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+              <p class="text-slate-500 dark:text-slate-400 mt-0.5">Srinagar Airport (60 km), Tangmarg taxi stand (13 km), and road advice.</p>
+            </li>
+            <li>
+              <a href="explore.html#map" class="font-semibold text-slate-800 dark:text-slate-200 hover:text-emerald-700 flex items-center justify-between">
+                <span>Interactive Regional Map</span>
+                <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+              <p class="text-slate-500 dark:text-slate-400 mt-0.5">OpenStreetMap embed centered on Tangmarg & Gogaldara coordinates.</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Category 3: Cuisine & Culture -->
+        <div class="nature-card p-6 reveal">
+          <div class="flex items-center gap-3 mb-4 pb-3 border-b border-slate-100 dark:border-slate-800">
+            <div class="w-10 h-10 rounded-xl bg-amber-100 dark:bg-amber-950/60 text-amber-600 dark:text-amber-300 flex items-center justify-center font-bold">
+              <i class="fas fa-mug-hot"></i>
+            </div>
+            <div>
+              <h2 class="text-lg font-bold font-serif text-slate-900 dark:text-white">Cuisine & Culture</h2>
+              <span class="text-[11px] text-slate-400">Hospitality & Food</span>
+            </div>
+          </div>
+          <ul class="space-y-3 text-xs">
+            <li>
+              <a href="explore.html#food" class="font-semibold text-amber-600 dark:text-amber-400 hover:text-emerald-700 flex items-center justify-between">
+                <span>Traditional Kashmiri Food</span>
+                <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+              <p class="text-slate-500 dark:text-slate-400 mt-0.5">Kahwa tea, Makki ki Roti with butter, and slow-cooked Wazwan.</p>
+            </li>
+            <li>
+              <a href="about.html#culture" class="font-semibold text-slate-800 dark:text-slate-200 hover:text-emerald-700 flex items-center justify-between">
+                <span>Gujjar Heritage & Hearths</span>
+                <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+              <p class="text-slate-500 dark:text-slate-400 mt-0.5">Kangri heating, wool pherans, and sustainable ecotourism principles.</p>
+            </li>
+            <li>
+              <a href="explore.html#activities" class="font-semibold text-slate-800 dark:text-slate-200 hover:text-emerald-700 flex items-center justify-between">
+                <span>Activities & Treks</span>
+                <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+              <p class="text-slate-500 dark:text-slate-400 mt-0.5">Snow sledging, pine forest walks, and summer meadow picnics.</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Category 4: Photography & Gallery -->
+        <div class="nature-card p-6 reveal">
+          <div class="flex items-center gap-3 mb-4 pb-3 border-b border-slate-100 dark:border-slate-800">
+            <div class="w-10 h-10 rounded-xl bg-purple-100 dark:bg-purple-950/60 text-purple-600 dark:text-purple-300 flex items-center justify-center font-bold">
+              <i class="fas fa-images"></i>
+            </div>
+            <div>
+              <h2 class="text-lg font-bold font-serif text-slate-900 dark:text-white">Visual Media</h2>
+              <span class="text-[11px] text-slate-400">Photos & Lightbox</span>
+            </div>
+          </div>
+          <ul class="space-y-3 text-xs">
+            <li>
+              <a href="gallery.html" class="font-semibold text-purple-600 dark:text-purple-400 hover:text-amber-600 flex items-center justify-between">
+                <span>Full Photo Gallery</span>
+                <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+              <p class="text-slate-500 dark:text-slate-400 mt-0.5">Filter by Winter, Meadows, Forests, and Village life.</p>
+            </li>
+            <li>
+              <a href="gallery.html" class="font-semibold text-slate-800 dark:text-slate-200 hover:text-emerald-700 flex items-center justify-between">
+                <span>Click-to-Zoom Lightbox</span>
+                <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+              <p class="text-slate-500 dark:text-slate-400 mt-0.5">High-definition modal viewer with captions and keyboard controls.</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Category 5: Account & Personalization -->
+        <div class="nature-card p-6 reveal">
+          <div class="flex items-center gap-3 mb-4 pb-3 border-b border-slate-100 dark:border-slate-800">
+            <div class="w-10 h-10 rounded-xl bg-teal-100 dark:bg-teal-950/60 text-teal-600 dark:text-teal-300 flex items-center justify-center font-bold">
+              <i class="fas fa-user-circle"></i>
+            </div>
+            <div>
+              <h2 class="text-lg font-bold font-serif text-slate-900 dark:text-white">Account & Preferences</h2>
+              <span class="text-[11px] text-slate-400">Forms & Settings</span>
+            </div>
+          </div>
+          <ul class="space-y-3 text-xs">
+            <li>
+              <a href="login.html" class="font-semibold text-slate-800 dark:text-slate-200 hover:text-emerald-700 flex items-center justify-between">
+                <span>Traveler Login</span>
+                <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+              <p class="text-slate-500 dark:text-slate-400 mt-0.5">Form validation, show/hide password, and localStorage session.</p>
+            </li>
+            <li>
+              <a href="signup.html" class="font-semibold text-slate-800 dark:text-slate-200 hover:text-emerald-700 flex items-center justify-between">
+                <span>Sign Up / Register</span>
+                <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+              <p class="text-slate-500 dark:text-slate-400 mt-0.5">Real-time password strength meter and account creation.</p>
+            </li>
+            <li>
+              <a href="settings.html" class="font-semibold text-teal-600 dark:text-teal-400 hover:text-amber-600 flex items-center justify-between">
+                <span>Display Settings</span>
+                <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+              <p class="text-slate-500 dark:text-slate-400 mt-0.5">Dark/light mode, font sizes, language options, and notifications.</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Category 6: Community & Support -->
+        <div class="nature-card p-6 reveal">
+          <div class="flex items-center gap-3 mb-4 pb-3 border-b border-slate-100 dark:border-slate-800">
+            <div class="w-10 h-10 rounded-xl bg-rose-100 dark:bg-rose-950/60 text-rose-600 dark:text-rose-300 flex items-center justify-center font-bold">
+              <i class="fas fa-life-ring"></i>
+            </div>
+            <div>
+              <h2 class="text-lg font-bold font-serif text-slate-900 dark:text-white">Community & Help</h2>
+              <span class="text-[11px] text-slate-400">FAQs & Reviews</span>
+            </div>
+          </div>
+          <ul class="space-y-3 text-xs">
+            <li>
+              <a href="help.html" class="font-semibold text-rose-600 dark:text-rose-400 hover:text-amber-600 flex items-center justify-between">
+                <span>Travel Help & FAQs</span>
+                <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+              <p class="text-slate-500 dark:text-slate-400 mt-0.5">Searchable accordion with answers on weather, gear, and cabs.</p>
+            </li>
+            <li>
+              <a href="help.html#contact" class="font-semibold text-slate-800 dark:text-slate-200 hover:text-emerald-700 flex items-center justify-between">
+                <span>Contact Desk</span>
+                <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+              <p class="text-slate-500 dark:text-slate-400 mt-0.5">Reach curator Shahid Mir and local tourism coordinators.</p>
+            </li>
+            <li>
+              <a href="feedback.html" class="font-semibold text-slate-800 dark:text-slate-200 hover:text-emerald-700 flex items-center justify-between">
+                <span>Reviews & Star Rating</span>
+                <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+              <p class="text-slate-500 dark:text-slate-400 mt-0.5">Submit your travel feedback and read verified visitor impressions.</p>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="bg-slate-900 text-slate-300 pt-16 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-emerald-800 text-amber-400 flex items-center justify-center shadow">
+              <i class="fas fa-mountain"></i>
+            </div>
+            <div>
+              <span class="text-xl font-bold font-serif text-white">The Gogaldara</span>
+              <span class="block text-[10px] text-emerald-400 uppercase tracking-wider">Tangmarg, Baramulla, Kashmir</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed mb-6 max-w-sm">
+            Curated by Shahid Mir to share the real beauty, geography, and hospitality of Gogaldara in Tangmarg.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">Discover</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-amber-400">Home</a></li>
+            <li><a href="about.html" class="hover:text-amber-400">About</a></li>
+            <li><a href="explore.html" class="hover:text-amber-400">Explore</a></li>
+            <li><a href="gallery.html" class="hover:text-amber-400">Gallery</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">Traveler Info</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="explore.html#how-to-reach" class="hover:text-amber-400">How to Reach</a></li>
+            <li><a href="explore.html#food" class="hover:text-amber-400">Kashmiri Cuisine</a></li>
+            <li><a href="help.html" class="hover:text-amber-400">Help & FAQs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">Preferences</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="settings.html" class="hover:text-amber-400">Settings</a></li>
+            <li><a href="feedback.html" class="hover:text-amber-400">Feedback</a></li>
+            <li><a href="login.html" class="hover:text-amber-400">Traveler Login</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <div>&copy; 2026 The Gogaldara. Designed by <strong class="text-slate-300 font-semibold">Shahid Mir</strong>.</div>
+        <div class="text-[11px]">Images sourced from Unsplash & Wikimedia Commons (Kashmir & Alpine Landscapes).</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>

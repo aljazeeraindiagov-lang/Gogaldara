@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traveler Help & FAQs - The Gogaldara | Curated by Shahid Mir</title>
+  <meta name="description" content="Frequently asked questions about visiting Gogaldara in Tangmarg Baramulla: road conditions, winter gear, taxi costs, mobile network coverage, and direct contact details.">
+  <meta property="og:title" content="Help & FAQs - The Gogaldara">
+  <meta property="og:description" content="Frequently asked traveler questions and direct contact desk.">
+  <meta property="og:type" content="website">
+
+  <!-- Tailwind CDN & Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            pine: { 800: '#166534', 900: '#143828', 950: '#0b2218' },
+            saffron: { 500: '#f59e0b', 600: '#d97706' }
+          },
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+            serif: ['Playfair Display', 'Georgia', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Font Awesome CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 antialiased selection:bg-emerald-800 selection:text-white flex flex-col min-h-screen">
+
+  <!-- Loading Preloader -->
+  <div id="preloader" aria-hidden="true">
+    <div class="spinner mb-4"></div>
+    <div class="text-white text-sm font-semibold tracking-widest uppercase">The Gogaldara</div>
+    <div class="text-xs text-amber-400 mt-1">Travel Help & FAQs</div>
+  </div>
+
+  <!-- Sticky Navbar -->
+  <header class="sticky top-0 z-50 glass-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[72px] flex items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center gap-3 flex-shrink-0 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-900 to-emerald-700 flex items-center justify-center text-amber-400 shadow-md group-hover:scale-105 transition-transform">
+          <i class="fas fa-mountain text-lg"></i>
+        </div>
+        <div>
+          <span class="text-xl font-bold font-serif tracking-tight text-emerald-950 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+            The Gogaldara
+          </span>
+          <span class="block text-[10px] tracking-wider uppercase text-emerald-700 dark:text-emerald-400 font-medium">Tangmarg, Kashmir</span>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-700 dark:text-slate-200" aria-label="Main Navigation">
+        <a href="index.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">Home</a>
+        <a href="about.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">About</a>
+        <a href="explore.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">Explore</a>
+        <a href="gallery.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">Gallery</a>
+        <a href="menu.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">Directory</a>
+        <a href="help.html" class="text-emerald-800 dark:text-emerald-400 font-semibold border-b-2 border-emerald-800 dark:border-emerald-400 pb-1">Help & FAQ</a>
+        <a href="feedback.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">Reviews</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <button class="theme-toggle-btn w-9 h-9 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center transition-colors" aria-label="Toggle Dark Mode">
+          <i class="fas fa-moon theme-toggle-icon text-slate-700 text-sm"></i>
+        </button>
+
+        <a href="settings.html" class="w-9 h-9 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 hidden sm:flex items-center justify-center transition-colors" title="Settings">
+          <i class="fas fa-cog text-sm"></i>
+        </a>
+
+        <div class="nav-auth-container hidden sm:block"></div>
+
+        <button id="hamburger-btn" class="lg:hidden w-9 h-9 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-200">
+          <i class="fas fa-bars text-lg"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="drawer-backdrop" class="drawer-backdrop"></div>
+  <aside id="mobile-drawer" class="mobile-drawer p-5 flex flex-col justify-between">
+    <div>
+      <div class="flex items-center justify-between pb-4 border-b border-slate-100 dark:border-slate-800">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-lg bg-emerald-900 text-amber-400 flex items-center justify-center font-bold">
+            <i class="fas fa-mountain text-sm"></i>
+          </div>
+          <span class="font-serif font-bold text-slate-900 dark:text-white">The Gogaldara</span>
+        </div>
+        <button id="close-drawer-btn" class="w-8 h-8 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center text-slate-500">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <nav class="space-y-1 text-sm font-medium mt-6">
+        <a href="index.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-home w-5 text-center"></i> Home</a>
+        <a href="about.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-info-circle w-5 text-center"></i> About</a>
+        <a href="explore.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-compass w-5 text-center"></i> Explore</a>
+        <a href="gallery.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-images w-5 text-center"></i> Gallery</a>
+        <a href="menu.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-sitemap w-5 text-center"></i> Directory</a>
+        <a href="settings.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-sliders-h w-5 text-center"></i> Settings</a>
+        <a href="help.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 text-emerald-800 dark:text-emerald-300 font-semibold"><i class="fas fa-question-circle w-5 text-center text-rose-600"></i> Help & FAQs</a>
+        <a href="feedback.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-star w-5 text-center"></i> Reviews</a>
+      </nav>
+    </div>
+    <div class="pt-6 border-t border-slate-100 dark:border-slate-800">
+      <div class="nav-auth-container"></div>
+    </div>
+  </aside>
+
+  <!-- Help & FAQ Main Content -->
+  <main class="flex-grow py-12 md:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Page Header -->
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="text-xs font-bold uppercase tracking-wider text-rose-600 dark:text-rose-400">Travel Assistance & FAQ</span>
+        <h1 class="text-3xl sm:text-4xl font-bold font-serif text-slate-900 dark:text-white mt-1 mb-3">
+          Frequently Asked Questions
+        </h1>
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
+          Essential answers for travelers planning a trip to Gogaldara, Tangmarg, and Chill Point.
+        </p>
+      </div>
+
+      <!-- Live FAQ Search -->
+      <div class="relative max-w-lg mx-auto mb-10">
+        <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+        <input 
+          type="text" 
+          id="faq-search-input"
+          placeholder="Filter FAQs: 'icicles', 'cabs', 'permits', 'network'..." 
+          class="w-full bg-white dark:bg-slate-900 text-slate-900 dark:text-white pl-11 pr-4 py-3 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm focus:border-emerald-600 outline-none text-xs sm:text-sm transition-all"
+        >
+      </div>
+
+      <!-- FAQ Accordion List -->
+      <div class="space-y-4 mb-16" id="faq-list">
+        
+        <!-- FAQ 1 -->
+        <div class="nature-card accordion-item active overflow-hidden">
+          <button class="accordion-header w-full p-5 text-left flex items-center justify-between gap-4 font-semibold text-sm sm:text-base text-slate-900 dark:text-white hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors" aria-expanded="true">
+            <span class="flex items-center gap-3">
+              <i class="fas fa-icicles text-sky-500 text-sm"></i>
+              What is the best month to see the 35-foot icicles at Chill Point?
+            </span>
+            <i class="fas fa-chevron-down accordion-icon text-slate-400 text-xs transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content px-5 pb-5 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-100 dark:border-slate-800/80 pt-3">
+            The colossal natural icicle cascades at Chill Point form during peak winter freeze—typically starting from <strong>late December through late January and early February</strong>. During this window, sub-zero temperatures solidify natural mountain seepages into monolithic ice walls against the pine trees.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="nature-card accordion-item overflow-hidden">
+          <button class="accordion-header w-full p-5 text-left flex items-center justify-between gap-4 font-semibold text-sm sm:text-base text-slate-900 dark:text-white hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors" aria-expanded="false">
+            <span class="flex items-center gap-3">
+              <i class="fas fa-route text-emerald-600 text-sm"></i>
+              How do I get to Gogaldara from Srinagar and Tangmarg?
+            </span>
+            <i class="fas fa-chevron-down accordion-icon text-slate-400 text-xs transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content px-5 pb-5 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-100 dark:border-slate-800/80 pt-3">
+            From Srinagar International Airport or city center, take the smooth Srinagar-Gulmarg highway to Tangmarg town (~47–50 km, approx. 1 hr 15 mins). At Tangmarg, take the scenic mountain road leading ~13 km into Gogaldara. Local taxis are readily available at the Tangmarg taxi terminal.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="nature-card accordion-item overflow-hidden">
+          <button class="accordion-header w-full p-5 text-left flex items-center justify-between gap-4 font-semibold text-sm sm:text-base text-slate-900 dark:text-white hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors" aria-expanded="false">
+            <span class="flex items-center gap-3">
+              <i class="fas fa-shield-alt text-amber-500 text-sm"></i>
+              Do I need a special permit or pass to visit Gogaldara?
+            </span>
+            <i class="fas fa-chevron-down accordion-icon text-slate-400 text-xs transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content px-5 pb-5 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-100 dark:border-slate-800/80 pt-3">
+            No special inner-line permit or entry fee is required for either Indian citizens or international travelers to enter Gogaldara or Tangmarg. You only need valid government ID proof for standard Kashmir travel and hotel registrations.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="nature-card accordion-item overflow-hidden">
+          <button class="accordion-header w-full p-5 text-left flex items-center justify-between gap-4 font-semibold text-sm sm:text-base text-slate-900 dark:text-white hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors" aria-expanded="false">
+            <span class="flex items-center gap-3">
+              <i class="fas fa-car text-teal-600 text-sm"></i>
+              Are anti-skid tyre chains necessary for driving in winter?
+            </span>
+            <i class="fas fa-chevron-down accordion-icon text-slate-400 text-xs transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content px-5 pb-5 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-100 dark:border-slate-800/80 pt-3">
+            Yes! Following any fresh winter snowfall, local traffic authorities enforce tyre chains or 4x4 vehicles on roads between Tangmarg and Gogaldara / Gulmarg due to treacherous black ice. Chain fitting services are widely available right at the Tangmarg entry checkpoint.
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="nature-card accordion-item overflow-hidden">
+          <button class="accordion-header w-full p-5 text-left flex items-center justify-between gap-4 font-semibold text-sm sm:text-base text-slate-900 dark:text-white hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors" aria-expanded="false">
+            <span class="flex items-center gap-3">
+              <i class="fas fa-signal text-rose-500 text-sm"></i>
+              What mobile phone network works in Gogaldara?
+            </span>
+            <i class="fas fa-chevron-down accordion-icon text-slate-400 text-xs transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content px-5 pb-5 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-100 dark:border-slate-800/80 pt-3">
+            <strong>Postpaid connections</strong> of Reliance Jio and Airtel have the strongest 4G/5G signals throughout Tangmarg and the lower slopes of Gogaldara. Please note that prepaid SIM cards issued outside Jammu and Kashmir do not roam in J&K due to national security regulations.
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="nature-card accordion-item overflow-hidden">
+          <button class="accordion-header w-full p-5 text-left flex items-center justify-between gap-4 font-semibold text-sm sm:text-base text-slate-900 dark:text-white hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors" aria-expanded="false">
+            <span class="flex items-center gap-3">
+              <i class="fas fa-bed text-indigo-500 text-sm"></i>
+              What accommodation options exist in Gogaldara?
+            </span>
+            <i class="fas fa-chevron-down accordion-icon text-slate-400 text-xs transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content px-5 pb-5 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-100 dark:border-slate-800/80 pt-3">
+            Tangmarg town features numerous cozy guest houses, boutique resorts, and tourist bungalows. Within Gogaldara itself, traditional Kashmiri village homestays and eco-camps operate, offering an intimate, genuine taste of mountain hospitality and home-cooked meals.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Contact Details & Curator Message Card -->
+      <section id="contact" class="nature-card p-8 sm:p-10 reveal">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-400 flex items-center justify-center mb-3">
+              <i class="fas fa-envelope-open-text"></i>
+            </div>
+            <h2 class="text-2xl font-bold font-serif text-slate-900 dark:text-white mb-2">
+              Community & Curator Desk
+            </h2>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+              Have specific questions about winter road passes, hiring local village guides, or organizing photography excursions in Gogaldara? Reach out to <strong>Shahid Mir</strong> and the community desk.
+            </p>
+
+            <div class="space-y-3 text-xs">
+              <div class="flex items-center gap-3">
+                <i class="fas fa-map-marker-alt text-emerald-700 w-4"></i>
+                <span class="text-slate-700 dark:text-slate-300">Tangmarg Tehsil, Baramulla, Kashmir 193402</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fas fa-envelope text-emerald-700 w-4"></i>
+                <a href="mailto:contact@thegogaldara.com" class="text-emerald-800 dark:text-emerald-400 hover:underline">contact@thegogaldara.com</a>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fas fa-user-tie text-emerald-700 w-4"></i>
+                <span class="text-slate-700 dark:text-slate-300">Curator: Shahid Mir</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Message Form -->
+          <div class="bg-slate-50 dark:bg-slate-800/60 p-6 rounded-2xl border border-slate-200 dark:border-slate-700/60">
+            <h3 class="text-sm font-semibold text-slate-900 dark:text-white mb-3">
+              Send a Travel Query
+            </h3>
+            <form id="help-query-form" class="space-y-3" onsubmit="event.preventDefault(); showToast('Your query was dispatched to the travel desk!', 'success'); this.reset();">
+              <div>
+                <input type="text" required placeholder="Your Name" class="w-full bg-white dark:bg-slate-900 text-slate-900 dark:text-white px-3 py-2 rounded-xl text-xs border border-slate-200 dark:border-slate-700 outline-none focus:border-emerald-700">
+              </div>
+              <div>
+                <input type="email" required placeholder="Your Email" class="w-full bg-white dark:bg-slate-900 text-slate-900 dark:text-white px-3 py-2 rounded-xl text-xs border border-slate-200 dark:border-slate-700 outline-none focus:border-emerald-700">
+              </div>
+              <div>
+                <textarea rows="3" required placeholder="How can we assist your trip to Gogaldara?" class="w-full bg-white dark:bg-slate-900 text-slate-900 dark:text-white px-3 py-2 rounded-xl text-xs border border-slate-200 dark:border-slate-700 outline-none focus:border-emerald-700 resize-none"></textarea>
+              </div>
+              <button type="submit" class="w-full py-2.5 rounded-xl bg-emerald-800 hover:bg-emerald-700 text-white font-semibold text-xs transition-colors flex items-center justify-center gap-2">
+                <span>Submit Query</span>
+                <i class="fas fa-paper-plane text-[10px]"></i>
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="bg-slate-900 text-slate-400 py-6 text-xs text-center border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4">
+      &copy; 2026 The Gogaldara. Designed by <strong class="text-slate-200">Shahid Mir</strong>. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>

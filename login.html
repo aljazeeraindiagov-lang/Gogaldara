@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traveler Login - The Gogaldara | Curated by Shahid Mir</title>
+  <meta name="description" content="Log in to your Gogaldara traveler account. Access custom itineraries, save favorite photo spots, and submit travel reviews.">
+  <meta property="og:title" content="Login - The Gogaldara">
+  <meta property="og:description" content="Access your personalized Gogaldara trip portal.">
+  <meta property="og:type" content="website">
+
+  <!-- Tailwind CDN & Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            pine: { 800: '#166534', 900: '#143828', 950: '#0b2218' },
+            saffron: { 500: '#f59e0b', 600: '#d97706' }
+          },
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+            serif: ['Playfair Display', 'Georgia', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Font Awesome CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 antialiased selection:bg-emerald-800 selection:text-white flex flex-col min-h-screen">
+
+  <!-- Loading Preloader -->
+  <div id="preloader" aria-hidden="true">
+    <div class="spinner mb-4"></div>
+    <div class="text-white text-sm font-semibold tracking-widest uppercase">The Gogaldara</div>
+    <div class="text-xs text-amber-400 mt-1">Traveler Login</div>
+  </div>
+
+  <!-- Sticky Navbar -->
+  <header class="sticky top-0 z-50 glass-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[72px] flex items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center gap-3 flex-shrink-0 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-900 to-emerald-700 flex items-center justify-center text-amber-400 shadow-md group-hover:scale-105 transition-transform">
+          <i class="fas fa-mountain text-lg"></i>
+        </div>
+        <div>
+          <span class="text-xl font-bold font-serif tracking-tight text-emerald-950 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+            The Gogaldara
+          </span>
+          <span class="block text-[10px] tracking-wider uppercase text-emerald-700 dark:text-emerald-400 font-medium">Tangmarg, Kashmir</span>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-700 dark:text-slate-200" aria-label="Main Navigation">
+        <a href="index.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">Home</a>
+        <a href="about.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">About</a>
+        <a href="explore.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">Explore</a>
+        <a href="gallery.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">Gallery</a>
+        <a href="menu.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">Directory</a>
+        <a href="help.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">Help & FAQ</a>
+        <a href="feedback.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">Reviews</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <button class="theme-toggle-btn w-9 h-9 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center transition-colors" aria-label="Toggle Dark Mode">
+          <i class="fas fa-moon theme-toggle-icon text-slate-700 text-sm"></i>
+        </button>
+        <a href="signup.html" class="text-xs font-semibold bg-emerald-800 hover:bg-emerald-700 text-white px-3.5 py-1.5 rounded-lg shadow-sm transition-all">
+          Sign Up
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Login Main Content -->
+  <main class="flex-grow flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-md w-full space-y-8 nature-card p-8 sm:p-10 reveal">
+      
+      <div class="text-center">
+        <div class="w-12 h-12 rounded-2xl bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-400 flex items-center justify-center text-xl mx-auto mb-3 shadow-inner">
+          <i class="fas fa-key"></i>
+        </div>
+        <h1 class="text-2xl sm:text-3xl font-bold font-serif text-slate-900 dark:text-white">
+          Welcome Back
+        </h1>
+        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+          Enter your credentials to manage your Gogaldara trip preferences.
+        </p>
+      </div>
+
+      <!-- Demo Account Quick Fill Pill -->
+      <div class="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-900/40 rounded-xl p-3 flex items-center justify-between text-xs text-amber-900 dark:text-amber-200">
+        <div>
+          <span class="font-bold block">Demo Traveler:</span>
+          <span class="text-[11px] opacity-80">traveler@gogaldara.com</span>
+        </div>
+        <button type="button" id="fill-demo-btn" class="px-2.5 py-1 rounded bg-amber-500 text-slate-950 font-semibold hover:bg-amber-400 transition-colors text-[11px]">
+          Quick Fill
+        </button>
+      </div>
+
+      <!-- Login Form -->
+      <form id="login-form" class="mt-6 space-y-5" novalidate>
+        
+        <!-- Email Field -->
+        <div>
+          <label for="login-email" class="block text-xs font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5">
+            Email Address
+          </label>
+          <div class="relative">
+            <i class="fas fa-envelope absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+            <input 
+              id="login-email" 
+              name="email" 
+              type="email" 
+              required 
+              placeholder="e.g. traveler@kashmir.com"
+              class="w-full bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white pl-10 pr-3 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 focus:border-emerald-700 focus:ring-1 focus:ring-emerald-700 outline-none text-xs transition-all"
+            >
+          </div>
+        </div>
+
+        <!-- Password Field with Show/Hide -->
+        <div>
+          <div class="flex items-center justify-between mb-1.5">
+            <label for="login-password" class="block text-xs font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300">
+              Password
+            </label>
+            <a href="help.html#contact" class="text-[11px] text-emerald-700 dark:text-emerald-400 hover:underline">Forgot password?</a>
+          </div>
+          <div class="relative">
+            <i class="fas fa-lock absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+            <input 
+              id="login-password" 
+              name="password" 
+              type="password" 
+              required 
+              placeholder="••••••••"
+              class="w-full bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white pl-10 pr-10 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 focus:border-emerald-700 focus:ring-1 focus:ring-emerald-700 outline-none text-xs transition-all"
+            >
+            <button 
+              type="button" 
+              class="password-toggle-btn absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-xs" 
+              data-target="login-password"
+              aria-label="Toggle password visibility"
+            >
+              <i class="fas fa-eye text-slate-400"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Remember Me Checkbox -->
+        <div class="flex items-center justify-between">
+          <div class="flex items-center">
+            <input id="remember-me" name="remember-me" type="checkbox" checked class="h-4 w-4 text-emerald-800 focus:ring-emerald-700 border-slate-300 rounded cursor-pointer">
+            <label for="remember-me" class="ml-2 block text-xs text-slate-600 dark:text-slate-400 cursor-pointer">
+              Remember me on this device
+            </label>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div>
+          <button 
+            type="submit" 
+            class="w-full py-3 px-4 rounded-xl text-white bg-emerald-800 hover:bg-emerald-700 font-semibold text-xs uppercase tracking-wider shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2"
+          >
+            <span>Log In to The Gogaldara</span>
+            <i class="fas fa-sign-in-alt text-xs"></i>
+          </button>
+        </div>
+
+      </form>
+
+      <!-- Switch to Sign Up -->
+      <div class="text-center pt-4 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-500">
+        <span>Don't have an account yet? </span>
+        <a href="signup.html" class="font-semibold text-emerald-800 dark:text-emerald-400 hover:text-amber-600 hover:underline">
+          Create Account
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="bg-slate-900 text-slate-400 py-6 text-xs text-center border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4">
+      &copy; 2026 The Gogaldara. Designed by <strong class="text-slate-200">Shahid Mir</strong>. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+  <script>
+    // Quick Demo autofill
+    const demoBtn = document.getElementById('fill-demo-btn');
+    if (demoBtn) {
+      demoBtn.addEventListener('click', () => {
+        document.getElementById('login-email').value = 'traveler@gogaldara.com';
+        document.getElementById('login-password').value = 'Kashmir@2026!';
+        showToast('Demo credentials inserted', 'info');
+      });
+    }
+  </script>
+</body>
+</html>

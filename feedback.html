@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traveler Feedback & Reviews - The Gogaldara | Curated by Shahid Mir</title>
+  <meta name="description" content="Share your impressions and rate your trip to Gogaldara in Tangmarg Kashmir. Read genuine traveler experiences of Chill Point, local homestays, and pine treks.">
+  <meta property="og:title" content="Traveler Reviews - The Gogaldara">
+  <meta property="og:description" content="Rate your trip and submit feedback for The Gogaldara.">
+  <meta property="og:type" content="website">
+
+  <!-- Tailwind CDN & Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            pine: { 800: '#166534', 900: '#143828', 950: '#0b2218' },
+            saffron: { 500: '#f59e0b', 600: '#d97706' }
+          },
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+            serif: ['Playfair Display', 'Georgia', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Font Awesome CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 antialiased selection:bg-emerald-800 selection:text-white flex flex-col min-h-screen">
+
+  <!-- Loading Preloader -->
+  <div id="preloader" aria-hidden="true">
+    <div class="spinner mb-4"></div>
+    <div class="text-white text-sm font-semibold tracking-widest uppercase">The Gogaldara</div>
+    <div class="text-xs text-amber-400 mt-1">Traveler Feedback</div>
+  </div>
+
+  <!-- Sticky Navbar -->
+  <header class="sticky top-0 z-50 glass-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[72px] flex items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center gap-3 flex-shrink-0 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-900 to-emerald-700 flex items-center justify-center text-amber-400 shadow-md group-hover:scale-105 transition-transform">
+          <i class="fas fa-mountain text-lg"></i>
+        </div>
+        <div>
+          <span class="text-xl font-bold font-serif tracking-tight text-emerald-950 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+            The Gogaldara
+          </span>
+          <span class="block text-[10px] tracking-wider uppercase text-emerald-700 dark:text-emerald-400 font-medium">Tangmarg, Kashmir</span>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-700 dark:text-slate-200" aria-label="Main Navigation">
+        <a href="index.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">Home</a>
+        <a href="about.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">About</a>
+        <a href="explore.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">Explore</a>
+        <a href="gallery.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">Gallery</a>
+        <a href="menu.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">Directory</a>
+        <a href="help.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">Help & FAQ</a>
+        <a href="feedback.html" class="text-emerald-800 dark:text-emerald-400 font-semibold border-b-2 border-emerald-800 dark:border-emerald-400 pb-1">Reviews</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <button class="theme-toggle-btn w-9 h-9 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center transition-colors" aria-label="Toggle Dark Mode">
+          <i class="fas fa-moon theme-toggle-icon text-slate-700 text-sm"></i>
+        </button>
+
+        <a href="settings.html" class="w-9 h-9 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 hidden sm:flex items-center justify-center transition-colors" title="Settings">
+          <i class="fas fa-cog text-sm"></i>
+        </a>
+
+        <div class="nav-auth-container hidden sm:block"></div>
+
+        <button id="hamburger-btn" class="lg:hidden w-9 h-9 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-200">
+          <i class="fas fa-bars text-lg"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="drawer-backdrop" class="drawer-backdrop"></div>
+  <aside id="mobile-drawer" class="mobile-drawer p-5 flex flex-col justify-between">
+    <div>
+      <div class="flex items-center justify-between pb-4 border-b border-slate-100 dark:border-slate-800">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-lg bg-emerald-900 text-amber-400 flex items-center justify-center font-bold">
+            <i class="fas fa-mountain text-sm"></i>
+          </div>
+          <span class="font-serif font-bold text-slate-900 dark:text-white">The Gogaldara</span>
+        </div>
+        <button id="close-drawer-btn" class="w-8 h-8 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center text-slate-500">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <nav class="space-y-1 text-sm font-medium mt-6">
+        <a href="index.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-home w-5 text-center"></i> Home</a>
+        <a href="about.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-info-circle w-5 text-center"></i> About</a>
+        <a href="explore.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-compass w-5 text-center"></i> Explore</a>
+        <a href="gallery.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-images w-5 text-center"></i> Gallery</a>
+        <a href="menu.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-sitemap w-5 text-center"></i> Directory</a>
+        <a href="settings.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-sliders-h w-5 text-center"></i> Settings</a>
+        <a href="help.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-question-circle w-5 text-center"></i> Help & FAQs</a>
+        <a href="feedback.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 text-emerald-800 dark:text-emerald-300 font-semibold"><i class="fas fa-star w-5 text-center text-amber-500"></i> Reviews</a>
+      </nav>
+    </div>
+    <div class="pt-6 border-t border-slate-100 dark:border-slate-800">
+      <div class="nav-auth-container"></div>
+    </div>
+  </aside>
+
+  <!-- Feedback Main Content -->
+  <main class="flex-grow py-12 md:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Page Header -->
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400">Visitor Community</span>
+        <h1 class="text-3xl sm:text-4xl font-bold font-serif text-slate-900 dark:text-white mt-1 mb-3">
+          Share Your Gogaldara Experience
+        </h1>
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
+          Your impressions help fellow travelers explore Tangmarg respectfully and keep our guides up-to-date.
+        </p>
+      </div>
+
+      <!-- Success Confirmation Banner (Hidden by default) -->
+      <div id="feedback-success-msg" class="hidden mb-8 p-5 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/80 text-emerald-900 dark:text-emerald-200 flex items-start gap-3">
+        <i class="fas fa-check-circle text-emerald-600 text-lg mt-0.5 flex-shrink-0"></i>
+        <div>
+          <h3 class="text-sm font-semibold">Thank you for your review!</h3>
+          <p class="text-xs text-emerald-700 dark:text-emerald-300 mt-0.5">
+            Your rating and comments have been recorded into the community guestbook below.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        
+        <!-- Feedback Form -->
+        <div class="lg:col-span-7 nature-card p-6 sm:p-8 reveal">
+          <h2 class="text-lg font-bold font-serif text-slate-900 dark:text-white mb-4">
+            Leave a Travel Review
+          </h2>
+
+          <form id="feedback-form" class="space-y-4" novalidate>
+            
+            <!-- Star Rating Selection -->
+            <div>
+              <label class="block text-xs font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-2">
+                Your Rating
+              </label>
+              <div class="flex items-center gap-2 star-rating" id="star-rating-container" aria-label="Rate from 1 to 5 stars">
+                <i class="fas fa-star text-amber-400 text-xl cursor-pointer" data-value="1" title="1 Star"></i>
+                <i class="fas fa-star text-amber-400 text-xl cursor-pointer" data-value="2" title="2 Stars"></i>
+                <i class="fas fa-star text-amber-400 text-xl cursor-pointer" data-value="3" title="3 Stars"></i>
+                <i class="fas fa-star text-amber-400 text-xl cursor-pointer" data-value="4" title="4 Stars"></i>
+                <i class="fas fa-star text-amber-400 text-xl cursor-pointer" data-value="5" title="5 Stars"></i>
+                <input type="hidden" id="feedback-rating" name="rating" value="5">
+              </div>
+            </div>
+
+            <!-- Category -->
+            <div>
+              <label for="feedback-category" class="block text-xs font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5">
+                Trip Focus / Category
+              </label>
+              <select id="feedback-category" name="category" class="w-full bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white px-3 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 outline-none text-xs">
+                <option value="Winter Chill Point">Winter Chill Point (Icicles & Snow)</option>
+                <option value="Summer Trekking">Summer Meadows & Forest Treks</option>
+                <option value="Local Hospitality">Village Homestay & Food</option>
+                <option value="Landscape Photography">Photography & Scenery</option>
+                <option value="Overall Experience">General Travel Experience</option>
+              </select>
+            </div>
+
+            <!-- Name Field -->
+            <div>
+              <label for="feedback-name" class="block text-xs font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5">
+                Full Name
+              </label>
+              <input 
+                id="feedback-name" 
+                name="name" 
+                type="text" 
+                required 
+                placeholder="e.g. Aakash Rafiq"
+                class="w-full bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white px-3 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 focus:border-emerald-700 outline-none text-xs transition-all"
+              >
+            </div>
+
+            <!-- Email Field -->
+            <div>
+              <label for="feedback-email" class="block text-xs font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5">
+                Email Address (Private)
+              </label>
+              <input 
+                id="feedback-email" 
+                name="email" 
+                type="email" 
+                required 
+                placeholder="e.g. explorer@kashmir.com"
+                class="w-full bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white px-3 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 focus:border-emerald-700 outline-none text-xs transition-all"
+              >
+            </div>
+
+            <!-- Message Field -->
+            <div>
+              <label for="feedback-message" class="block text-xs font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5">
+                Your Review & Tips for Future Visitors
+              </label>
+              <textarea 
+                id="feedback-message" 
+                name="message" 
+                rows="4" 
+                required 
+                placeholder="Describe your visit to Gogaldara, snow conditions, favorite view, or advice on local cabs..."
+                class="w-full bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white p-3 rounded-xl border border-slate-200 dark:border-slate-700 focus:border-emerald-700 outline-none text-xs transition-all resize-none"
+              ></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button 
+              type="submit" 
+              class="w-full py-3 px-4 rounded-xl text-white bg-emerald-800 hover:bg-emerald-700 font-semibold text-xs uppercase tracking-wider shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2"
+            >
+              <span>Submit Traveler Review</span>
+              <i class="fas fa-paper-plane text-xs"></i>
+            </button>
+
+          </form>
+        </div>
+
+        <!-- Right Side: Tips & Verified Reviews Preview -->
+        <div class="lg:col-span-5 space-y-6">
+          
+          <!-- Curator Assurance -->
+          <div class="nature-card p-6 border-l-4 border-l-amber-500 reveal">
+            <h3 class="text-sm font-bold font-serif text-slate-900 dark:text-white mb-1">
+              Curator's Commitment
+            </h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+              "We read every review to verify road alerts and assist local Tangmarg village families in welcoming respectful travelers."
+            </p>
+            <div class="text-[11px] text-amber-600 dark:text-amber-400 font-semibold mt-2">— Shahid Mir</div>
+          </div>
+
+          <!-- Community Reviews Feed -->
+          <div>
+            <h3 class="text-sm font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-3 px-1">
+              Recent Traveler Impressions
+            </h3>
+            <div id="recent-feedback-list" class="space-y-4">
+              <!-- Populated by script.js -->
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="bg-slate-900 text-slate-400 py-6 text-xs text-center border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4">
+      &copy; 2026 The Gogaldara. Designed by <strong class="text-slate-200">Shahid Mir</strong>. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>

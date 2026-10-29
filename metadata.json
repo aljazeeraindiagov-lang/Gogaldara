@@ -1,0 +1,6 @@
+{
+  "name": "The Gogaldara",
+  "description": "Explore The Gogaldara in Tangmarg Kashmir by Shahid Mir - pristine alpine meadows, 35-foot icicles at Chill Point, pine forests, Kashmiri culture, and travel guides.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
