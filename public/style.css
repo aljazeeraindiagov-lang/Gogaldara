@@ -446,4 +446,102 @@ html.dark .kbd-shortcut {
   100% { box-shadow: 0 0 20px rgba(245, 158, 11, 0.5); }
 }
 
+/* --- Natural Button Styling (Forest Green & Muted Blue) --- */
+.btn-primary-nature {
+  background-color: #15803d; /* Natural Pine Green */
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+.btn-primary-nature:hover {
+  background-color: #166534;
+}
+
+.btn-secondary-nature {
+  background-color: #0369a1; /* Muted Mountain Slate Blue */
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+.btn-secondary-nature:hover {
+  background-color: #075985;
+}
+
+/* --- Flower Petals Shower (Welcome Animation) --- */
+.flower-canvas-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.falling-petal {
+  position: absolute;
+  top: -40px;
+  pointer-events: none;
+  animation: fallDown linear forwards;
+}
+
+@keyframes fallDown {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(0.8);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.95;
+  }
+  85% {
+    opacity: 0.95;
+  }
+  100% {
+    transform: translateY(105vh) rotate(360deg) scale(1);
+    opacity: 0;
+  }
+}
+
+/* --- Welcome & Development Modal --- */
+.welcome-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9990;
+  padding: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.welcome-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.welcome-modal-card {
+  background: #ffffff;
+  color: #0f172a;
+  border-radius: 1.25rem;
+  max-width: 520px;
+  width: 100%;
+  padding: 1.75rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+  transform: scale(0.95);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid #e2e8f0;
+}
+
+html.dark .welcome-modal-card {
+  background: #1e293b;
+  color: #f1f5f9;
+  border-color: #334155;
+}
+
+.welcome-modal-overlay.active .welcome-modal-card {
+  transform: scale(1);
+}
+
+
 

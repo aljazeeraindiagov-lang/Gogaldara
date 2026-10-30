@@ -1177,6 +1177,118 @@ function showToast(message, type = 'info') {
   }, 4000);
 }
 
+// --- Flower Petal Shower & Under Development Welcome Modal ---
+function initWelcomeExperience() {
+  // Only trigger on first visit in the current session
+  const hasVisited = sessionStorage.getItem('gogaldara_welcome_shown');
+  if (hasVisited) return;
+
+  sessionStorage.setItem('gogaldara_welcome_shown', 'true');
+
+  // 1. Create Flower Petal Shower Container
+  const container = document.createElement('div');
+  container.className = 'flower-canvas-container';
+  document.body.appendChild(container);
+
+  // Kashmir Wildflower Petals Colors (Rose pink, saffron yellow, alpine white, marigold)
+  const petalColors = [
+    '#f43f5e', '#fb7185', '#fda4af', '#f59e0b', '#fbbf24', '#fef08a', '#ffffff', '#e0f2fe'
+  ];
+
+  const totalPetals = 45;
+  for (let i = 0; i < totalPetals; i++) {
+    const petal = document.createElement('div');
+    petal.className = 'falling-petal';
+    
+    const size = Math.random() * 14 + 10; // 10px to 24px
+    const left = Math.random() * 100; // 0 to 100vw
+    const delay = Math.random() * 2.5; // Staggered start
+    const duration = Math.random() * 3 + 3.5; // 3.5s to 6.5s
+    const color = petalColors[Math.floor(Math.random() * petalColors.length)];
+
+    petal.style.left = `${left}vw`;
+    petal.style.width = `${size}px`;
+    petal.style.height = `${size * 1.3}px`;
+    petal.style.backgroundColor = color;
+    petal.style.borderRadius = '50% 0 50% 50%';
+    petal.style.animationDelay = `${delay}s`;
+    petal.style.animationDuration = `${duration}s`;
+    petal.style.boxShadow = '0 2px 6px rgba(0,0,0,0.15)';
+
+    container.appendChild(petal);
+  }
+
+  // Remove petals container after animation completes
+  setTimeout(() => {
+    container.remove();
+  }, 7500);
+
+  // 2. Show "Under Development" & Welcome Modal
+  setTimeout(() => {
+    const modal = document.createElement('div');
+    modal.className = 'welcome-modal-overlay';
+    modal.innerHTML = `
+      <div class="welcome-modal-card" role="dialog" aria-modal="true" aria-labelledby="welcome-modal-title">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-slate-700">
+          <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-lg bg-emerald-800 text-white flex items-center justify-center font-bold text-sm">
+              G
+            </div>
+            <div>
+              <h3 id="welcome-modal-title" class="font-serif font-bold text-base text-slate-900 dark:text-white">
+                Welcome to The Gogaldara
+              </h3>
+              <p class="text-[11px] text-slate-500 dark:text-slate-400">Official Portal Preview</p>
+            </div>
+          </div>
+          <button id="close-welcome-modal-icon" class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-sm p-1.5" aria-label="Close modal">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+
+        <div class="py-4 space-y-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+          <div class="p-3 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-900/50 flex items-start gap-2.5">
+            <i class="fas fa-tools text-amber-600 dark:text-amber-400 mt-0.5 text-sm flex-shrink-0"></i>
+            <div>
+              <strong class="text-amber-900 dark:text-amber-300 font-semibold block mb-0.5">Website Under Active Development</strong>
+              <span>This web portal is currently under active development. You can freely explore the guides, 35-ft Chill Point photos, routes, and maps right now.</span>
+            </div>
+          </div>
+          <p>
+            In the coming updates, this portal is expanding into a comprehensive futuristic travel web application with live weather cams, verified guide booking, and homestay listings.
+          </p>
+        </div>
+
+        <div class="pt-3 border-t border-slate-100 dark:border-slate-700 flex items-center justify-end gap-2.5">
+          <button id="close-welcome-modal-btn" class="px-5 py-2 rounded-xl text-xs font-semibold bg-emerald-700 hover:bg-emerald-800 text-white transition-colors shadow">
+            Explore Website <i class="fas fa-arrow-right ml-1"></i>
+          </button>
+        </div>
+      </div>
+    `;
+
+    document.body.appendChild(modal);
+
+    // Fade in
+    requestAnimationFrame(() => {
+      modal.classList.add('active');
+    });
+
+    const closeModal = () => {
+      modal.classList.remove('active');
+      setTimeout(() => modal.remove(), 300);
+    };
+
+    const closeBtn = modal.querySelector('#close-welcome-modal-btn');
+    const closeIcon = modal.querySelector('#close-welcome-modal-icon');
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (closeIcon) closeIcon.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+  }, 1000);
+}
+
 // --- Application Entry Point ---
 function startApp() {
   initTheme();
@@ -1191,6 +1303,7 @@ function startApp() {
   initFAQ();
   initForms();
   initSettingsPage();
+  initWelcomeExperience();
 }
 
 if (typeof document !== 'undefined') {
