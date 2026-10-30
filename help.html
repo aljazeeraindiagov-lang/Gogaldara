@@ -293,6 +293,30 @@
     </div>
   </footer>
 
+  <!-- Mobile Sticky Bottom Navigation Bar (Automatic for Mobile Screens) -->
+  <nav class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 flex items-center justify-around py-2 px-1 text-[11px] shadow-lg text-slate-600 dark:text-slate-300" aria-label="Mobile Bottom Navigation">
+    <a href="index.html" class="flex flex-col items-center gap-0.5 hover:text-emerald-700 dark:hover:text-emerald-400 py-1 px-2">
+      <i class="fas fa-home text-base"></i>
+      <span>Home</span>
+    </a>
+    <a href="explore.html" class="flex flex-col items-center gap-0.5 hover:text-emerald-700 dark:hover:text-emerald-400 py-1 px-2">
+      <i class="fas fa-compass text-base"></i>
+      <span>Explore</span>
+    </a>
+    <a href="gallery.html" class="flex flex-col items-center gap-0.5 hover:text-emerald-700 dark:hover:text-emerald-400 py-1 px-2">
+      <i class="fas fa-images text-base"></i>
+      <span>Gallery</span>
+    </a>
+    <a href="help.html" class="flex flex-col items-center gap-0.5 text-emerald-800 dark:text-emerald-400 font-semibold py-1 px-2">
+      <i class="fas fa-question-circle text-base"></i>
+      <span>Help</span>
+    </a>
+    <button id="mobile-bottom-menu-btn" class="flex flex-col items-center gap-0.5 hover:text-emerald-700 dark:hover:text-emerald-400 py-1 px-2">
+      <i class="fas fa-bars text-base"></i>
+      <span>Menu</span>
+    </button>
+  </nav>
+
   <script src="./script.js"></script>
 </body>
 </html>

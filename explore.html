@@ -63,11 +63,18 @@
         <a href="feedback.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">Reviews</a>
       </nav>
 
-      <div class="flex items-center gap-3">
-        <div class="search-container relative hidden sm:block w-48 md:w-60">
+      <div class="flex items-center gap-2 sm:gap-3">
+        <div class="search-container relative hidden sm:block w-48 md:w-60 lg:w-72">
           <div class="relative">
-            <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
-            <input type="text" id="nav-search-input" placeholder="Search places, food..." class="w-full bg-slate-100 dark:bg-slate-800/80 text-slate-900 dark:text-white pl-8 pr-3 py-1.5 rounded-full text-xs border border-transparent focus:border-emerald-600 outline-none transition-all">
+            <i class="fas fa-search absolute left-3.5 top-1/2 -translate-y-1/2 text-emerald-700 dark:text-emerald-400 text-xs"></i>
+            <input 
+              type="text" 
+              id="nav-search-input" 
+              placeholder="Search places, food, trails..." 
+              class="nav-search-bar w-full text-slate-900 dark:text-white pl-9 pr-14 py-2 rounded-full text-xs outline-none transition-all placeholder:text-slate-400 font-medium shadow-sm"
+              autocomplete="off"
+            >
+            <kbd class="kbd-shortcut absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none hidden md:inline-block">Ctrl K</kbd>
           </div>
         </div>
 
@@ -204,11 +211,11 @@
           <div class="nature-card p-6 flex flex-col sm:flex-row gap-6 reveal">
             <div class="sm:w-1/2 aspect-video sm:aspect-auto rounded-xl overflow-hidden relative flex-shrink-0">
               <img 
-                src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80" 
-                alt="Tangmarg town surrounded by towering pine covered hills"
+                src="images/FB_IMG_1793332040303.jpg" 
+                alt="Tangmarg foothill highway surrounded by towering pine covered hills"
                 class="w-full h-full object-cover"
                 loading="lazy"
-                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80';"
+                onerror="this.onerror=null;this.src='images/FB_IMG_1793332035375.jpg';"
               >
               <div class="absolute top-2 left-2 bg-emerald-900/80 text-white text-[10px] font-bold px-2 py-0.5 rounded">
                 Transit Gateway
@@ -231,11 +238,11 @@
           <div class="nature-card p-6 flex flex-col sm:flex-row gap-6 reveal">
             <div class="sm:w-1/2 aspect-video sm:aspect-auto rounded-xl overflow-hidden relative flex-shrink-0">
               <img 
-                src="https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=800&q=80" 
-                alt="Spiritual wooden Kashmiri architectural style near Tangmarg"
+                src="images/file_00000000e2b08211818354f692f1af25.png" 
+                alt="Scenic pine-clad highland ridge path near Tangmarg"
                 class="w-full h-full object-cover"
                 loading="lazy"
-                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80';"
+                onerror="this.onerror=null;this.src='images/FB_IMG_1793332035375.jpg';"
               >
               <div class="absolute top-2 left-2 bg-amber-900/80 text-amber-200 text-[10px] font-bold px-2 py-0.5 rounded">
                 Cultural Heritage
@@ -258,11 +265,11 @@
           <div class="nature-card p-6 flex flex-col sm:flex-row gap-6 reveal">
             <div class="sm:w-1/2 aspect-video sm:aspect-auto rounded-xl overflow-hidden relative flex-shrink-0">
               <img 
-                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" 
-                alt="Crystal mountain stream rushing through rocks in North Kashmir"
+                src="images/397b90ca-43ba-422a-9db9-ebbbc3a5cc04.jpg" 
+                alt="Pine woods and snow slopes in North Kashmir"
                 class="w-full h-full object-cover"
                 loading="lazy"
-                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80';"
+                onerror="this.onerror=null;this.src='images/41a5a283-74f7-483f-a719-6ce5c0de00ab.jpg';"
               >
               <div class="absolute top-2 left-2 bg-sky-900/80 text-sky-200 text-[10px] font-bold px-2 py-0.5 rounded">
                 Fresh Waters
@@ -366,17 +373,17 @@
           <div class="nature-card overflow-hidden reveal">
             <div class="h-48 overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80" 
-                alt="Kashmiri Kahwa tea in cup with saffron and nuts"
-                class="w-full h-full object-cover"
+                src="images/images.jpeg" 
+                alt="Traditional mountain warmth and hospitality in Gogaldara"
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
-                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80';"
+                onerror="this.onerror=null;this.src='images/FB_IMG_1793332035375.jpg';"
               >
             </div>
             <div class="p-5">
-              <h3 class="text-lg font-bold font-serif text-slate-900 dark:text-white mb-1">Kashmiri Saffron Kahwa</h3>
+              <h3 class="text-lg font-bold font-serif text-slate-900 dark:text-white mb-1">Mountain Hearth &amp; Saffron Kahwa</h3>
               <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                Boiled in a brass samovar, this fragrant green tea is sweetened and infused with genuine saffron strands, green cardamom, cinnamon, and slivered almonds. The ultimate shield against alpine chills.
+                Boiled in a traditional samovar, fragrant green tea sweetened with genuine saffron strands, cardamom, cinnamon, and slivered almonds. The ultimate shield against alpine chills.
               </p>
             </div>
           </div>
@@ -384,17 +391,17 @@
           <div class="nature-card overflow-hidden reveal">
             <div class="h-48 overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=80" 
-                alt="Traditional Kashmiri Rogan Josh and rich mutton dishes"
-                class="w-full h-full object-cover"
+                src="images/images_1.jpeg" 
+                alt="Snow-clad winter landscape and authentic mountain stay in Gogaldara"
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
-                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80';"
+                onerror="this.onerror=null;this.src='images/images_2.jpeg';"
               >
             </div>
             <div class="p-5">
-              <h3 class="text-lg font-bold font-serif text-slate-900 dark:text-white mb-1">Wazwan & Rogan Josh</h3>
+              <h3 class="text-lg font-bold font-serif text-slate-900 dark:text-white mb-1">Traditional Winter Feasts &amp; Wazwan</h3>
               <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                Slow-braised tender meat infused with aromatic mawal (cockscomb flower), Kashmiri red chillies, and fennel. Served during festive gatherings and available in Tangmarg eateries.
+                Slow-braised mountain preparations infused with aromatic cockscomb flower, Kashmiri spices, and tender highland vegetables. Available across authentic Tangmarg and valley homestays.
               </p>
             </div>
           </div>
@@ -402,17 +409,17 @@
           <div class="nature-card overflow-hidden reveal">
             <div class="h-48 overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=800&q=80" 
-                alt="Traditional village kitchen fire with rotis in Kashmir"
-                class="w-full h-full object-cover"
+                src="images/images_2.jpeg" 
+                alt="Authentic village foothill setting in Gogaldara Kashmir"
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
-                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80';"
+                onerror="this.onerror=null;this.src='images/images.jpeg';"
               >
             </div>
             <div class="p-5">
-              <h3 class="text-lg font-bold font-serif text-slate-900 dark:text-white mb-1">Makki ki Roti & Salted Noon Chai</h3>
+              <h3 class="text-lg font-bold font-serif text-slate-900 dark:text-white mb-1">Rustic Village Hospitality &amp; Noon Chai</h3>
               <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                Hand-patted mountain cornflour bread baked crisp over a hearth, slathered in fresh butter, paired with traditional Kashmiri salted pink tea (Noon Chai) and local walnut chutney.
+                Crisp wood-baked mountain breads, farm butter, and soothing salted pink tea (Noon Chai) prepared by local families welcoming travelers with heartfelt Kashmiri hospitality.
               </p>
             </div>
           </div>
@@ -566,6 +573,28 @@
       </div>
     </div>
   </footer>
+  <nav class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 flex items-center justify-around py-2 px-1 text-[11px] shadow-lg text-slate-600 dark:text-slate-300" aria-label="Mobile Bottom Navigation">
+    <a href="index.html" class="flex flex-col items-center gap-0.5 hover:text-emerald-700 dark:hover:text-emerald-400 py-1 px-2">
+      <i class="fas fa-home text-base"></i>
+      <span>Home</span>
+    </a>
+    <a href="explore.html" class="flex flex-col items-center gap-0.5 text-emerald-800 dark:text-emerald-400 font-semibold py-1 px-2">
+      <i class="fas fa-compass text-base"></i>
+      <span>Explore</span>
+    </a>
+    <a href="gallery.html" class="flex flex-col items-center gap-0.5 hover:text-emerald-700 dark:hover:text-emerald-400 py-1 px-2">
+      <i class="fas fa-images text-base"></i>
+      <span>Gallery</span>
+    </a>
+    <a href="menu.html" class="flex flex-col items-center gap-0.5 hover:text-emerald-700 dark:hover:text-emerald-400 py-1 px-2">
+      <i class="fas fa-sitemap text-base"></i>
+      <span>Directory</span>
+    </a>
+    <button id="mobile-bottom-menu-btn" class="flex flex-col items-center gap-0.5 hover:text-emerald-700 dark:hover:text-emerald-400 py-1 px-2">
+      <i class="fas fa-bars text-base"></i>
+      <span>Menu</span>
+    </button>
+  </nav>
 
   <script src="./script.js"></script>
 </body>

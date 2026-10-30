@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en" class="font-size-base">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Gogaldara Shots &amp; Instagram Reels | Curated by Shahid Mir</title>
+  <meta name="description" content="Watch viral and beautiful Instagram reels, short video clips, and live tourist footage of Gogaldara Chill Point and Tangmarg.">
+  <meta property="og:title" content="Gogaldara Shots & Instagram Reels">
+  <meta property="og:description" content="Viral short videos and field footage from Gogaldara Chill Point.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts & Font Awesome CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 flex flex-col min-h-screen">
+
+  <!-- Sticky Glassmorphic Navbar -->
+  <header class="glass-header sticky top-0 z-50 transition-all border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3 group focus:outline-none" aria-label="The Gogaldara Home">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-800 to-emerald-950 text-amber-400 flex items-center justify-center shadow-md group-hover:scale-105 transition-transform border border-emerald-700/50">
+          <i class="fas fa-mountain text-lg"></i>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-xl font-bold font-serif tracking-tight text-white group-hover:text-emerald-400 transition-colors">
+            The Gogaldara
+          </span>
+          <span class="text-[10px] font-semibold text-amber-400 uppercase tracking-widest -mt-1">
+            Shahid Mir • Tangmarg
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-200" aria-label="Main Navigation">
+        <a href="index.html" class="hover:text-emerald-400 transition-colors">Home</a>
+        <a href="about.html" class="hover:text-emerald-400 transition-colors">About</a>
+        <a href="explore.html" class="hover:text-emerald-400 transition-colors">Explore</a>
+        <a href="gallery.html" class="hover:text-emerald-400 transition-colors">Gallery</a>
+        <a href="shots.html" class="text-emerald-400 font-semibold border-b-2 border-emerald-400 pb-1 flex items-center gap-1.5">
+          <i class="fab fa-instagram text-rose-400"></i> Shots &amp; Reels
+        </a>
+        <a href="menu.html" class="hover:text-emerald-400 transition-colors">Directory</a>
+        <a href="help.html" class="hover:text-emerald-400 transition-colors">Help</a>
+      </nav>
+
+      <!-- Search Bar & Actions -->
+      <div class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+        <div class="search-container relative hidden sm:block w-48 md:w-60">
+          <div class="relative">
+            <i class="fas fa-search absolute left-3.5 top-1/2 -translate-y-1/2 text-emerald-400 text-xs"></i>
+            <input 
+              type="text" 
+              id="nav-search-input"
+              placeholder="Search reels, ice..." 
+              class="nav-search-bar w-full text-white pl-9 pr-14 py-2 rounded-full text-xs outline-none transition-all placeholder:text-slate-400 font-medium shadow-sm bg-slate-900 border border-slate-700"
+              autocomplete="off"
+            >
+            <kbd class="kbd-shortcut absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none hidden md:inline-block">Ctrl K</kbd>
+          </div>
+        </div>
+
+        <button class="theme-toggle-btn w-9 h-9 rounded-full hover:bg-slate-800 text-slate-200 flex items-center justify-center transition-colors" aria-label="Toggle Dark Mode">
+          <i class="fas fa-moon theme-toggle-icon text-sm"></i>
+        </button>
+
+        <a href="index.html" class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold px-4 py-2 rounded-full text-xs shadow flex items-center gap-1.5">
+          <i class="fas fa-arrow-left"></i>
+          <span>Main Site</span>
+        </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button id="hamburger-btn" class="lg:hidden w-9 h-9 rounded-lg hover:bg-slate-800 flex items-center justify-center text-slate-200" aria-label="Open Navigation Drawer">
+          <i class="fas fa-bars text-lg"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="drawer-backdrop" class="drawer-backdrop"></div>
+  <aside id="mobile-drawer" class="mobile-drawer p-5 flex flex-col justify-between">
+    <div>
+      <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-lg bg-emerald-900 text-amber-400 flex items-center justify-center font-bold">
+            <i class="fas fa-mountain text-sm"></i>
+          </div>
+          <span class="font-serif font-bold text-white">The Gogaldara</span>
+        </div>
+        <button id="close-drawer-btn" class="w-8 h-8 rounded-full hover:bg-slate-800 flex items-center justify-center text-slate-400">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <nav class="space-y-1 text-sm font-medium mt-6">
+        <a href="index.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-800 text-slate-300"><i class="fas fa-home w-5 text-center"></i> Home</a>
+        <a href="about.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-800 text-slate-300"><i class="fas fa-info-circle w-5 text-center"></i> About Gogaldara</a>
+        <a href="explore.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-800 text-slate-300"><i class="fas fa-compass w-5 text-center"></i> Explore & Travel Guide</a>
+        <a href="gallery.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-800 text-slate-300"><i class="fas fa-images w-5 text-center"></i> Photo Gallery</a>
+        <a href="shots.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-emerald-950/60 text-emerald-400 font-semibold"><i class="fab fa-instagram w-5 text-center text-rose-400"></i> Shots &amp; Reels</a>
+        <a href="menu.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-800 text-slate-300"><i class="fas fa-sitemap w-5 text-center"></i> Site Directory</a>
+      </nav>
+    </div>
+    <div class="pt-6 border-t border-slate-800">
+      <div class="text-[11px] text-slate-500 text-center">Curated by Shahid Mir • Tangmarg</div>
+    </div>
+  </aside>
+
+  <!-- Main Content: Vertical Feed & Scrollable Reels Showcase -->
+  <main class="flex-grow py-8 md:py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Banner Header -->
+      <div class="text-center max-w-3xl mx-auto mb-8">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-rose-900/60 via-purple-900/60 to-amber-900/60 text-rose-300 border border-rose-500/30 text-xs font-bold uppercase tracking-wider mb-3 shadow-lg">
+          <i class="fab fa-instagram text-rose-400"></i> Viral Instagram Reels &amp; Shorts
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-serif text-white mb-3">
+          Gogaldara Chill Point Shots
+        </h1>
+        <p class="text-xs sm:text-sm text-slate-400 max-w-xl mx-auto">
+          Immersive vertical videos and trending reels of the 35-foot frozen icicles, winter sledging, snow-laden cedar forests, and authentic Kashmir warmth.
+        </p>
+      </div>
+
+      <!-- Quick Category Chips -->
+      <div class="flex items-center justify-center gap-2 mb-8 overflow-x-auto pb-2 scrollbar-none">
+        <button class="px-3.5 py-1.5 rounded-full bg-rose-600 text-white text-xs font-semibold shadow flex items-center gap-1.5">
+          <i class="fab fa-instagram"></i> All Viral Reels
+        </button>
+        <a href="https://www.instagram.com/explore/tags/gogaldara/" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-full bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-xs font-semibold transition-colors flex items-center gap-1.5">
+          <i class="fas fa-hashtag text-rose-400"></i> #Gogaldara
+        </a>
+        <a href="https://www.instagram.com/explore/tags/gogaldarachillpoint/" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-full bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-xs font-semibold transition-colors flex items-center gap-1.5">
+          <i class="fas fa-hashtag text-amber-400"></i> #GogaldaraChillPoint
+        </a>
+        <a href="https://www.instagram.com/explore/tags/tangmarg/" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-full bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-xs font-semibold transition-colors flex items-center gap-1.5">
+          <i class="fas fa-hashtag text-sky-400"></i> #Tangmarg
+        </a>
+      </div>
+
+      <!-- Scrollable Shots Feed Grid (Responsive 9:16 Short Video Cards) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto" id="shots-feed">
+        
+        <!-- Reel 1: 35-Foot Icicles Live Video -->
+        <div class="relative rounded-3xl overflow-hidden aspect-[9/16] bg-slate-900 border border-slate-800 shadow-2xl group flex flex-col justify-between p-4">
+          <video 
+            src="images/gogaldara_video.mp4" 
+            class="absolute inset-0 w-full h-full object-cover z-0" 
+            playsinline 
+            loop 
+            muted 
+            autoplay
+          ></video>
+          <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/90 z-10 pointer-events-none"></div>
+
+          <!-- Top Row -->
+          <div class="relative z-20 flex items-center justify-between">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-rose-600/90 text-white text-[10px] font-bold shadow backdrop-blur-md">
+              <i class="fab fa-instagram"></i> Trending Reel
+            </span>
+            <span class="text-xs text-white bg-black/50 px-2 py-0.5 rounded-full backdrop-blur-md">
+              <i class="fas fa-eye mr-1 text-amber-400"></i> 185K
+            </span>
+          </div>
+
+          <!-- Bottom Meta & Actions -->
+          <div class="relative z-20 text-white">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-amber-500 to-rose-500 p-0.5">
+                <div class="w-full h-full rounded-full bg-slate-950 flex items-center justify-center text-[10px] font-bold text-amber-300">
+                  SM
+                </div>
+              </div>
+              <div>
+                <span class="text-xs font-bold block leading-tight">@the_gogaldara</span>
+                <span class="text-[10px] text-slate-300">Curated by Shahid Mir</span>
+              </div>
+            </div>
+
+            <p class="text-xs text-slate-100 font-medium leading-snug mb-3 line-clamp-2">
+              The colossal 35-foot natural ice cascade at Chill Point, Gogaldara! ❄️🏔️ Sub-zero winter marvel near Tangmarg.
+            </p>
+
+            <div class="flex items-center justify-between pt-2 border-t border-white/20">
+              <a 
+                href="https://www.instagram.com/explore/tags/gogaldarachillpoint/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-rose-500 via-purple-600 to-amber-500 text-white text-[11px] font-bold shadow hover:opacity-95 transition-all"
+              >
+                <i class="fab fa-instagram"></i>
+                <span>Open on Insta</span>
+                <i class="fas fa-external-link-alt text-[9px]"></i>
+              </a>
+
+              <button onclick="toggleAudio(this)" class="w-8 h-8 rounded-full bg-black/60 hover:bg-black/80 text-white flex items-center justify-center backdrop-blur-md text-xs transition-colors" title="Toggle Sound">
+                <i class="fas fa-volume-mute"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reel 2: High Pine Ridge Snowfall -->
+        <div class="relative rounded-3xl overflow-hidden aspect-[9/16] bg-slate-900 border border-slate-800 shadow-2xl group flex flex-col justify-between p-4">
+          <img 
+            src="images/file_00000000e2b08211818354f692f1af25.png" 
+            alt="Cinematic Gogaldara Alpine Slopes" 
+            class="absolute inset-0 w-full h-full object-cover z-0 group-hover:scale-105 transition-transform duration-700"
+          >
+          <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/90 z-10 pointer-events-none"></div>
+
+          <div class="relative z-20 flex items-center justify-between">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-600/90 text-white text-[10px] font-bold shadow backdrop-blur-md">
+              <i class="fas fa-tree"></i> Pine Ridges
+            </span>
+            <span class="text-xs text-white bg-black/50 px-2 py-0.5 rounded-full backdrop-blur-md">
+              <i class="fas fa-eye mr-1 text-amber-400"></i> 142K
+            </span>
+          </div>
+
+          <div class="relative z-20 text-white">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center text-[10px] font-bold text-white shadow">
+                TK
+              </div>
+              <div>
+                <span class="text-xs font-bold block leading-tight">@travel_kashmir</span>
+                <span class="text-[10px] text-slate-300">Tangmarg Foothills</span>
+              </div>
+            </div>
+            <p class="text-xs text-slate-100 font-medium leading-snug mb-3 line-clamp-2">
+              Untouched powder snow blanketing ancient Himalayan fir woods in Gogaldara. Zero noise, pure peace. 🌲✨
+            </p>
+            <div class="flex items-center justify-between pt-2 border-t border-white/20">
+              <a 
+                href="https://www.instagram.com/explore/tags/gogaldara/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-rose-500 to-purple-600 text-white text-[11px] font-bold shadow hover:opacity-95 transition-all"
+              >
+                <i class="fab fa-instagram"></i>
+                <span>Watch Reel</span>
+                <i class="fas fa-external-link-alt text-[9px]"></i>
+              </a>
+              <button onclick="likeShort(this)" class="w-8 h-8 rounded-full bg-black/60 hover:bg-black/80 text-rose-400 flex items-center justify-center backdrop-blur-md text-xs transition-colors">
+                <i class="fas fa-heart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reel 3: Chill Point Ice Pillars & Sledging -->
+        <div class="relative rounded-3xl overflow-hidden aspect-[9/16] bg-slate-900 border border-slate-800 shadow-2xl group flex flex-col justify-between p-4">
+          <img 
+            src="images/41a5a283-74f7-483f-a719-6ce5c0de00ab.jpg" 
+            alt="Chill Point 35-ft Icicles" 
+            class="absolute inset-0 w-full h-full object-cover z-0 group-hover:scale-105 transition-transform duration-700"
+          >
+          <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/90 z-10 pointer-events-none"></div>
+
+          <div class="relative z-20 flex items-center justify-between">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-sky-600/90 text-white text-[10px] font-bold shadow backdrop-blur-md">
+              <i class="fas fa-snowflake"></i> Viral Spot
+            </span>
+            <span class="text-xs text-white bg-black/50 px-2 py-0.5 rounded-full backdrop-blur-md">
+              <i class="fas fa-eye mr-1 text-amber-400"></i> 260K
+            </span>
+          </div>
+
+          <div class="relative z-20 text-white">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="w-8 h-8 rounded-full bg-sky-500 flex items-center justify-center text-[10px] font-bold text-white shadow">
+                CP
+              </div>
+              <div>
+                <span class="text-xs font-bold block leading-tight">@chillpoint_diaries</span>
+                <span class="text-[10px] text-slate-300">Baramulla Kashmir</span>
+              </div>
+            </div>
+            <p class="text-xs text-slate-100 font-medium leading-snug mb-3 line-clamp-2">
+              Standing right beneath the twin frozen stalactite towers! The frost sound here is unreal. 🧊⚡
+            </p>
+            <div class="flex items-center justify-between pt-2 border-t border-white/20">
+              <a 
+                href="https://www.instagram.com/explore/tags/gogaldarachillpoint/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-rose-500 to-purple-600 text-white text-[11px] font-bold shadow hover:opacity-95 transition-all"
+              >
+                <i class="fab fa-instagram"></i>
+                <span>Watch Reel</span>
+                <i class="fas fa-external-link-alt text-[9px]"></i>
+              </a>
+              <button onclick="likeShort(this)" class="w-8 h-8 rounded-full bg-black/60 hover:bg-black/80 text-rose-400 flex items-center justify-center backdrop-blur-md text-xs transition-colors">
+                <i class="fas fa-heart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reel 4: Mountain Heights & Sunbeam Glow -->
+        <div class="relative rounded-3xl overflow-hidden aspect-[9/16] bg-slate-900 border border-slate-800 shadow-2xl group flex flex-col justify-between p-4">
+          <img 
+            src="images/FB_IMG_1793332035375.jpg" 
+            alt="Mountain heights of Gogaldara" 
+            class="absolute inset-0 w-full h-full object-cover z-0 group-hover:scale-105 transition-transform duration-700"
+          >
+          <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/90 z-10 pointer-events-none"></div>
+
+          <div class="relative z-20 flex items-center justify-between">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-600/90 text-white text-[10px] font-bold shadow backdrop-blur-md">
+              <i class="fas fa-mountain"></i> Drone View
+            </span>
+            <span class="text-xs text-white bg-black/50 px-2 py-0.5 rounded-full backdrop-blur-md">
+              <i class="fas fa-eye mr-1 text-amber-400"></i> 94K
+            </span>
+          </div>
+
+          <div class="relative z-20 text-white">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="w-8 h-8 rounded-full bg-amber-500 flex items-center justify-center text-[10px] font-bold text-slate-950 shadow">
+                AD
+              </div>
+              <div>
+                <span class="text-xs font-bold block leading-tight">@alpine_drone_shots</span>
+                <span class="text-[10px] text-slate-300">North Kashmir View</span>
+              </div>
+            </div>
+            <p class="text-xs text-slate-100 font-medium leading-snug mb-3 line-clamp-2">
+              Morning light striking the highest crests above Gogaldara village. Winter magic at its purest. ☀️🏔️
+            </p>
+            <div class="flex items-center justify-between pt-2 border-t border-white/20">
+              <a 
+                href="https://www.instagram.com/explore/tags/gogaldara/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-rose-500 to-purple-600 text-white text-[11px] font-bold shadow hover:opacity-95 transition-all"
+              >
+                <i class="fab fa-instagram"></i>
+                <span>Watch Reel</span>
+                <i class="fas fa-external-link-alt text-[9px]"></i>
+              </a>
+              <button onclick="likeShort(this)" class="w-8 h-8 rounded-full bg-black/60 hover:bg-black/80 text-rose-400 flex items-center justify-center backdrop-blur-md text-xs transition-colors">
+                <i class="fas fa-heart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Live Video Showcase Player Card -->
+      <div class="max-w-4xl mx-auto mt-16 p-6 sm:p-8 rounded-3xl bg-slate-900 border border-slate-800 shadow-2xl">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 rounded-xl bg-rose-600/20 text-rose-400 flex items-center justify-center text-lg border border-rose-500/30">
+            <i class="fab fa-instagram"></i>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold font-serif text-white">Tourist Experience at Chill Point</h3>
+            <p class="text-xs text-slate-400">Authentic field clip capturing the icy atmosphere and visitor excitement.</p>
+          </div>
+        </div>
+
+        <div class="relative rounded-2xl overflow-hidden aspect-video bg-black shadow-inner border border-slate-800">
+          <video 
+            id="main-showcase-video"
+            src="images/gogaldara_video.mp4" 
+            class="w-full h-full object-cover" 
+            controls 
+            playsinline
+          ></video>
+        </div>
+
+        <div class="mt-4 flex flex-wrap items-center justify-between gap-4 text-xs text-slate-400">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
+            <span>Recorded on-site at Chill Point, Gogaldara (Tangmarg)</span>
+          </div>
+          <a 
+            href="https://www.instagram.com/explore/tags/gogaldarachillpoint/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="text-amber-400 hover:underline flex items-center gap-1 font-semibold"
+          >
+            <span>Browse More Instagram Reels</span>
+            <i class="fas fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Global Footer with Core Developer Sheikh Adil in deep bottom -->
+  <footer class="bg-slate-950 text-slate-400 pt-16 pb-12 border-t border-slate-900 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-900">
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-emerald-800 text-amber-400 flex items-center justify-center shadow">
+              <i class="fas fa-mountain"></i>
+            </div>
+            <div>
+              <span class="text-xl font-bold font-serif text-white">The Gogaldara</span>
+              <span class="block text-[10px] text-emerald-400 uppercase tracking-wider">Tangmarg, Baramulla, Kashmir</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed mb-6 max-w-sm">
+            Curated by Shahid Mir to share the real beauty, geography, and hospitality of Gogaldara in Tangmarg.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">Discover</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-amber-400">Home</a></li>
+            <li><a href="about.html" class="hover:text-amber-400">About</a></li>
+            <li><a href="explore.html" class="hover:text-amber-400">Explore</a></li>
+            <li><a href="gallery.html" class="hover:text-amber-400">Gallery</a></li>
+            <li><a href="shots.html" class="text-rose-400 font-semibold">Shots &amp; Reels</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">Traveler Info</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="explore.html#how-to-reach" class="hover:text-amber-400">How to Reach</a></li>
+            <li><a href="explore.html#food" class="hover:text-amber-400">Kashmiri Cuisine</a></li>
+            <li><a href="help.html" class="hover:text-amber-400">Help &amp; FAQs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">Preferences</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="settings.html" class="hover:text-amber-400">Settings</a></li>
+            <li><a href="feedback.html" class="hover:text-amber-400">Feedback</a></li>
+            <li><a href="login.html" class="hover:text-amber-400">Traveler Login</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Deep Bottom Credits with Core Developer Sheikh Adil -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <div>
+          <div>&copy; 2026 The Gogaldara. Owned &amp; Designed by <strong class="text-slate-300 font-semibold">Shahid Mir</strong>.</div>
+          <!-- Deep Bottom Core Developer Attribution -->
+          <div class="mt-1 text-emerald-400 font-medium tracking-wide">
+            Core Developer: <strong class="text-amber-300 font-bold underline decoration-amber-500/50">Sheikh Adil</strong>
+          </div>
+        </div>
+        <div class="text-[11px] text-slate-500">
+          Instagram Reels &amp; Authentic Tourist Clips curated for Gogaldara Chill Point.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Bottom Sticky Navigation -->
+  <nav class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-slate-900/95 backdrop-blur-md border-t border-slate-800 flex items-center justify-around py-2 px-1 text-[11px] shadow-lg text-slate-300" aria-label="Mobile Bottom Navigation">
+    <a href="index.html" class="flex flex-col items-center gap-0.5 hover:text-emerald-400 py-1 px-2">
+      <i class="fas fa-home text-base"></i>
+      <span>Home</span>
+    </a>
+    <a href="explore.html" class="flex flex-col items-center gap-0.5 hover:text-emerald-400 py-1 px-2">
+      <i class="fas fa-compass text-base"></i>
+      <span>Explore</span>
+    </a>
+    <a href="gallery.html" class="flex flex-col items-center gap-0.5 hover:text-emerald-400 py-1 px-2">
+      <i class="fas fa-images text-base"></i>
+      <span>Gallery</span>
+    </a>
+    <a href="shots.html" class="flex flex-col items-center gap-0.5 text-rose-400 font-semibold py-1 px-2">
+      <i class="fab fa-instagram text-base"></i>
+      <span>Shots</span>
+    </a>
+    <button id="mobile-bottom-menu-btn" class="flex flex-col items-center gap-0.5 hover:text-emerald-400 py-1 px-2">
+      <i class="fas fa-bars text-base"></i>
+      <span>Menu</span>
+    </button>
+  </nav>
+
+  <script src="./script.js"></script>
+  <script>
+    function toggleAudio(btn) {
+      const card = btn.closest('.relative');
+      const video = card.querySelector('video');
+      if (video) {
+        video.muted = !video.muted;
+        const icon = btn.querySelector('i');
+        if (icon) {
+          icon.className = video.muted ? 'fas fa-volume-mute' : 'fas fa-volume-up text-amber-400';
+        }
+      }
+    }
+
+    function likeShort(btn) {
+      btn.classList.toggle('text-rose-500');
+      btn.classList.toggle('scale-125');
+      setTimeout(() => btn.classList.remove('scale-125'), 200);
+    }
+  </script>
+</body>
+</html>

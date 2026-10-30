@@ -216,18 +216,29 @@ function initNavbar() {
   if (hamburgerBtn) hamburgerBtn.addEventListener('click', openDrawer);
   if (closeDrawerBtn) closeDrawerBtn.addEventListener('click', closeDrawer);
   if (drawerBackdrop) drawerBackdrop.addEventListener('click', closeDrawer);
+  
+  const bottomMenuBtn = document.getElementById('mobile-bottom-menu-btn');
+  if (bottomMenuBtn) bottomMenuBtn.addEventListener('click', openDrawer);
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 1024) {
+      closeDrawer();
+    }
+  });
 }
 
 // --- Search Functionality ---
 function initSearch() {
   const searchInputs = [
     document.getElementById('nav-search-input'),
-    document.getElementById('drawer-search-input')
+    document.getElementById('drawer-search-input'),
+    document.getElementById('hero-search-input'),
+    document.getElementById('gallery-search-input')
   ].filter(Boolean);
 
   searchInputs.forEach(input => {
     const parent = input.closest('.search-container') || input.parentElement;
-    let dropdown = parent.querySelector('.search-results-dropdown');
+    let dropdown = parent.querySelector('.search-results-dropdown') || document.getElementById('hero-search-dropdown');
     
     if (!dropdown) {
       dropdown = document.createElement('div');
@@ -240,6 +251,7 @@ function initSearch() {
       const q = e.target.value.trim().toLowerCase();
       if (!q) {
         dropdown.classList.remove('show');
+        dropdown.classList.add('hidden');
         dropdown.innerHTML = '';
         return;
       }
@@ -280,21 +292,53 @@ function initSearch() {
         `;
       }
       dropdown.classList.add('show');
+      dropdown.classList.remove('hidden');
     });
 
     // Close on outside click
     document.addEventListener('click', (e) => {
       if (!parent.contains(e.target)) {
         dropdown.classList.remove('show');
+        dropdown.classList.add('hidden');
       }
     });
 
     input.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         dropdown.classList.remove('show');
+        dropdown.classList.add('hidden');
       }
     });
   });
+
+  // Global Ctrl+K / Cmd+K search shortcut
+  window.addEventListener('keydown', (e) => {
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+      e.preventDefault();
+      const target = document.getElementById('hero-search-input') || document.getElementById('nav-search-input');
+      if (target) {
+        target.focus();
+        target.select();
+      }
+    }
+  });
+
+  // Global Quick Search trigger for pills & buttons
+  window.quickSearch = function(query) {
+    const input = document.getElementById('hero-search-input') || document.getElementById('nav-search-input');
+    if (input) {
+      input.value = query;
+      input.focus();
+      input.dispatchEvent(new Event('input', { bubbles: true }));
+    }
+  };
+
+  window.handleHeroSearch = function() {
+    const input = document.getElementById('hero-search-input');
+    if (input && input.value.trim()) {
+      window.quickSearch(input.value.trim());
+    }
+  };
 }
 
 function highlightMatch(text, query) {
@@ -689,8 +733,9 @@ function initLightbox() {
 
         const filter = btn.getAttribute('data-filter') || 'all';
         galleryItems.forEach(card => {
-          const category = card.getAttribute('data-category')?.toLowerCase();
-          if (filter === 'all' || category === filter.toLowerCase()) {
+          const category = card.getAttribute('data-category')?.toLowerCase() || '';
+          const targetFilter = filter.toLowerCase();
+          if (filter === 'all' || category === targetFilter || category.includes(targetFilter)) {
             card.style.display = 'block';
           } else {
             card.style.display = 'none';

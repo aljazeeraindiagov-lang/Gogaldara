@@ -65,55 +65,61 @@
 
   <!-- Sticky Glassmorphic Navbar -->
   <header class="sticky top-0 z-50 glass-header">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[72px] flex items-center justify-between gap-4">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-[68px] sm:h-[72px] flex items-center justify-between gap-2 sm:gap-4">
       
       <!-- Brand Logo & Owner Byline -->
-      <a href="index.html" class="flex items-center gap-3 flex-shrink-0 group">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-900 to-emerald-700 flex items-center justify-center text-amber-400 shadow-md group-hover:scale-105 transition-transform">
-          <i class="fas fa-mountain text-lg"></i>
+      <a href="index.html" class="flex items-center gap-2 sm:gap-3 min-w-0 group flex-1 sm:flex-none">
+        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-emerald-900 to-emerald-700 flex items-center justify-center text-amber-400 shadow-md group-hover:scale-105 transition-transform flex-shrink-0">
+          <i class="fas fa-mountain text-base sm:text-lg"></i>
         </div>
-        <div>
-          <span class="text-xl font-bold font-serif tracking-tight text-emerald-950 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+        <div class="min-w-0">
+          <span class="text-base sm:text-xl font-bold font-serif tracking-tight text-emerald-950 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors truncate block">
             The Gogaldara
           </span>
-          <span class="block text-[10px] tracking-wider uppercase text-emerald-700 dark:text-emerald-400 font-semibold">
-            Owned & Curated by Shahid Mir • Tangmarg
+          <span class="block text-[9px] sm:text-[10px] tracking-wider uppercase text-emerald-700 dark:text-emerald-400 font-semibold truncate">
+            Shahid Mir • Tangmarg
           </span>
         </div>
       </a>
 
       <!-- Desktop Navigation Links -->
-      <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-700 dark:text-slate-200" aria-label="Main Navigation">
+      <nav class="hidden lg:flex items-center gap-5 text-sm font-medium text-slate-700 dark:text-slate-200" aria-label="Main Navigation">
         <a href="index.html" class="text-emerald-800 dark:text-emerald-400 font-semibold border-b-2 border-emerald-800 dark:border-emerald-400 pb-1">Home</a>
         <a href="about.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">About</a>
         <a href="explore.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">Explore</a>
         <a href="gallery.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">Gallery</a>
+        <a href="shots.html" class="hover:text-rose-500 transition-colors flex items-center gap-1.5"><i class="fab fa-instagram text-rose-500"></i> Shots &amp; Reels</a>
         <a href="menu.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">Directory</a>
-        <a href="help.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">Help & FAQ</a>
-        <a href="feedback.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">Reviews</a>
+        <a href="help.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">Help</a>
       </nav>
 
       <!-- Search Bar & Actions -->
-      <div class="flex items-center gap-3">
-        <!-- Interactive Search Bar -->
-        <div class="search-container relative hidden sm:block w-48 md:w-60">
+      <div class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+        <!-- Prominent Interactive Search Bar (अच्छी तरफ) -->
+        <div class="search-container relative hidden sm:block w-48 md:w-60 lg:w-72">
           <div class="relative">
-            <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+            <i class="fas fa-search absolute left-3.5 top-1/2 -translate-y-1/2 text-emerald-700 dark:text-emerald-400 text-xs"></i>
             <input 
               type="text" 
               id="nav-search-input"
-              placeholder="Search Chill Point, stays..." 
-              class="w-full bg-slate-100 dark:bg-slate-800/80 text-slate-900 dark:text-white pl-8 pr-3 py-1.5 rounded-full text-xs border border-transparent focus:border-emerald-600 focus:bg-white dark:focus:bg-slate-900 outline-none transition-all placeholder:text-slate-400"
+              placeholder="Search Chill Point, stays, food..." 
+              class="nav-search-bar w-full text-slate-900 dark:text-white pl-9 pr-14 py-2 rounded-full text-xs outline-none transition-all placeholder:text-slate-400 font-medium shadow-sm"
               autocomplete="off"
             >
+            <kbd class="kbd-shortcut absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none hidden md:inline-block">Ctrl K</kbd>
           </div>
         </div>
 
+        <!-- Mobile Quick Search Trigger Button -->
+        <button onclick="document.getElementById('drawer-search-input')?.focus(); window.openDrawer?.();" class="sm:hidden w-8 h-8 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 flex items-center justify-center transition-colors" aria-label="Search" title="Search">
+          <i class="fas fa-search text-xs"></i>
+        </button>
+
         <!-- Notification Bell Dropdown -->
         <div class="relative">
-          <button id="notif-bell-btn" class="w-9 h-9 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 flex items-center justify-center transition-colors relative" aria-label="Notifications" title="Notifications">
+          <button id="notif-bell-btn" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 flex items-center justify-center transition-colors relative" aria-label="Notifications" title="Notifications">
             <i class="fas fa-bell text-sm"></i>
-            <span id="notif-badge" class="absolute top-1 right-1 w-4 h-4 rounded-full bg-amber-500 text-white text-[9px] font-bold flex items-center justify-center shadow">2</span>
+            <span id="notif-badge" class="absolute top-0.5 right-0.5 sm:top-1 sm:right-1 w-4 h-4 rounded-full bg-amber-500 text-white text-[9px] font-bold flex items-center justify-center shadow">2</span>
           </button>
 
           <!-- Notification Dropdown Menu -->
@@ -132,12 +138,12 @@
         </div>
 
         <!-- Theme Toggle Button -->
-        <button class="theme-toggle-btn w-9 h-9 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center transition-colors" aria-label="Toggle Dark Mode" title="Toggle Dark/Light Mode">
+        <button class="theme-toggle-btn w-8 h-8 sm:w-9 sm:h-9 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center transition-colors" aria-label="Toggle Dark Mode" title="Toggle Dark/Light Mode">
           <i class="fas fa-moon theme-toggle-icon text-slate-700 text-sm"></i>
         </button>
 
         <!-- Settings Quick Link -->
-        <a href="settings.html" class="w-9 h-9 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 hidden sm:flex items-center justify-center transition-colors" title="Settings">
+        <a href="settings.html" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 hidden sm:flex items-center justify-center transition-colors" title="Settings">
           <i class="fas fa-cog text-sm"></i>
         </a>
 
@@ -147,8 +153,8 @@
         </div>
 
         <!-- Mobile Hamburger Button -->
-        <button id="hamburger-btn" class="lg:hidden w-9 h-9 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-200" aria-label="Open Navigation Drawer">
-          <i class="fas fa-bars text-lg"></i>
+        <button id="hamburger-btn" class="lg:hidden w-8 h-8 sm:w-9 sm:h-9 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-200" aria-label="Open Navigation Drawer">
+          <i class="fas fa-bars text-base sm:text-lg"></i>
         </button>
       </div>
 
@@ -241,62 +247,96 @@
     <!-- Hero Slider Section -->
     <section class="slider-container" aria-label="Featured Highlights of Gogaldara">
       
-      <!-- Slide 1: Original Gogaldara Chill Point Image from Kashmir Digest -->
+      <!-- Slide 1: High-Definition Gogaldara Mountain Landscape (Google Drive) -->
       <div class="slide active">
         <img 
-          src="https://www.kashmirdigest.com/wp-content/uploads/2025/01/download-2025-01-16T230346.379.jpeg" 
-          alt="Original photo of Chill Point 35-foot frozen icicles in Gogaldara Tangmarg Kashmir" 
+          src="images/file_00000000e2b08211818354f692f1af25.png" 
+          alt="High-resolution panoramic alpine view of Gogaldara in Tangmarg Baramulla Kashmir" 
           class="w-full h-full object-cover"
           loading="eager"
-          onerror="this.onerror=null;this.src='https://cdn.tripuntold.com/media/photos/location/2025/04/07/41a5a283-74f7-483f-a719-6ce5c0de00ab.jpg';"
+          fetchpriority="high"
+          decoding="async"
+          onerror="this.onerror=null;this.src='images/FB_IMG_1793332035375.jpg';"
         >
         <div class="slide-overlay absolute inset-0 flex items-center">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div class="max-w-3xl text-white">
-              <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500 text-slate-950 text-xs font-bold uppercase tracking-wider mb-4 shadow-lg">
-                <i class="fas fa-award"></i> Official Travel Portal • Owned by Shahid Mir
+              <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500 text-slate-950 text-xs font-bold uppercase tracking-wider mb-4 shadow-lg glow-tag">
+                <i class="fas fa-mountain"></i> Official Travel Portal • Owned by Shahid Mir
               </span>
               <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold font-serif leading-tight mb-4 drop-shadow-lg">
-                Chill Point Gogaldara: The 35-Foot Frozen Icicle Marvel
+                The Gogaldara: Tangmarg’s Pristine Alpine Sanctuary
               </h1>
-              <p class="text-sm sm:text-lg text-slate-100 mb-8 font-light leading-relaxed drop-shadow">
-                Witness Kashmir's true winter phenomenon. Situated just 13 km from Tangmarg town, Gogaldara's sub-zero frost sculpts running hillside water into towering 35-foot crystalline ice columns framed by dense fir forests.
+              <p class="text-sm sm:text-lg text-slate-100 mb-6 font-light leading-relaxed drop-shadow">
+                Discover North Kashmir’s tranquil retreat situated just 13 km from Tangmarg town. Experience snow-draped cedar forests, sub-zero mountain springs, and peaceful Himalayan village warmth.
               </p>
-              <div class="flex flex-wrap items-center gap-4">
-                <a href="explore.html#chill-point" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-6 py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 flex items-center gap-2 text-sm">
-                  <span>Explore Chill Point Guide</span>
+              
+              <div class="flex flex-wrap items-center gap-3 mb-6">
+                <a href="explore.html#chill-point" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 flex items-center gap-2 text-sm">
+                  <span>Explore Chill Point</span>
                   <i class="fas fa-arrow-right text-xs"></i>
                 </a>
-                <a href="gallery.html" class="bg-white/20 hover:bg-white/30 backdrop-blur-md text-white border border-white/40 font-semibold px-6 py-3.5 rounded-xl transition-all text-sm flex items-center gap-2">
+                <a href="gallery.html" class="bg-white/20 hover:bg-white/30 backdrop-blur-md text-white border border-white/40 font-semibold px-6 py-3 rounded-xl transition-all text-sm flex items-center gap-2">
                   <i class="fas fa-images"></i>
-                  <span>Original Photos Gallery</span>
+                  <span>Original Photos</span>
                 </a>
               </div>
+
+              <!-- Cool Floating Hero Search Bar -->
+              <div class="cool-glass-search p-2.5 sm:p-3 rounded-2xl max-w-2xl search-container relative">
+                <div class="flex items-center gap-2">
+                  <div class="relative flex-1">
+                    <i class="fas fa-search absolute left-3.5 top-1/2 -translate-y-1/2 text-amber-400 text-xs"></i>
+                    <input 
+                      type="text" 
+                      id="hero-search-input" 
+                      placeholder="Search Chill Point, snow treks, pine trails, homestays..." 
+                      class="w-full bg-white/10 text-white placeholder-slate-300 pl-10 pr-4 py-2.5 rounded-xl text-xs sm:text-sm border border-white/10 focus:border-amber-400 focus:bg-white/15 outline-none transition-all shadow-inner"
+                      autocomplete="off"
+                    >
+                  </div>
+                  <button type="button" onclick="window.handleHeroSearch();" class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm shadow-md flex items-center gap-1.5 flex-shrink-0 transition-transform active:scale-95">
+                    <span>Search</span>
+                    <i class="fas fa-search text-xs"></i>
+                  </button>
+                </div>
+                <!-- Quick Filter Tags -->
+                <div class="flex items-center gap-2 mt-2.5 pt-2 border-t border-white/10 overflow-x-auto text-[11px] text-slate-300">
+                  <span class="text-amber-300 font-semibold flex items-center gap-1 uppercase tracking-wider flex-shrink-0"><i class="fas fa-bolt text-[10px]"></i> Quick:</span>
+                  <button type="button" onclick="quickSearch('Chill Point')" class="px-2.5 py-0.5 rounded-lg bg-white/10 hover:bg-white/20 text-white whitespace-nowrap border border-white/10 transition-colors">❄️ Chill Point</button>
+                  <button type="button" onclick="quickSearch('Pine Forests')" class="px-2.5 py-0.5 rounded-lg bg-white/10 hover:bg-white/20 text-white whitespace-nowrap border border-white/10 transition-colors">🌲 Pine Forests</button>
+                  <button type="button" onclick="quickSearch('How to Reach')" class="px-2.5 py-0.5 rounded-lg bg-white/10 hover:bg-white/20 text-white whitespace-nowrap border border-white/10 transition-colors">🚗 Tangmarg (13km)</button>
+                  <button type="button" onclick="quickSearch('Cuisine')" class="px-2.5 py-0.5 rounded-lg bg-white/10 hover:bg-white/20 text-white whitespace-nowrap border border-white/10 transition-colors">☕ Warm Kahwa</button>
+                </div>
+                <div id="hero-search-dropdown" class="search-results-dropdown"></div>
+              </div>
+
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Slide 2: Original Gogaldara Scenic Landscape from TripUntold -->
+      <!-- Slide 2: Authentic Chill Point Frozen Icicles -->
       <div class="slide">
         <img 
-          src="https://cdn.tripuntold.com/media/photos/location/2025/04/07/41a5a283-74f7-483f-a719-6ce5c0de00ab.jpg" 
-          alt="Original winter landscape and pine trees of Gogaldara Chill Point Baramulla" 
+          src="images/41a5a283-74f7-483f-a719-6ce5c0de00ab.jpg" 
+          alt="Natural winter 35-foot frozen icicle formation at Gogaldara Chill Point" 
           class="w-full h-full object-cover"
           loading="lazy"
-          onerror="this.onerror=null;this.src='https://www.kashmirdigest.com/wp-content/uploads/2025/01/download-2025-01-16T230346.379.jpeg';"
+          decoding="async"
+          onerror="this.onerror=null;this.src='images/7ca44d44-88da-4053-a1e6-9afb76ee3c1c.jpg';"
         >
         <div class="slide-overlay absolute inset-0 flex items-center">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div class="max-w-3xl text-white">
               <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-600/90 backdrop-blur-md text-white text-xs font-semibold uppercase tracking-wider mb-4 border border-emerald-400/40">
-                <i class="fas fa-tree"></i> Authentic North Kashmir • Curated by Shahid Mir
+                <i class="fas fa-snowflake"></i> Winter Geological Wonder • Tangmarg
               </span>
               <h2 class="text-3xl sm:text-5xl lg:text-6xl font-bold font-serif leading-tight mb-4 drop-shadow-lg">
-                Snow-Draped Deodar Forests & Pure Solitude
+                Chill Point: Towering 35-Foot Frozen Ice Columns
               </h2>
               <p class="text-sm sm:text-lg text-slate-100 mb-8 font-light leading-relaxed drop-shadow">
-                A serene retreat away from Gulmarg’s crowded commercial corridors. Breathe in crisp mountain air, trek along quiet snow trails, and savor warmth around traditional village hearths.
+                When winter temperatures plunge below zero, mountain mineral seepages freeze into towering crystalline columns, creating North Kashmir's most spectacular natural ice attraction.
               </p>
               <div class="flex flex-wrap items-center gap-4">
                 <a href="about.html#geography" class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-6 py-3.5 rounded-xl shadow-lg transition-all text-sm flex items-center gap-2">
@@ -313,35 +353,36 @@
         </div>
       </div>
 
-      <!-- Slide 3: Alpine Meadows & Spring Blooms -->
+      <!-- Slide 3: Majestic Gogaldara Pine Slopes & Snow Blanket (Google Drive) -->
       <div class="slide">
         <img 
-          src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=2000&q=85" 
-          alt="Lush green alpine meadows and mountain streams of Gogaldara in summer" 
+          src="images/FB_IMG_1793332035375.jpg" 
+          alt="Panoramic mountain landscape and pine slopes of Gogaldara Chill Point" 
           class="w-full h-full object-cover"
           loading="lazy"
-          onerror="this.onerror=null;this.src='https://cdn.tripuntold.com/media/photos/location/2025/04/07/41a5a283-74f7-483f-a719-6ce5c0de00ab.jpg';"
+          decoding="async"
+          onerror="this.onerror=null;this.src='images/397b90ca-43ba-422a-9db9-ebbbc3a5cc04.jpg';"
         >
         <div class="slide-overlay absolute inset-0 flex items-center">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div class="max-w-3xl text-white">
               <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-600/90 backdrop-blur-md text-white text-xs font-semibold uppercase tracking-wider mb-4 border border-sky-400/40">
-                <i class="fas fa-seedling"></i> Summer Pastures & Brooks
+                <i class="fas fa-tree"></i> Pristine Pine Woods & Pure Solitude
               </span>
               <h2 class="text-3xl sm:text-5xl lg:text-6xl font-bold font-serif leading-tight mb-4 drop-shadow-lg">
-                Wildflower Slopes & Crystal Brooks
+                Snow-Draped Slopes & Mountain Peace
               </h2>
               <p class="text-sm sm:text-lg text-slate-100 mb-8 font-light leading-relaxed drop-shadow">
-                When winter recedes, Gogaldara's pastures awaken under carpeted wildflowers, cold glacial brooks, and shepherd trails connecting Baramulla and Budgam.
+                Escape the tourist crowds and embrace authentic Himalayan silence. Hike through century-old deodar forests and experience Kashmir as it was meant to be.
               </p>
               <div class="flex flex-wrap items-center gap-4">
                 <a href="explore.html#activities" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-6 py-3.5 rounded-xl shadow-lg transition-all text-sm flex items-center gap-2">
-                  <span>Meadow Picnics & Treks</span>
-                  <i class="fas fa-hiking"></i>
+                  <span>Winter Activities</span>
+                  <i class="fas fa-skiing"></i>
                 </a>
-                <a href="explore.html#food" class="bg-white/20 hover:bg-white/30 backdrop-blur-md text-white border border-white/40 font-semibold px-6 py-3.5 rounded-xl transition-all text-sm flex items-center gap-2">
-                  <i class="fas fa-mug-hot"></i>
-                  <span>Kashmiri Food & Kahwa</span>
+                <a href="gallery.html" class="bg-white/20 hover:bg-white/30 backdrop-blur-md text-white border border-white/40 font-semibold px-6 py-3.5 rounded-xl transition-all text-sm flex items-center gap-2">
+                  <i class="fas fa-images"></i>
+                  <span>Explore Gallery</span>
                 </a>
               </div>
             </div>
@@ -372,11 +413,11 @@
             <div class="relative">
               <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800 bg-slate-100">
                 <img 
-                  src="https://www.kashmirdigest.com/wp-content/uploads/2025/01/download-2025-01-16T230346.379.jpeg" 
-                  alt="Original Chill Point icicle formation in Gogaldara Tangmarg curated by Shahid Mir"
+                  src="images/FB_IMG_1793332040303.jpg" 
+                  alt="Authentic mountain trails and pine slopes of Gogaldara curated by Shahid Mir"
                   class="w-full h-full object-cover"
                   loading="lazy"
-                  onerror="this.onerror=null;this.src='https://cdn.tripuntold.com/media/photos/location/2025/04/07/41a5a283-74f7-483f-a719-6ce5c0de00ab.jpg';"
+                  onerror="this.onerror=null;this.src='images/41a5a283-74f7-483f-a719-6ce5c0de00ab.jpg';"
                 >
               </div>
               <div class="absolute -bottom-6 -right-6 bg-gradient-to-br from-emerald-950 to-emerald-900 text-white p-6 rounded-2xl shadow-2xl max-w-xs border border-emerald-700/60">
@@ -475,11 +516,11 @@
           <div class="nature-card overflow-hidden flex flex-col reveal">
             <div class="relative h-56 overflow-hidden">
               <img 
-                src="https://www.kashmirdigest.com/wp-content/uploads/2025/01/download-2025-01-16T230346.379.jpeg" 
+                src="images/41a5a283-74f7-483f-a719-6ce5c0de00ab.jpg" 
                 alt="Original photo of Chill Point frozen icicle wall in Gogaldara"
                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
-                onerror="this.onerror=null;this.src='https://cdn.tripuntold.com/media/photos/location/2025/04/07/41a5a283-74f7-483f-a719-6ce5c0de00ab.jpg';"
+                onerror="this.onerror=null;this.src='images/7ca44d44-88da-4053-a1e6-9afb76ee3c1c.jpg';"
               >
               <div class="absolute top-3 left-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm text-xs font-bold text-sky-600 dark:text-sky-400 px-3 py-1 rounded-full">
                 Winter Wonder
@@ -505,28 +546,28 @@
             </div>
           </div>
 
-          <!-- Card 2: Wildflower Meadows & Trekking -->
+          <!-- Card 2: Alpine Pine Slopes -->
           <div class="nature-card overflow-hidden flex flex-col reveal">
             <div class="relative h-56 overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1586348943529-beaae6c28db9?auto=format&fit=crop&w=800&q=80" 
-                alt="Summer alpine meadows and wildflowers in Gogaldara Tangmarg"
+                src="images/397b90ca-43ba-422a-9db9-ebbbc3a5cc04.jpg" 
+                alt="Gogaldara alpine pine slopes and trails"
                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
-                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80';"
+                onerror="this.onerror=null;this.src='images/7ca44d44-88da-4053-a1e6-9afb76ee3c1c.jpg';"
               >
               <div class="absolute top-3 left-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm text-xs font-bold text-emerald-700 dark:text-emerald-400 px-3 py-1 rounded-full">
-                Spring & Summer
+                Pine Ridges
               </div>
               <div class="absolute bottom-3 right-3 bg-black/60 backdrop-blur-sm text-white text-[11px] px-2.5 py-1 rounded-md">
-                Wildflower Trails
+                Deodar Woods
               </div>
             </div>
             <div class="p-6 flex-grow flex flex-col justify-between">
               <div>
-                <h3 class="text-xl font-bold font-serif text-slate-900 dark:text-white mb-2">Alpine Meadows & Brooks</h3>
+                <h3 class="text-xl font-bold font-serif text-slate-900 dark:text-white mb-2">Alpine Pine Ridges</h3>
                 <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                  Lush terraced slopes, grazing pastoral flocks, and meandering glacial rivulets make Gogaldara an idyllic escape for picnics, solitude, and amateur landscape photography.
+                  Lush terraced slopes, grazing pastoral flocks, and pine tree canopies make Gogaldara an idyllic escape for quiet mountain walks, solitude, and landscape photography.
                 </p>
               </div>
               <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
@@ -539,39 +580,259 @@
             </div>
           </div>
 
-          <!-- Card 3: Traditional Kashmiri Food & Hospitality -->
+          <!-- Card 3: Mountain Highland View -->
           <div class="nature-card overflow-hidden flex flex-col reveal">
             <div class="relative h-56 overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80" 
-                alt="Traditional Kashmiri Kahwa tea brewed with saffron and crushed almonds"
+                src="images/FB_IMG_1793332040303.jpg" 
+                alt="Panoramic view of Gogaldara mountain slopes and valley"
                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
-                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80';"
+                onerror="this.onerror=null;this.src='images/FB_IMG_1793332035375.jpg';"
               >
               <div class="absolute top-3 left-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm text-xs font-bold text-amber-600 dark:text-amber-400 px-3 py-1 rounded-full">
-                Kashmiri Flavors
+                Valley Vista
               </div>
               <div class="absolute bottom-3 right-3 bg-black/60 backdrop-blur-sm text-white text-[11px] px-2.5 py-1 rounded-md">
-                Kahwa & Wazwan
+                Alpine Highland
               </div>
             </div>
             <div class="p-6 flex-grow flex flex-col justify-between">
               <div>
-                <h3 class="text-xl font-bold font-serif text-slate-900 dark:text-white mb-2">Hearth & Village Hospitality</h3>
+                <h3 class="text-xl font-bold font-serif text-slate-900 dark:text-white mb-2">Gogaldara Valley Panorama</h3>
                 <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                  Warm your hands around a boiling samovar cup of sweet saffron Kahwa, taste freshly baked Makki ki Roti with mountain butter, and experience generous Kashmiri warmth.
+                  Experience true Kashmiri hospitality in the tranquil mountain highlands. Clean spring waters, snowy slopes, and pure untouched wilderness.
                 </p>
               </div>
               <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
-                <span class="text-xs font-medium text-emerald-800 dark:text-emerald-400">Authentic Taste</span>
-                <a href="explore.html#food" class="text-xs font-semibold text-amber-600 dark:text-amber-400 hover:underline flex items-center gap-1">
-                  <span>Culinary Guide</span>
+                <span class="text-xs font-medium text-emerald-800 dark:text-emerald-400">Authentic Nature</span>
+                <a href="about.html" class="text-xs font-semibold text-amber-600 dark:text-amber-400 hover:underline flex items-center gap-1">
+                  <span>About Valley</span>
                   <i class="fas fa-chevron-right text-[10px]"></i>
                 </a>
               </div>
             </div>
           </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Authentic Photo Stream Section -->
+    <section class="py-16 md:py-24 bg-white dark:bg-slate-900 border-t border-b border-slate-200/60 dark:border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4 reveal">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 text-xs font-bold uppercase tracking-wider mb-2">
+              <i class="fas fa-camera text-emerald-600 dark:text-emerald-400"></i> Authentic Photography Showcase
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-bold font-serif text-slate-900 dark:text-white mt-1">
+              Photographs of Gogaldara & Chill Point
+            </h2>
+            <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-2 max-w-2xl">
+              Authentic photographs captured across Gogaldara and Chill Point in Tangmarg, Baramulla. Click any picture to zoom and inspect in high-resolution lightbox.
+            </p>
+          </div>
+          <div class="flex-shrink-0">
+            <a href="gallery.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-800 hover:bg-emerald-700 text-white text-xs font-semibold shadow transition-all">
+              <i class="fas fa-images"></i>
+              <span>Open Complete Photo Gallery</span>
+              <i class="fas fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Real Photos Grid (Responsive 1-col on mobile, 2-col on tablet, 4-col on desktop) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          
+          <!-- Photo 1: High-Res Panorama -->
+          <div class="gallery-item group relative overflow-hidden rounded-2xl cursor-pointer shadow-md hover:shadow-xl transition-all aspect-[4/3] bg-slate-100 dark:bg-slate-800 reveal" data-category="Meadows" data-title="Alpine Highland View of Gogaldara">
+            <img 
+              src="images/file_00000000e2b08211818354f692f1af25.png" 
+              alt="High-resolution alpine mountain slopes in Gogaldara"
+              class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500"
+              loading="lazy"
+              decoding="async"
+              onerror="this.onerror=null;this.src='images/FB_IMG_1793332035375.jpg';"
+            >
+            <div class="absolute top-2.5 left-2.5 bg-black/70 backdrop-blur-sm text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded shadow">
+              <i class="fas fa-mountain mr-1"></i> Alpine Panorama
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+              <span class="text-[10px] font-semibold text-amber-300 uppercase">Gogaldara Highlands</span>
+              <h4 class="text-xs font-bold font-serif leading-snug">Himalayan Foothills &amp; Pines</h4>
+              <span class="text-[10px] text-slate-300 mt-1 flex items-center gap-1"><i class="fas fa-search-plus"></i> Click to Zoom</span>
+            </div>
+          </div>
+
+          <!-- Photo 2: Chill Point Ice Dome & Pines -->
+          <div class="gallery-item group relative overflow-hidden rounded-2xl cursor-pointer shadow-md hover:shadow-xl transition-all aspect-[4/3] bg-slate-100 dark:bg-slate-800 reveal" data-category="Chill Point" data-title="Frozen Ice Dome and Pine Backing">
+            <img 
+              src="images/7ca44d44-88da-4053-a1e6-9afb76ee3c1c.jpg" 
+              alt="Gogaldara Chill Point Ice Dome Structure"
+              class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500"
+              loading="lazy"
+              decoding="async"
+              onerror="this.onerror=null;this.src='images/41a5a283-74f7-483f-a719-6ce5c0de00ab.jpg';"
+            >
+            <div class="absolute top-2.5 left-2.5 bg-black/70 backdrop-blur-sm text-emerald-300 text-[10px] font-bold px-2 py-0.5 rounded shadow">
+              <i class="fas fa-snowflake mr-1"></i> Ice Dome
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+              <span class="text-[10px] font-semibold text-emerald-300 uppercase">Chill Point</span>
+              <h4 class="text-xs font-bold font-serif leading-snug">Natural Ice Dome &amp; Pines</h4>
+              <span class="text-[10px] text-slate-300 mt-1 flex items-center gap-1"><i class="fas fa-search-plus"></i> Click to Zoom</span>
+            </div>
+          </div>
+
+          <!-- Photo 3: Twin Frozen Columns -->
+          <div class="gallery-item group relative overflow-hidden rounded-2xl cursor-pointer shadow-md hover:shadow-xl transition-all aspect-[4/3] bg-slate-100 dark:bg-slate-800 reveal" data-category="Landscape" data-title="Twin Frozen Ice Columns at Chill Point">
+            <img 
+              src="images/41a5a283-74f7-483f-a719-6ce5c0de00ab.jpg" 
+              alt="Snowy Pine Ridge and Twin Ice Columns in Gogaldara"
+              class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500"
+              loading="lazy"
+              decoding="async"
+              onerror="this.onerror=null;this.src='images/7ca44d44-88da-4053-a1e6-9afb76ee3c1c.jpg';"
+            >
+            <div class="absolute top-2.5 left-2.5 bg-black/70 backdrop-blur-sm text-sky-300 text-[10px] font-bold px-2 py-0.5 rounded shadow">
+              <i class="fas fa-icicles mr-1"></i> Twin Columns
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+              <span class="text-[10px] font-semibold text-sky-300 uppercase">Natural Wonder</span>
+              <h4 class="text-xs font-bold font-serif leading-snug">Twin Frozen Ice Columns</h4>
+              <span class="text-[10px] text-slate-300 mt-1 flex items-center gap-1"><i class="fas fa-search-plus"></i> Click to Zoom</span>
+            </div>
+          </div>
+
+          <!-- Photo 4: Frozen Cascade Wall -->
+          <div class="gallery-item group relative overflow-hidden rounded-2xl cursor-pointer shadow-md hover:shadow-xl transition-all aspect-[4/3] bg-slate-100 dark:bg-slate-800 reveal" data-category="Chill Point" data-title="Frozen Cascade & Mountain Seepage">
+            <img 
+              src="images/0711d468-591b-429a-84d9-fc9213c55a6f.jpg" 
+              alt="Frozen water seepage cascade in Gogaldara"
+              class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500"
+              loading="lazy"
+              decoding="async"
+              onerror="this.onerror=null;this.src='images/41a5a283-74f7-483f-a719-6ce5c0de00ab.jpg';"
+            >
+            <div class="absolute top-2.5 left-2.5 bg-black/70 backdrop-blur-sm text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded shadow">
+              <i class="fas fa-tint mr-1"></i> Ice Cascade
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+              <span class="text-[10px] font-semibold text-amber-300 uppercase">Frozen Wall</span>
+              <h4 class="text-xs font-bold font-serif leading-snug">Seepage Ice Sheet</h4>
+              <span class="text-[10px] text-slate-300 mt-1 flex items-center gap-1"><i class="fas fa-search-plus"></i> Click to Zoom</span>
+            </div>
+          </div>
+
+          <!-- Photo 5: Snow Slope & Pine Forest Ridge -->
+          <div class="gallery-item group relative overflow-hidden rounded-2xl cursor-pointer shadow-md hover:shadow-xl transition-all aspect-[4/3] bg-slate-100 dark:bg-slate-800 reveal" data-category="Forest" data-title="Deep Powder Snow Blanket & Pine Ridge">
+            <img 
+              src="images/397b90ca-43ba-422a-9db9-ebbbc3a5cc04.jpg" 
+              alt="Pine ridge and deep snow slopes in Gogaldara"
+              class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500"
+              loading="lazy"
+              decoding="async"
+              onerror="this.onerror=null;this.src='images/41a5a283-74f7-483f-a719-6ce5c0de00ab.jpg';"
+            >
+            <div class="absolute top-2.5 left-2.5 bg-black/70 backdrop-blur-sm text-emerald-300 text-[10px] font-bold px-2 py-0.5 rounded shadow">
+              <i class="fas fa-tree mr-1"></i> Forest Ridge
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+              <span class="text-[10px] font-semibold text-emerald-300 uppercase">Pine Forest</span>
+              <h4 class="text-xs font-bold font-serif leading-snug">Silver Fir &amp; Deodar Slopes</h4>
+              <span class="text-[10px] text-slate-300 mt-1 flex items-center gap-1"><i class="fas fa-search-plus"></i> Click to Zoom</span>
+            </div>
+          </div>
+
+          <!-- Photo 6: Ice Mound & Fir Trees -->
+          <div class="gallery-item group relative overflow-hidden rounded-2xl cursor-pointer shadow-md hover:shadow-xl transition-all aspect-[4/3] bg-slate-100 dark:bg-slate-800 reveal" data-category="Chill Point" data-title="Ice Mound with Mountain Fir Woods">
+            <img 
+              src="images/ed19299d-f9dd-4fdd-83cc-fa6f8fea16a7.jpg" 
+              alt="Ice mound and fir trees in Gogaldara"
+              class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500"
+              loading="lazy"
+              decoding="async"
+              onerror="this.onerror=null;this.src='images/41a5a283-74f7-483f-a719-6ce5c0de00ab.jpg';"
+            >
+            <div class="absolute top-2.5 left-2.5 bg-black/70 backdrop-blur-sm text-sky-300 text-[10px] font-bold px-2 py-0.5 rounded shadow">
+              <i class="fas fa-snowflake mr-1"></i> Sub-Zero Ice
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+              <span class="text-[10px] font-semibold text-sky-300 uppercase">Chill Point Formation</span>
+              <h4 class="text-xs font-bold font-serif leading-snug">Ice Mound &amp; Fir Woods</h4>
+              <span class="text-[10px] text-slate-300 mt-1 flex items-center gap-1"><i class="fas fa-search-plus"></i> Click to Zoom</span>
+            </div>
+          </div>
+
+          <!-- Photo 7: Crystalline Ice Spire Detail -->
+          <div class="gallery-item group relative overflow-hidden rounded-2xl cursor-pointer shadow-md hover:shadow-xl transition-all aspect-[4/3] bg-slate-100 dark:bg-slate-800 reveal" data-category="Chill Point" data-title="Crystalline Ice Spire Detail">
+            <img 
+              src="images/bba3bc38-1586-4af5-afe1-4948ab92a856.jpg" 
+              alt="Crystalline ice spire detail at Chill Point"
+              class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500"
+              loading="lazy"
+              decoding="async"
+              onerror="this.onerror=null;this.src='images/41a5a283-74f7-483f-a719-6ce5c0de00ab.jpg';"
+            >
+            <div class="absolute top-2.5 left-2.5 bg-black/70 backdrop-blur-sm text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded shadow">
+              <i class="fas fa-gem mr-1"></i> Ice Spire
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+              <span class="text-[10px] font-semibold text-amber-300 uppercase">Ice Architecture</span>
+              <h4 class="text-xs font-bold font-serif leading-snug">Crystalline Ice Column</h4>
+              <span class="text-[10px] text-slate-300 mt-1 flex items-center gap-1"><i class="fas fa-search-plus"></i> Click to Zoom</span>
+            </div>
+          </div>
+
+          <!-- Photo 8: Mountain Heights -->
+          <div class="gallery-item group relative overflow-hidden rounded-2xl cursor-pointer shadow-md hover:shadow-xl transition-all aspect-[4/3] bg-slate-100 dark:bg-slate-800 reveal" data-category="Meadows" data-title="Chill Point Mountain Landscape">
+            <img 
+              src="images/FB_IMG_1793332035375.jpg" 
+              alt="Gogaldara Chill Point landscape"
+              class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500"
+              loading="lazy"
+              decoding="async"
+              onerror="this.onerror=null;this.src='images/41a5a283-74f7-483f-a719-6ce5c0de00ab.jpg';"
+            >
+            <div class="absolute top-2.5 left-2.5 bg-black/70 backdrop-blur-sm text-emerald-400 text-[10px] font-bold px-2 py-0.5 rounded shadow">
+              <i class="fas fa-mountain mr-1"></i> Mountain Heights
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+              <span class="text-[10px] font-semibold text-emerald-300 uppercase">Alpine Heights</span>
+              <h4 class="text-xs font-bold font-serif leading-snug">Chill Point Frozen Landscape</h4>
+              <span class="text-[10px] text-slate-300 mt-1 flex items-center gap-1"><i class="fas fa-search-plus"></i> Click to Zoom</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Authentic Tourist Video Feature from Google Drive -->
+        <div class="mt-12 p-6 sm:p-8 rounded-3xl bg-slate-900 text-white shadow-2xl border border-slate-800 reveal">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-5">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950 text-emerald-300 text-xs font-bold uppercase tracking-wider mb-3 border border-emerald-800/60">
+                <i class="fas fa-video"></i> Field Video Footage • Tangmarg
+              </div>
+              <h3 class="text-2xl sm:text-3xl font-bold font-serif">Watch Real Footage from Chill Point</h3>
+              <p class="text-sm text-slate-300 mt-2 leading-relaxed">
+                Experience the authentic sound and atmosphere of visitors enjoying the frozen ice cliffs and snow trails at Gogaldara Chill Point in Tangmarg.
+              </p>
+              <div class="mt-5 flex items-center gap-3 text-xs text-amber-300 font-semibold">
+                <i class="fas fa-check-circle"></i> Direct Google Drive Upload Verified
+              </div>
+            </div>
+            <div class="lg:col-span-7">
+              <div class="rounded-2xl overflow-hidden shadow-2xl bg-black border border-slate-700 aspect-video flex items-center justify-center">
+                <video controls preload="metadata" class="w-full h-full object-cover">
+                  <source src="images/gogaldara_video.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
 
         </div>
 
@@ -656,6 +917,149 @@
       </div>
     </section>
 
+    <!-- Trending Instagram Reels & Shots Section (Scrollable Short-Video Cards) -->
+    <section class="py-16 md:py-20 bg-slate-950 text-white border-t border-slate-900 relative overflow-hidden" id="trending-reels">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-rose-900/60 to-purple-900/60 text-rose-300 text-xs font-bold uppercase tracking-wider mb-2 border border-rose-500/30 shadow-md">
+              <i class="fab fa-instagram text-rose-400"></i> Trending Instagram Reels &amp; Shots
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold font-serif text-white">
+              Gogaldara Chill Point Viral Reels
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-400 mt-1 max-w-xl">
+              Swipe through authentic short video clips of the 35-foot frozen icicle marvel, snow sledging, and pine slopes.
+            </p>
+          </div>
+          <div class="flex items-center gap-3">
+            <a href="shots.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-rose-600 to-purple-600 hover:from-rose-500 hover:to-purple-500 text-white text-xs font-bold shadow-lg transition-transform hover:-translate-y-0.5">
+              <i class="fab fa-instagram"></i>
+              <span>Open All Reels Feed</span>
+              <i class="fas fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Horizontal Scrollable Reel Cards -->
+        <div class="flex gap-4 sm:gap-6 overflow-x-auto pb-6 snap-x snap-mandatory scrollbar-thin">
+          
+          <!-- Reel Card 1: 35-ft Icicles Video Preview -->
+          <div class="flex-shrink-0 w-64 sm:w-72 aspect-[9/16] rounded-3xl overflow-hidden relative shadow-2xl snap-start bg-slate-900 border border-slate-800 flex flex-col justify-between p-4 group">
+            <video src="images/gogaldara_video.mp4" class="absolute inset-0 w-full h-full object-cover z-0" playsinline loop muted autoplay></video>
+            <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/90 z-10 pointer-events-none"></div>
+            <div class="relative z-20 flex items-center justify-between">
+              <span class="px-2.5 py-0.5 rounded-full bg-rose-600 text-white text-[10px] font-bold shadow flex items-center gap-1">
+                <i class="fab fa-instagram"></i> Live Clip
+              </span>
+              <span class="text-[11px] text-white bg-black/60 px-2 py-0.5 rounded-full backdrop-blur-md">
+                <i class="fas fa-eye text-amber-400 mr-1"></i> 185K
+              </span>
+            </div>
+            <div class="relative z-20 text-white">
+              <span class="text-[11px] font-bold text-amber-300 block mb-1">Chill Point 35-ft Icicle Marvel</span>
+              <p class="text-xs text-slate-200 line-clamp-2 leading-tight mb-3">Witness the frozen seepage wall towering high in Tangmarg sub-zero freeze.</p>
+              <a href="https://www.instagram.com/explore/tags/gogaldarachillpoint/" target="_blank" rel="noopener noreferrer" class="w-full py-2 rounded-xl bg-gradient-to-r from-rose-500 to-purple-600 hover:from-rose-400 hover:to-purple-500 text-white text-xs font-bold text-center flex items-center justify-center gap-1.5 shadow transition-colors">
+                <i class="fab fa-instagram"></i>
+                <span>Watch on Instagram</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Reel Card 2: Alpine Forest Ridge -->
+          <div class="flex-shrink-0 w-64 sm:w-72 aspect-[9/16] rounded-3xl overflow-hidden relative shadow-2xl snap-start bg-slate-900 border border-slate-800 flex flex-col justify-between p-4 group">
+            <img src="images/file_00000000e2b08211818354f692f1af25.png" alt="Alpine Forest Ridge" class="absolute inset-0 w-full h-full object-cover z-0 group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/90 z-10 pointer-events-none"></div>
+            <div class="relative z-20 flex items-center justify-between">
+              <span class="px-2.5 py-0.5 rounded-full bg-emerald-600 text-white text-[10px] font-bold shadow flex items-center gap-1">
+                <i class="fas fa-tree"></i> Pine Woods
+              </span>
+              <span class="text-[11px] text-white bg-black/60 px-2 py-0.5 rounded-full backdrop-blur-md">
+                <i class="fas fa-eye text-amber-400 mr-1"></i> 142K
+              </span>
+            </div>
+            <div class="relative z-20 text-white">
+              <span class="text-[11px] font-bold text-emerald-300 block mb-1">High Ridge Cedar Walk</span>
+              <p class="text-xs text-slate-200 line-clamp-2 leading-tight mb-3">Silent Himalayan snow trails surrounded by century-old fir trees.</p>
+              <a href="https://www.instagram.com/explore/tags/gogaldara/" target="_blank" rel="noopener noreferrer" class="w-full py-2 rounded-xl bg-gradient-to-r from-rose-500 to-purple-600 hover:from-rose-400 hover:to-purple-500 text-white text-xs font-bold text-center flex items-center justify-center gap-1.5 shadow transition-colors">
+                <i class="fab fa-instagram"></i>
+                <span>Watch on Instagram</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Reel Card 3: Twin Frozen Columns -->
+          <div class="flex-shrink-0 w-64 sm:w-72 aspect-[9/16] rounded-3xl overflow-hidden relative shadow-2xl snap-start bg-slate-900 border border-slate-800 flex flex-col justify-between p-4 group">
+            <img src="images/41a5a283-74f7-483f-a719-6ce5c0de00ab.jpg" alt="Twin Frozen Columns" class="absolute inset-0 w-full h-full object-cover z-0 group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/90 z-10 pointer-events-none"></div>
+            <div class="relative z-20 flex items-center justify-between">
+              <span class="px-2.5 py-0.5 rounded-full bg-sky-600 text-white text-[10px] font-bold shadow flex items-center gap-1">
+                <i class="fas fa-snowflake"></i> Viral Reel
+              </span>
+              <span class="text-[11px] text-white bg-black/60 px-2 py-0.5 rounded-full backdrop-blur-md">
+                <i class="fas fa-eye text-amber-400 mr-1"></i> 260K
+              </span>
+            </div>
+            <div class="relative z-20 text-white">
+              <span class="text-[11px] font-bold text-sky-300 block mb-1">Twin Ice Stalactites</span>
+              <p class="text-xs text-slate-200 line-clamp-2 leading-tight mb-3">Natural crystalline spires standing 35 feet above Tangmarg ground.</p>
+              <a href="https://www.instagram.com/explore/tags/gogaldarachillpoint/" target="_blank" rel="noopener noreferrer" class="w-full py-2 rounded-xl bg-gradient-to-r from-rose-500 to-purple-600 hover:from-rose-400 hover:to-purple-500 text-white text-xs font-bold text-center flex items-center justify-center gap-1.5 shadow transition-colors">
+                <i class="fab fa-instagram"></i>
+                <span>Watch on Instagram</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Reel Card 4: Mountain Heights -->
+          <div class="flex-shrink-0 w-64 sm:w-72 aspect-[9/16] rounded-3xl overflow-hidden relative shadow-2xl snap-start bg-slate-900 border border-slate-800 flex flex-col justify-between p-4 group">
+            <img src="images/FB_IMG_1793332035375.jpg" alt="Mountain Heights" class="absolute inset-0 w-full h-full object-cover z-0 group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/90 z-10 pointer-events-none"></div>
+            <div class="relative z-20 flex items-center justify-between">
+              <span class="px-2.5 py-0.5 rounded-full bg-amber-600 text-white text-[10px] font-bold shadow flex items-center gap-1">
+                <i class="fas fa-mountain"></i> Drone Reel
+              </span>
+              <span class="text-[11px] text-white bg-black/60 px-2 py-0.5 rounded-full backdrop-blur-md">
+                <i class="fas fa-eye text-amber-400 mr-1"></i> 94K
+              </span>
+            </div>
+            <div class="relative z-20 text-white">
+              <span class="text-[11px] font-bold text-amber-300 block mb-1">Crest &amp; Snow Slopes</span>
+              <p class="text-xs text-slate-200 line-clamp-2 leading-tight mb-3">Morning golden light on sub-alpine Baramulla slopes.</p>
+              <a href="https://www.instagram.com/explore/tags/gogaldara/" target="_blank" rel="noopener noreferrer" class="w-full py-2 rounded-xl bg-gradient-to-r from-rose-500 to-purple-600 hover:from-rose-400 hover:to-purple-500 text-white text-xs font-bold text-center flex items-center justify-center gap-1.5 shadow transition-colors">
+                <i class="fab fa-instagram"></i>
+                <span>Watch on Instagram</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Reel Card 5: Rustic Mountain Warmth -->
+          <div class="flex-shrink-0 w-64 sm:w-72 aspect-[9/16] rounded-3xl overflow-hidden relative shadow-2xl snap-start bg-slate-900 border border-slate-800 flex flex-col justify-between p-4 group">
+            <img src="images/images.jpeg" alt="Rustic Mountain Warmth" class="absolute inset-0 w-full h-full object-cover z-0 group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/90 z-10 pointer-events-none"></div>
+            <div class="relative z-20 flex items-center justify-between">
+              <span class="px-2.5 py-0.5 rounded-full bg-teal-600 text-white text-[10px] font-bold shadow flex items-center gap-1">
+                <i class="fas fa-home"></i> Village Life
+              </span>
+              <span class="text-[11px] text-white bg-black/60 px-2 py-0.5 rounded-full backdrop-blur-md">
+                <i class="fas fa-eye text-amber-400 mr-1"></i> 112K
+              </span>
+            </div>
+            <div class="relative z-20 text-white">
+              <span class="text-[11px] font-bold text-teal-300 block mb-1">Kashmiri Village Hospitality</span>
+              <p class="text-xs text-slate-200 line-clamp-2 leading-tight mb-3">Steaming saffron kahwa around glowing wood-fire hearths.</p>
+              <a href="https://www.instagram.com/explore/tags/gogaldara/" target="_blank" rel="noopener noreferrer" class="w-full py-2 rounded-xl bg-gradient-to-r from-rose-500 to-purple-600 hover:from-rose-400 hover:to-purple-500 text-white text-xs font-bold text-center flex items-center justify-center gap-1.5 shadow transition-colors">
+                <i class="fab fa-instagram"></i>
+                <span>Watch on Instagram</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
   <!-- Global Footer -->
@@ -680,7 +1084,7 @@
           </p>
           <div class="flex items-center gap-3 text-slate-400 text-sm">
             <a href="https://facebook.com" target="_blank" rel="noopener" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-emerald-800 hover:text-white flex items-center justify-center transition-colors" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://instagram.com" target="_blank" rel="noopener" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-emerald-800 hover:text-white flex items-center justify-center transition-colors" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/explore/tags/gogaldarachillpoint/" target="_blank" rel="noopener" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-emerald-800 hover:text-white flex items-center justify-center transition-colors" aria-label="Instagram"><i class="fab fa-instagram text-rose-400"></i></a>
             <a href="https://youtube.com" target="_blank" rel="noopener" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-emerald-800 hover:text-white flex items-center justify-center transition-colors" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
             <a href="https://twitter.com" target="_blank" rel="noopener" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-emerald-800 hover:text-white flex items-center justify-center transition-colors" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
           </div>
@@ -694,6 +1098,7 @@
             <li><a href="about.html" class="hover:text-amber-400 transition-colors">About Gogaldara</a></li>
             <li><a href="explore.html#chill-point" class="hover:text-amber-400 transition-colors">Chill Point Icicles</a></li>
             <li><a href="gallery.html" class="hover:text-amber-400 transition-colors">Photo Grid</a></li>
+            <li><a href="shots.html" class="text-rose-400 hover:underline flex items-center gap-1 font-semibold"><i class="fab fa-instagram"></i> Shots &amp; Reels</a></li>
             <li><a href="menu.html" class="hover:text-amber-400 transition-colors">Site Directory</a></li>
           </ul>
         </div>
@@ -723,18 +1128,45 @@
 
       </div>
 
-      <!-- Bottom Credits & Image Sources -->
+      <!-- Bottom Credits & Deep Bottom Core Developer Sheikh Adil -->
       <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
         <div>
-          <span>&copy; 2026 The Gogaldara. Owned & Designed by <strong class="text-slate-200 font-semibold">Shahid Mir</strong>.</span>
+          <div>&copy; 2026 The Gogaldara. Owned &amp; Designed by <strong class="text-slate-200 font-semibold">Shahid Mir</strong>.</div>
+          <!-- Deep Bottom Core Developer Attribution -->
+          <div class="mt-1 text-emerald-400 font-medium tracking-wide">
+            Core Developer: <strong class="text-amber-400 font-bold underline decoration-amber-500/50">Sheikh Adil</strong>
+          </div>
         </div>
         <div class="text-[11px] text-slate-500 text-center sm:text-right">
-          <span>Photos: Kashmir Digest, TripUntold & Wikimedia Commons.</span>
+          <span>Official Tourism &amp; Cultural Heritage Portal of Gogaldara.</span>
         </div>
       </div>
-
     </div>
   </footer>
+
+  <!-- Mobile Sticky Bottom Navigation Bar (Automatic for Mobile Screens) -->
+  <nav class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 flex items-center justify-around py-2 px-1 text-[11px] shadow-lg text-slate-600 dark:text-slate-300" aria-label="Mobile Bottom Navigation">
+    <a href="index.html" class="flex flex-col items-center gap-0.5 text-emerald-800 dark:text-emerald-400 font-semibold py-1 px-2">
+      <i class="fas fa-home text-base"></i>
+      <span>Home</span>
+    </a>
+    <a href="explore.html" class="flex flex-col items-center gap-0.5 hover:text-emerald-700 dark:hover:text-emerald-400 py-1 px-2">
+      <i class="fas fa-compass text-base"></i>
+      <span>Explore</span>
+    </a>
+    <a href="gallery.html" class="flex flex-col items-center gap-0.5 hover:text-emerald-700 dark:hover:text-emerald-400 py-1 px-2">
+      <i class="fas fa-images text-base"></i>
+      <span>Gallery</span>
+    </a>
+    <a href="shots.html" class="flex flex-col items-center gap-0.5 text-rose-500 font-semibold py-1 px-2">
+      <i class="fab fa-instagram text-base"></i>
+      <span>Shots</span>
+    </a>
+    <button id="mobile-bottom-menu-btn" class="flex flex-col items-center gap-0.5 hover:text-emerald-700 dark:hover:text-emerald-400 py-1 px-2">
+      <i class="fas fa-bars text-base"></i>
+      <span>Menu</span>
+    </button>
+  </nav>
 
   <!-- Shared JavaScript -->
   <script src="./script.js"></script>

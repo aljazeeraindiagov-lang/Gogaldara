@@ -63,11 +63,18 @@
         <a href="feedback.html" class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-colors">Reviews</a>
       </nav>
 
-      <div class="flex items-center gap-3">
-        <div class="search-container relative hidden sm:block w-48 md:w-60">
+      <div class="flex items-center gap-2 sm:gap-3">
+        <div class="search-container relative hidden sm:block w-48 md:w-60 lg:w-72">
           <div class="relative">
-            <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
-            <input type="text" id="nav-search-input" placeholder="Search gallery photos..." class="w-full bg-slate-100 dark:bg-slate-800/80 text-slate-900 dark:text-white pl-8 pr-3 py-1.5 rounded-full text-xs border border-transparent focus:border-emerald-600 outline-none transition-all">
+            <i class="fas fa-search absolute left-3.5 top-1/2 -translate-y-1/2 text-emerald-700 dark:text-emerald-400 text-xs"></i>
+            <input 
+              type="text" 
+              id="nav-search-input" 
+              placeholder="Search gallery photos..." 
+              class="nav-search-bar w-full text-slate-900 dark:text-white pl-9 pr-14 py-2 rounded-full text-xs outline-none transition-all placeholder:text-slate-400 font-medium shadow-sm"
+              autocomplete="off"
+            >
+            <kbd class="kbd-shortcut absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none hidden md:inline-block">Ctrl K</kbd>
           </div>
         </div>
 
@@ -138,32 +145,47 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Page Header -->
-      <div class="text-center max-w-3xl mx-auto mb-10">
-        <span class="text-xs font-bold uppercase tracking-wider text-emerald-800 dark:text-emerald-400">Curated Photography Collection</span>
+      <div class="text-center max-w-3xl mx-auto mb-8">
+        <span class="text-xs font-bold uppercase tracking-wider text-emerald-800 dark:text-emerald-400">Authentic Photography Collection</span>
         <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-serif text-slate-900 dark:text-white mt-2 mb-4">
           Gogaldara in Pictures
         </h1>
         <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400">
-          Click any image to view in full-screen zoom with captions. Capturing the natural 35-foot icicles at Chill Point, summer wildflower meadows, and quiet pine woods.
+          Curated authentic captures of Gogaldara, Chill Point, frozen water cascades, and deep pine woods. Click any picture to open the full-screen interactive zoom lightbox.
         </p>
+      </div>
+
+      <!-- Live Search & Filter Bar (अच्छी जगह) -->
+      <div class="max-w-md mx-auto mb-6 relative">
+        <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-emerald-700 dark:text-emerald-400 text-xs"></i>
+        <input 
+          type="text" 
+          id="gallery-search-input" 
+          placeholder="Search photo titles (e.g. ice, snow, pine, video)..." 
+          class="w-full bg-white dark:bg-slate-800 text-slate-900 dark:text-white pl-10 pr-4 py-2.5 rounded-full text-xs sm:text-sm border border-slate-200 dark:border-slate-700 focus:border-emerald-600 outline-none shadow-sm transition-all"
+          autocomplete="off"
+        >
       </div>
 
       <!-- Filter Buttons -->
       <div class="flex flex-wrap items-center justify-center gap-2 mb-10">
         <button class="gallery-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-emerald-800 text-white shadow transition-all" data-filter="all">
-          All Photographs
+          All Photographs (17)
         </button>
-        <button class="gallery-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 shadow-sm hover:border-emerald-700 transition-all" data-filter="Winter & Icicles">
-          <i class="fas fa-icicles text-sky-500 mr-1"></i> Winter & Icicles
+        <button class="gallery-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 shadow-sm hover:border-emerald-700 transition-all" data-filter="ice">
+          <i class="fas fa-snowflake text-sky-500 mr-1"></i> Chill Point &amp; Ice
         </button>
-        <button class="gallery-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 shadow-sm hover:border-emerald-700 transition-all" data-filter="Meadows">
-          <i class="fas fa-seedling text-emerald-500 mr-1"></i> Alpine Meadows
+        <button class="gallery-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 shadow-sm hover:border-emerald-700 transition-all" data-filter="forests">
+          <i class="fas fa-tree text-emerald-600 mr-1"></i> Pine Forests &amp; Snow
         </button>
-        <button class="gallery-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 shadow-sm hover:border-emerald-700 transition-all" data-filter="Forests">
-          <i class="fas fa-tree text-pine-800 mr-1"></i> Pine Forests
+        <button class="gallery-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 shadow-sm hover:border-emerald-700 transition-all" data-filter="highlands">
+          <i class="fas fa-mountain text-amber-500 mr-1"></i> Alpine Highlands
         </button>
-        <button class="gallery-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 shadow-sm hover:border-emerald-700 transition-all" data-filter="Village Life">
-          <i class="fas fa-home text-amber-500 mr-1"></i> Village & Culture
+        <button class="gallery-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 shadow-sm hover:border-emerald-700 transition-all" data-filter="village">
+          <i class="fas fa-home text-teal-600 mr-1"></i> Village &amp; Stays
+        </button>
+        <button class="gallery-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 shadow-sm hover:border-emerald-700 transition-all" data-filter="video">
+          <i class="fas fa-video text-rose-500 mr-1"></i> Video Footage
         </button>
       </div>
 
@@ -171,7 +193,7 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
         
         <!-- Photo 1: Original Chill Point Icicles (Kashmir Digest) -->
-        <div class="gallery-item group relative overflow-hidden rounded-2xl cursor-pointer shadow-md hover:shadow-xl transition-all" data-category="Winter & Icicles" data-title="Colossal 35-Foot Icicles at Chill Point, Gogaldara (Original Photo)">
+        <div class="gallery-item group relative overflow-hidden rounded-2xl cursor-pointer shadow-md hover:shadow-xl transition-all" data-category="Verified Google Uploads Winter & Icicles" data-title="Colossal 35-Foot Icicles at Chill Point, Gogaldara (Original Photo)">
           <div class="aspect-[4/3] overflow-hidden bg-slate-200 dark:bg-slate-800">
             <img 
               src="https://www.kashmirdigest.com/wp-content/uploads/2025/01/download-2025-01-16T230346.379.jpeg" 
@@ -193,7 +215,7 @@
         </div>
 
         <!-- Photo 2: Original Landscape of Gogaldara Chill Point (TripUntold) -->
-        <div class="gallery-item group relative overflow-hidden rounded-2xl cursor-pointer shadow-md hover:shadow-xl transition-all" data-category="Winter & Icicles" data-title="Snowy Pine Slopes of Gogaldara Chill Point (TripUntold)">
+        <div class="gallery-item group relative overflow-hidden rounded-2xl cursor-pointer shadow-md hover:shadow-xl transition-all" data-category="Verified Google Uploads Winter & Icicles" data-title="Snowy Pine Slopes of Gogaldara Chill Point (TripUntold)">
           <div class="aspect-[4/3] overflow-hidden bg-slate-200 dark:bg-slate-800">
             <img 
               src="https://cdn.tripuntold.com/media/photos/location/2025/04/07/41a5a283-74f7-483f-a719-6ce5c0de00ab.jpg" 
@@ -207,6 +229,156 @@
             <span class="text-[11px] font-semibold text-emerald-300 uppercase tracking-wider">Winter &amp; Icicles • Real Landscape</span>
             <h3 class="text-sm sm:text-base font-bold font-serif">Gogaldara Chill Point Landscape</h3>
             <p class="text-xs text-slate-200 mt-1 line-clamp-2">Snow-laden pine slopes and winter scenery near Tangmarg in Baramulla district.</p>
+            <div class="mt-2 flex items-center gap-1.5 text-xs text-amber-300">
+              <i class="fas fa-search-plus"></i>
+              <span>Click to view lightbox</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Verified Location Photo: Winter Snow-Laden Pines -->
+        <div class="gallery-item group relative overflow-hidden rounded-2xl cursor-pointer shadow-md hover:shadow-xl transition-all" data-category="Verified Google Uploads Forests Winter & Icicles" data-title="Deep Powder Snow Blanket on Tangmarg Pine Ridges">
+          <div class="aspect-[4/3] overflow-hidden bg-slate-200 dark:bg-slate-800">
+            <img 
+              src="https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?auto=format&fit=crop&w=1000&q=80" 
+              srcset="https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?auto=format&fit=crop&w=480&q=80 480w, https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?auto=format&fit=crop&w=960&q=80 960w"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              alt="Deep powder snow blanket on Tangmarg pine ridges"
+              class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500"
+              loading="lazy"
+              decoding="async"
+              onerror="this.onerror=null;this.src='https://cdn.tripuntold.com/media/photos/location/2025/04/07/41a5a283-74f7-483f-a719-6ce5c0de00ab.jpg';"
+            >
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 text-white">
+            <span class="text-[11px] font-semibold text-emerald-300 uppercase tracking-wider">Winter &amp; Forests • Tangmarg Ridge</span>
+            <h3 class="text-sm sm:text-base font-bold font-serif">Snow-Laden Himalayan Pines</h3>
+            <p class="text-xs text-slate-200 mt-1 line-clamp-2">Dense fir and cedar woods surrounding the approach path to Gogaldara village.</p>
+            <div class="mt-2 flex items-center gap-1.5 text-xs text-amber-300">
+              <i class="fas fa-search-plus"></i>
+              <span>Click to view lightbox</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Verified Location Photo 1: Chill Point Ice Dome & Pines (TripUntold) -->
+        <div class="gallery-item group relative overflow-hidden rounded-2xl cursor-pointer shadow-md hover:shadow-xl transition-all" data-category="Verified Google Uploads Winter & Icicles" data-title="Frozen Ice Dome and Pine Backing (TripUntold Location)">
+          <div class="aspect-[4/3] overflow-hidden bg-slate-200 dark:bg-slate-800">
+            <img 
+              src="https://cdn.tripuntold.com/media/photos/location/2025/04/07/7ca44d44-88da-4053-a1e6-9afb76ee3c1c.jpg" 
+              srcset="https://cdn.tripuntold.com/media/photos/location/2025/04/07/7ca44d44-88da-4053-a1e6-9afb76ee3c1c.jpg 480w, https://cdn.tripuntold.com/media/photos/location/2025/04/07/7ca44d44-88da-4053-a1e6-9afb76ee3c1c.jpg 960w"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              alt="Gogaldara Chill Point Ice Dome Structure"
+              class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500"
+              loading="lazy"
+              decoding="async"
+              onerror="this.onerror=null;this.src='https://cdn.tripuntold.com/media/photos/location/2025/04/07/41a5a283-74f7-483f-a719-6ce5c0de00ab.jpg';"
+            >
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 text-white">
+            <span class="text-[11px] font-semibold text-emerald-300 uppercase tracking-wider">Verified Upload • TripUntold Location</span>
+            <h3 class="text-sm sm:text-base font-bold font-serif">Natural Ice Dome &amp; Pines</h3>
+            <p class="text-xs text-slate-200 mt-1 line-clamp-2">Massive natural ice formation backed by Tangmarg deodar trees.</p>
+            <div class="mt-2 flex items-center gap-1.5 text-xs text-amber-300">
+              <i class="fas fa-search-plus"></i>
+              <span>Click to view lightbox</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Verified Location Photo 2: Frozen Cascade Wall (TripUntold) -->
+        <div class="gallery-item group relative overflow-hidden rounded-2xl cursor-pointer shadow-md hover:shadow-xl transition-all" data-category="Verified Google Uploads Winter & Icicles" data-title="Frozen Cascade & Mountain Seepage at Chill Point (TripUntold)">
+          <div class="aspect-[4/3] overflow-hidden bg-slate-200 dark:bg-slate-800">
+            <img 
+              src="https://cdn.tripuntold.com/media/photos/location/2025/04/07/0711d468-591b-429a-84d9-fc9213c55a6f.jpg" 
+              srcset="https://cdn.tripuntold.com/media/photos/location/2025/04/07/0711d468-591b-429a-84d9-fc9213c55a6f.jpg 480w, https://cdn.tripuntold.com/media/photos/location/2025/04/07/0711d468-591b-429a-84d9-fc9213c55a6f.jpg 960w"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              alt="Frozen water seepage cascade in Gogaldara"
+              class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500"
+              loading="lazy"
+              decoding="async"
+              onerror="this.onerror=null;this.src='https://cdn.tripuntold.com/media/photos/location/2025/04/07/41a5a283-74f7-483f-a719-6ce5c0de00ab.jpg';"
+            >
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 text-white">
+            <span class="text-[11px] font-semibold text-amber-300 uppercase tracking-wider">Verified Upload • TripUntold Location</span>
+            <h3 class="text-sm sm:text-base font-bold font-serif">Seepage Ice Sheet Wall</h3>
+            <p class="text-xs text-slate-200 mt-1 line-clamp-2">Frozen mineral stream forming crystalline wall sheets along the hillside.</p>
+            <div class="mt-2 flex items-center gap-1.5 text-xs text-amber-300">
+              <i class="fas fa-search-plus"></i>
+              <span>Click to view lightbox</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Verified Location Photo 3: Snow Slopes & Pine Ridge (TripUntold) -->
+        <div class="gallery-item group relative overflow-hidden rounded-2xl cursor-pointer shadow-md hover:shadow-xl transition-all" data-category="Verified Google Uploads Forests" data-title="Deep Powder Snow Blanket & Pine Ridge (TripUntold)">
+          <div class="aspect-[4/3] overflow-hidden bg-slate-200 dark:bg-slate-800">
+            <img 
+              src="https://cdn.tripuntold.com/media/photos/location/2025/04/07/397b90ca-43ba-422a-9db9-ebbbc3a5cc04.jpg" 
+              srcset="https://cdn.tripuntold.com/media/photos/location/2025/04/07/397b90ca-43ba-422a-9db9-ebbbc3a5cc04.jpg 480w, https://cdn.tripuntold.com/media/photos/location/2025/04/07/397b90ca-43ba-422a-9db9-ebbbc3a5cc04.jpg 960w"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              alt="Pine ridge and deep snow slopes in Gogaldara"
+              class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500"
+              loading="lazy"
+              decoding="async"
+              onerror="this.onerror=null;this.src='https://cdn.tripuntold.com/media/photos/location/2025/04/07/41a5a283-74f7-483f-a719-6ce5c0de00ab.jpg';"
+            >
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 text-white">
+            <span class="text-[11px] font-semibold text-emerald-300 uppercase tracking-wider">Verified Upload • TripUntold Location</span>
+            <h3 class="text-sm sm:text-base font-bold font-serif">Silver Fir &amp; Deodar Slopes</h3>
+            <p class="text-xs text-slate-200 mt-1 line-clamp-2">Dense North Kashmir pine woods on the approach road to Gogaldara.</p>
+            <div class="mt-2 flex items-center gap-1.5 text-xs text-amber-300">
+              <i class="fas fa-search-plus"></i>
+              <span>Click to view lightbox</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Verified Location Photo 4: Ice Mound & Fir Trees (TripUntold) -->
+        <div class="gallery-item group relative overflow-hidden rounded-2xl cursor-pointer shadow-md hover:shadow-xl transition-all" data-category="Verified Google Uploads Winter & Icicles" data-title="Ice Mound with Mountain Fir Woods (TripUntold)">
+          <div class="aspect-[4/3] overflow-hidden bg-slate-200 dark:bg-slate-800">
+            <img 
+              src="https://cdn.tripuntold.com/media/photos/location/2025/04/07/ed19299d-f9dd-4fdd-83cc-fa6f8fea16a7.jpg" 
+              srcset="https://cdn.tripuntold.com/media/photos/location/2025/04/07/ed19299d-f9dd-4fdd-83cc-fa6f8fea16a7.jpg 480w, https://cdn.tripuntold.com/media/photos/location/2025/04/07/ed19299d-f9dd-4fdd-83cc-fa6f8fea16a7.jpg 960w"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              alt="Ice mound and fir trees in Gogaldara"
+              class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500"
+              loading="lazy"
+              decoding="async"
+              onerror="this.onerror=null;this.src='https://cdn.tripuntold.com/media/photos/location/2025/04/07/41a5a283-74f7-483f-a719-6ce5c0de00ab.jpg';"
+            >
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 text-white">
+            <span class="text-[11px] font-semibold text-sky-300 uppercase tracking-wider">Verified Upload • TripUntold Location</span>
+            <h3 class="text-sm sm:text-base font-bold font-serif">Ice Mound &amp; Fir Woods</h3>
+            <p class="text-xs text-slate-200 mt-1 line-clamp-2">Crystalline frost dome standing tall in sub-zero winter temperatures.</p>
+            <div class="mt-2 flex items-center gap-1.5 text-xs text-amber-300">
+              <i class="fas fa-search-plus"></i>
+              <span>Click to view lightbox</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Verified Location Photo 5: Crystalline Ice Spire (TripUntold) -->
+        <div class="gallery-item group relative overflow-hidden rounded-2xl cursor-pointer shadow-md hover:shadow-xl transition-all" data-category="Verified Google Uploads Winter & Icicles" data-title="Crystalline Ice Spire Detail at Chill Point (TripUntold)">
+          <div class="aspect-[4/3] overflow-hidden bg-slate-200 dark:bg-slate-800">
+            <img 
+              src="https://cdn.tripuntold.com/media/photos/location/2025/04/07/bba3bc38-1586-4af5-afe1-4948ab92a856.jpg" 
+              srcset="https://cdn.tripuntold.com/media/photos/location/2025/04/07/bba3bc38-1586-4af5-afe1-4948ab92a856.jpg 480w, https://cdn.tripuntold.com/media/photos/location/2025/04/07/bba3bc38-1586-4af5-afe1-4948ab92a856.jpg 960w"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              alt="Crystalline ice spire detail at Chill Point"
+              class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500"
+              loading="lazy"
+              decoding="async"
+              onerror="this.onerror=null;this.src='https://cdn.tripuntold.com/media/photos/location/2025/04/07/41a5a283-74f7-483f-a719-6ce5c0de00ab.jpg';"
+            >
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 text-white">
+            <span class="text-[11px] font-semibold text-amber-300 uppercase tracking-wider">Verified Upload • TripUntold Location</span>
+            <h3 class="text-sm sm:text-base font-bold font-serif">Crystalline Ice Column Detail</h3>
+            <p class="text-xs text-slate-200 mt-1 line-clamp-2">Intricate ice crystals sculpted naturally by freezing Himalayan wind.</p>
             <div class="mt-2 flex items-center gap-1.5 text-xs text-amber-300">
               <i class="fas fa-search-plus"></i>
               <span>Click to view lightbox</span>
@@ -423,6 +595,28 @@
       </div>
     </div>
   </footer>
+  <nav class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 flex items-center justify-around py-2 px-1 text-[11px] shadow-lg text-slate-600 dark:text-slate-300" aria-label="Mobile Bottom Navigation">
+    <a href="index.html" class="flex flex-col items-center gap-0.5 hover:text-emerald-700 dark:hover:text-emerald-400 py-1 px-2">
+      <i class="fas fa-home text-base"></i>
+      <span>Home</span>
+    </a>
+    <a href="explore.html" class="flex flex-col items-center gap-0.5 hover:text-emerald-700 dark:hover:text-emerald-400 py-1 px-2">
+      <i class="fas fa-compass text-base"></i>
+      <span>Explore</span>
+    </a>
+    <a href="gallery.html" class="flex flex-col items-center gap-0.5 text-emerald-800 dark:text-emerald-400 font-semibold py-1 px-2">
+      <i class="fas fa-images text-base"></i>
+      <span>Gallery</span>
+    </a>
+    <a href="menu.html" class="flex flex-col items-center gap-0.5 hover:text-emerald-700 dark:hover:text-emerald-400 py-1 px-2">
+      <i class="fas fa-sitemap text-base"></i>
+      <span>Directory</span>
+    </a>
+    <button id="mobile-bottom-menu-btn" class="flex flex-col items-center gap-0.5 hover:text-emerald-700 dark:hover:text-emerald-400 py-1 px-2">
+      <i class="fas fa-bars text-base"></i>
+      <span>Menu</span>
+    </button>
+  </nav>
 
   <script src="./script.js"></script>
 </body>
