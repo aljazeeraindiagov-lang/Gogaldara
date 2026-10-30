@@ -104,12 +104,16 @@ html.dark ::-webkit-scrollbar-thumb {
 /* Fast Instant Load (Preloader Removed for Instant Display) */
 
 
-/* Scroll Reveal Animations */
+/* Scroll Reveal Animations (Default visible for instant accessibility) */
 .reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
+}
+.js-reveal-enabled .reveal:not(.active) {
+  opacity: 0;
+  transform: translateY(20px);
 }
 .reveal.active {
   opacity: 1;

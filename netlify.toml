@@ -1,0 +1,58 @@
+[build]
+  publish = "."
+
+# If user deploys from build directory (dist), this fallback handles root
+[[redirects]]
+  from = "/home"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/explore"
+  to = "/explore.html"
+  status = 200
+
+[[redirects]]
+  from = "/gallery"
+  to = "/gallery.html"
+  status = 200
+
+[[redirects]]
+  from = "/menu"
+  to = "/menu.html"
+  status = 200
+
+[[redirects]]
+  from = "/shots"
+  to = "/shots.html"
+  status = 200
+
+[[redirects]]
+  from = "/login"
+  to = "/login.html"
+  status = 200
+
+[[redirects]]
+  from = "/signup"
+  to = "/signup.html"
+  status = 200
+
+[[redirects]]
+  from = "/settings"
+  to = "/settings.html"
+  status = 200
+
+[[redirects]]
+  from = "/help"
+  to = "/help.html"
+  status = 200
+
+[[redirects]]
+  from = "/feedback"
+  to = "/feedback.html"
+  status = 200

@@ -125,21 +125,9 @@ const STORAGE_KEYS = {
   FEEDBACK: 'gogaldara_feedback'
 };
 
-// --- Initialization ---
-document.addEventListener('DOMContentLoaded', () => {
-  initTheme();
-  initFontSize();
-  initNavbar();
-  initSearch();
-  initNotifications();
-  initUserSession();
-  initScrollReveal();
-  initHeroSlider();
-  initLightbox();
-  initFAQ();
-  initForms();
-  initSettingsPage();
-});
+// --- Global Lightbox State ---
+let lightboxItems = [];
+let currentLightboxIdx = 0;
 
 
 // --- Theme Management ---
@@ -503,7 +491,10 @@ function getCurrentUser() {
 // --- Scroll Reveal ---
 function initScrollReveal() {
   const reveals = document.querySelectorAll('.reveal');
+  if (reveals.length === 0) return;
+
   if ('IntersectionObserver' in window) {
+    document.documentElement.classList.add('js-reveal-enabled');
     const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -511,7 +502,7 @@ function initScrollReveal() {
           obs.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.05, rootMargin: '0px 0px 50px 0px' });
 
     reveals.forEach(el => observer.observe(el));
   } else {
@@ -602,9 +593,6 @@ function initHeroSlider() {
 }
 
 // --- Lightbox Modal ---
-let lightboxItems = [];
-let currentLightboxIdx = 0;
-
 function initLightbox() {
   const galleryItems = document.querySelectorAll('.gallery-item');
   if (galleryItems.length === 0) return;
@@ -1188,3 +1176,29 @@ function showToast(message, type = 'info') {
     setTimeout(() => toast.remove(), 300);
   }, 4000);
 }
+
+// --- Application Entry Point ---
+function startApp() {
+  initTheme();
+  initFontSize();
+  initNavbar();
+  initSearch();
+  initNotifications();
+  initUserSession();
+  initScrollReveal();
+  initHeroSlider();
+  initLightbox();
+  initFAQ();
+  initForms();
+  initSettingsPage();
+}
+
+if (typeof document !== 'undefined') {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', startApp);
+  } else {
+    startApp();
+  }
+}
+
+

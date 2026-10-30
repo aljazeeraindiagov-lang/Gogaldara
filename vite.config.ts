@@ -24,6 +24,7 @@ export default defineConfig(() => {
           settings: path.resolve(__dirname, 'settings.html'),
           help: path.resolve(__dirname, 'help.html'),
           feedback: path.resolve(__dirname, 'feedback.html'),
+          shots: path.resolve(__dirname, 'shots.html'),
         },
       },
     },
